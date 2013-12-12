@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="true" version="3">
+  <includeClasses>
+    <classEntry path="com.mobage.air.ErrorCode"/>
+    <classEntry path="com.mobage.air.Extension"/>
+    <classEntry path="com.mobage.air.MarketCode"/>
+    <classEntry path="com.mobage.air.Mobage"/>
+    <classEntry path="com.mobage.air.PlatformListener"/>
+    <classEntry path="com.mobage.air.Region"/>
+    <classEntry path="com.mobage.air.ServerMode"/>
+    <classEntry path="com.mobage.air.TargetUserGrade"/>
+    <classEntry path="com.mobage.air.ad.AdListener"/>
+    <classEntry path="com.mobage.air.ad.FrameID"/>
+    <classEntry path="com.mobage.air.ad.MobageAd"/>
+    <classEntry path="com.mobage.air.ad.MobageAdEventReporter"/>
+    <classEntry path="com.mobage.air.ad.MobageAdListener"/>
+    <classEntry path="com.mobage.air.bank.Account"/>
+    <classEntry path="com.mobage.air.bank.BillingItem"/>
+    <classEntry path="com.mobage.air.bank.Debit"/>
+    <classEntry path="com.mobage.air.bank.Inventory"/>
+    <classEntry path="com.mobage.air.bank.ItemData"/>
+    <classEntry path="com.mobage.air.bank.Transaction"/>
+    <classEntry path="com.mobage.air.social.PagingOption"/>
+    <classEntry path="com.mobage.air.social.PagingResult"/>
+    <classEntry path="com.mobage.air.social.User"/>
+    <classEntry path="com.mobage.air.social.common.Appdata"/>
+    <classEntry path="com.mobage.air.social.common.Auth"/>
+    <classEntry path="com.mobage.air.social.common.Blacklist"/>
+    <classEntry path="com.mobage.air.social.common.Leaderboard"/>
+    <classEntry path="com.mobage.air.social.common.LeaderboardData"/>
+    <classEntry path="com.mobage.air.social.common.LeaderboardTopScore"/>
+    <classEntry path="com.mobage.air.social.common.People"/>
+    <classEntry path="com.mobage.air.social.common.Profanity"/>
+    <classEntry path="com.mobage.air.social.common.RemoteNotification"/>
+    <classEntry path="com.mobage.air.social.common.RemoteNotificationPayload"/>
+    <classEntry path="com.mobage.air.social.common.RemoteNotificationPayload_iOS"/>
+    <classEntry path="com.mobage.air.social.common.RemoteNotificationResponse"/>
+    <classEntry path="com.mobage.air.social.common.RemoteNotificationResponse_iOS"/>
+    <classEntry path="com.mobage.air.social.common.Service"/>
+    <classEntry path="com.mobage.air.social.jp.DocumentType"/>
+    <classEntry path="com.mobage.air.social.jp.Gravity"/>
+    <classEntry path="com.mobage.air.social.jp.Service"/>
+    <classEntry path="com.mobage.air.social.jp.Textdata"/>
+    <classEntry path="com.mobage.air.social.jp.TextdataEntry"/>
+    <classEntry path="com.mobage.air.social.kr.DocumentType"/>
+    <classEntry path="com.mobage.air.social.kr.Gravity"/>
+    <classEntry path="com.mobage.air.social.kr.Service"/>
+    <classEntry path="com.mobage.air.social.kr.Textdata"/>
+    <classEntry path="com.mobage.air.social.kr.TextdataEntry"/>
+    <classEntry path="com.mobage.air.util.AlertDialog"/>
+    <classEntry path="com.mobage.air.util.CallbackEvent"/>
+    <classEntry path="com.mobage.air.util.Enum"/>
+    <classEntry path="com.mobage.air.util.Log"/>
+    <classEntry path="com.mobage.air.util.NotImplementedError"/>
+    <classEntry path="com.mobage.air.util.Struct"/>
+    <classEntry path="com.mobage.air.ad.MobageAdError"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

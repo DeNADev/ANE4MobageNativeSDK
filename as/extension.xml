@@ -1,0 +1,27 @@
+<extension xmlns="http://ns.adobe.com/air/extension/3.8">
+    <id>com.mobage.air.ANE4MobageSDK</id>
+    <versionNumber>0.9.5</versionNumber>
+        <platforms>
+                <platform name="Android-ARM">
+                        <applicationDeployment>
+                                <nativeLibrary>ANE4MobageSDK.jar</nativeLibrary>
+                                <initializer>com.mobage.air.extension.MobageFREExtension</initializer>
+                                <finalizer>com.mobage.air.extension.MobageFREExtension</finalizer>
+                        </applicationDeployment>
+                </platform>
+                <platform name="iPhone-ARM">
+                        <applicationDeployment>
+                                <nativeLibrary>ANE4MobageSDK.a</nativeLibrary>
+                                <initializer>ANE4MobageSDKInitializer</initializer>
+                                <finalizer>ANE4MobageSDKFinalizer</finalizer>
+                        </applicationDeployment>
+                </platform>
+                <platform name="iPhone-x86">
+                        <applicationDeployment>
+                                <nativeLibrary>ANE4MobageSDK.a</nativeLibrary>
+                                <initializer>ANE4MobageSDKInitializer</initializer>
+                                <finalizer>ANE4MobageSDKFinalizer</finalizer>
+                        </applicationDeployment>
+                </platform>
+        </platforms>
+</extension>

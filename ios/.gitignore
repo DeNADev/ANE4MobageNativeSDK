@@ -1,0 +1,6 @@
+MobageSDK/
+
+# Xcode Project
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
