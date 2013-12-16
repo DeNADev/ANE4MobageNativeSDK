@@ -1,0 +1,1820 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		009AC4D61453648D001C38F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009AC4D51453648D001C38F5 /* Foundation.framework */; };
+		5F0A745114A8932B0036DC5A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0A745014A8932B0036DC5A /* StoreKit.framework */; };
+		5F80F270149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5F80F26D149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch */; };
+		5F80F271149EE7A90034C9BE /* ANE4MobageSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F80F26E149EE7A90034C9BE /* ANE4MobageSDK.h */; settings = {ATTRIBUTES = (); }; };
+		5F80F272149EE7A90034C9BE /* ANE4MobageSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F80F26F149EE7A90034C9BE /* ANE4MobageSDK.m */; };
+		C506C925174F6EEA0016ED54 /* ArgsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C506C923174F6EEA0016ED54 /* ArgsParser.h */; };
+		C506C926174F6EEA0016ED54 /* ArgsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C506C924174F6EEA0016ED54 /* ArgsParser.m */; };
+		C508BDAE17F435D40004E6CB /* libmobage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C508BDAD17F435D40004E6CB /* libmobage.a */; };
+		C508BDAF17F435D40004E6CB /* libmobage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C508BDAD17F435D40004E6CB /* libmobage.a */; };
+		C511FB6317D5823800C6292B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C511FB6217D5823800C6292B /* SystemConfiguration.framework */; };
+		C511FB6417D582A000C6292B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C511FB6217D5823800C6292B /* SystemConfiguration.framework */; };
+		C53F73D3174B716000EA7A2B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D2174B716000EA7A2B /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C53F73D5174B716D00EA7A2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D4174B716D00EA7A2B /* Security.framework */; };
+		C53F73D7174B718800EA7A2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D6174B718800EA7A2B /* UIKit.framework */; };
+		C53F73D9174B719900EA7A2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D8174B719900EA7A2B /* CoreGraphics.framework */; };
+		C54EA5CF17530FEC00DDC98F /* FunctionSets.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5CD17530FEC00DDC98F /* FunctionSets.h */; };
+		C54EA5D017530FEC00DDC98F /* FunctionSets.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5CE17530FEC00DDC98F /* FunctionSets.m */; };
+		C54EA5E117533C5F00DDC98F /* Mobage_addPlatformListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DB17533C5F00DDC98F /* Mobage_addPlatformListener.h */; };
+		C54EA5E217533C5F00DDC98F /* Mobage_addPlatformListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5DC17533C5F00DDC98F /* Mobage_addPlatformListener.m */; };
+		C54EA5E317533C5F00DDC98F /* Mobage_checkLoginStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DD17533C5F00DDC98F /* Mobage_checkLoginStatus.h */; };
+		C54EA5E417533C5F00DDC98F /* Mobage_checkLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5DE17533C5F00DDC98F /* Mobage_checkLoginStatus.m */; };
+		C54EA5E517533C5F00DDC98F /* Mobage_initialize.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DF17533C5F00DDC98F /* Mobage_initialize.h */; };
+		C54EA5E617533C5F00DDC98F /* Mobage_initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5E017533C5F00DDC98F /* Mobage_initialize.m */; };
+		C54EA5E917533CCA00DDC98F /* Mobage_getSdkVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5E717533CCA00DDC98F /* Mobage_getSdkVersion.h */; };
+		C54EA5EA17533CCA00DDC98F /* Mobage_getSdkVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5E817533CCA00DDC98F /* Mobage_getSdkVersion.m */; };
+		C54EA5F117533D3700DDC98F /* Mobage_onPause.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5EF17533D3700DDC98F /* Mobage_onPause.h */; };
+		C54EA5F217533D3700DDC98F /* Mobage_onPause.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F017533D3700DDC98F /* Mobage_onPause.m */; };
+		C54EA5F517533D5900DDC98F /* Mobage_onResume.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5F317533D5900DDC98F /* Mobage_onResume.h */; };
+		C54EA5F617533D5900DDC98F /* Mobage_onResume.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F417533D5900DDC98F /* Mobage_onResume.m */; };
+		C54EA5F917533D8000DDC98F /* Mobage_showLoginDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5F717533D8000DDC98F /* Mobage_showLoginDialog.h */; };
+		C54EA5FA17533D8000DDC98F /* Mobage_showLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F817533D8000DDC98F /* Mobage_showLoginDialog.m */; };
+		C54EA5FD17533DA000DDC98F /* Mobage_showLogoutDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5FB17533DA000DDC98F /* Mobage_showLogoutDialog.h */; };
+		C54EA5FE17533DA000DDC98F /* Mobage_showLogoutDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5FC17533DA000DDC98F /* Mobage_showLogoutDialog.m */; };
+		C54EA60117533DC700DDC98F /* Mobage_hideSplashScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5FF17533DC700DDC98F /* Mobage_hideSplashScreen.h */; };
+		C54EA60217533DC700DDC98F /* Mobage_hideSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60017533DC700DDC98F /* Mobage_hideSplashScreen.m */; };
+		C54EA60517533DED00DDC98F /* Mobage_tick.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA60317533DEC00DDC98F /* Mobage_tick.h */; };
+		C54EA60617533DED00DDC98F /* Mobage_tick.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60417533DEC00DDC98F /* Mobage_tick.m */; };
+		C54EA6101753617100DDC98F /* Mobage_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA60E1753617000DDC98F /* Mobage_base.h */; };
+		C54EA6111753617100DDC98F /* Mobage_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60F1753617000DDC98F /* Mobage_base.m */; };
+		C54EA614175369EB00DDC98F /* ContextOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA612175369EA00DDC98F /* ContextOwner.h */; };
+		C54EA615175369EB00DDC98F /* ContextOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA613175369EB00DDC98F /* ContextOwner.m */; };
+		C54EA61B1753735500DDC98F /* common_RemoteNotification_setListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6191753735500DDC98F /* common_RemoteNotification_setListener.h */; };
+		C54EA61C1753735500DDC98F /* common_RemoteNotification_setListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA61A1753735500DDC98F /* common_RemoteNotification_setListener.m */; };
+		C54EA62E1753A0CA00DDC98F /* Mobage_openUpgradeDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA62C1753A0C800DDC98F /* Mobage_openUpgradeDialog.h */; };
+		C54EA62F1753A0CA00DDC98F /* Mobage_openUpgradeDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA62D1753A0C900DDC98F /* Mobage_openUpgradeDialog.m */; };
+		C54EA6341753A35D00DDC98F /* Debit_cancelTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6321753A35D00DDC98F /* Debit_cancelTransaction.h */; };
+		C54EA6351753A35D00DDC98F /* Debit_cancelTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6331753A35D00DDC98F /* Debit_cancelTransaction.m */; };
+		C54EA6381753A3B300DDC98F /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6361753A3B200DDC98F /* Base.h */; };
+		C54EA6391753A3B300DDC98F /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6371753A3B300DDC98F /* Base.m */; };
+		C54EA63C1753A44C00DDC98F /* Debit_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA63A1753A44C00DDC98F /* Debit_base.h */; };
+		C54EA63D1753A44C00DDC98F /* Debit_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA63B1753A44C00DDC98F /* Debit_base.m */; };
+		C54EA6401753A69300DDC98F /* Debit_closeTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA63E1753A69200DDC98F /* Debit_closeTransaction.h */; };
+		C54EA6411753A69300DDC98F /* Debit_closeTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA63F1753A69300DDC98F /* Debit_closeTransaction.m */; };
+		C54EA6441754504300DDC98F /* Debit_continueTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6421754504300DDC98F /* Debit_continueTransaction.h */; };
+		C54EA6451754504300DDC98F /* Debit_continueTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6431754504300DDC98F /* Debit_continueTransaction.m */; };
+		C54EA6481754559300DDC98F /* Debit_createTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6461754559300DDC98F /* Debit_createTransaction.h */; };
+		C54EA6491754559300DDC98F /* Debit_createTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6471754559300DDC98F /* Debit_createTransaction.m */; };
+		C54EA64C175456BA00DDC98F /* Debit_getPendingTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA64A175456B900DDC98F /* Debit_getPendingTransaction.h */; };
+		C54EA64D175456BA00DDC98F /* Debit_getPendingTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA64B175456BA00DDC98F /* Debit_getPendingTransaction.m */; };
+		C54EA6501754578600DDC98F /* Debit_getTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA64E1754578500DDC98F /* Debit_getTransaction.h */; };
+		C54EA6511754578600DDC98F /* Debit_getTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA64F1754578600DDC98F /* Debit_getTransaction.m */; };
+		C54EA6541754583200DDC98F /* Debit_openTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6521754583100DDC98F /* Debit_openTransaction.h */; };
+		C54EA6551754583200DDC98F /* Debit_openTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6531754583100DDC98F /* Debit_openTransaction.m */; };
+		C54EA6591754593700DDC98F /* Inventory_getItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6571754593700DDC98F /* Inventory_getItem.h */; };
+		C54EA65A1754593700DDC98F /* Inventory_getItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6581754593700DDC98F /* Inventory_getItem.m */; };
+		C54EA65E17545E0F00DDC98F /* common_Appdata_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA65C17545E0F00DDC98F /* common_Appdata_base.h */; };
+		C54EA65F17545E0F00DDC98F /* common_Appdata_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA65D17545E0F00DDC98F /* common_Appdata_base.m */; };
+		C54EA66217545E7400DDC98F /* common_Appdata_deleteEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA66017545E7400DDC98F /* common_Appdata_deleteEntries.h */; };
+		C54EA66317545E7400DDC98F /* common_Appdata_deleteEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA66117545E7400DDC98F /* common_Appdata_deleteEntries.m */; };
+		C54EA6661754602300DDC98F /* common_Appdata_getEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6641754602300DDC98F /* common_Appdata_getEntries.h */; };
+		C54EA6671754602300DDC98F /* common_Appdata_getEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6651754602300DDC98F /* common_Appdata_getEntries.m */; };
+		C54EA66A1754611A00DDC98F /* common_Appdata_updateEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6681754611900DDC98F /* common_Appdata_updateEntries.h */; };
+		C54EA66B1754611A00DDC98F /* common_Appdata_updateEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6691754611900DDC98F /* common_Appdata_updateEntries.m */; };
+		C54EA66F1754623500DDC98F /* common_Auth_authorizeToken.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA66D1754623500DDC98F /* common_Auth_authorizeToken.h */; };
+		C54EA6701754623500DDC98F /* common_Auth_authorizeToken.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA66E1754623500DDC98F /* common_Auth_authorizeToken.m */; };
+		C54EA674175464F100DDC98F /* common_Blacklist_checkBlacklist.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA672175464F100DDC98F /* common_Blacklist_checkBlacklist.h */; };
+		C54EA675175464F100DDC98F /* common_Blacklist_checkBlacklist.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA673175464F100DDC98F /* common_Blacklist_checkBlacklist.m */; };
+		C54EA679175479AA00DDC98F /* common_Leaderboard_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA677175479AA00DDC98F /* common_Leaderboard_base.h */; };
+		C54EA67A175479AA00DDC98F /* common_Leaderboard_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA678175479AA00DDC98F /* common_Leaderboard_base.m */; };
+		C54EA67D175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA67B175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h */; };
+		C54EA67E175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA67C175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m */; };
+		C54EA68117547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA67F17547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h */; };
+		C54EA68217547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68017547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m */; };
+		C54EA68517547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68317547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h */; };
+		C54EA68617547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68417547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m */; };
+		C54EA68917547F6300DDC98F /* common_Leaderboard_getLeaderboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68717547F6300DDC98F /* common_Leaderboard_getLeaderboard.h */; };
+		C54EA68A17547F6300DDC98F /* common_Leaderboard_getLeaderboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68817547F6300DDC98F /* common_Leaderboard_getLeaderboard.m */; };
+		C54EA68D1754802000DDC98F /* common_Leaderboard_getLeaderboards.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68B1754802000DDC98F /* common_Leaderboard_getLeaderboards.h */; };
+		C54EA68E1754802000DDC98F /* common_Leaderboard_getLeaderboards.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68C1754802000DDC98F /* common_Leaderboard_getLeaderboards.m */; };
+		C54EA691175480CA00DDC98F /* common_Leaderboard_getScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68F175480C900DDC98F /* common_Leaderboard_getScore.h */; };
+		C54EA692175480CA00DDC98F /* common_Leaderboard_getScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA690175480CA00DDC98F /* common_Leaderboard_getScore.m */; };
+		C54EA6951754829B00DDC98F /* common_Leaderboard_getTopScoresList.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6931754829A00DDC98F /* common_Leaderboard_getTopScoresList.h */; };
+		C54EA6961754829B00DDC98F /* common_Leaderboard_getTopScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6941754829A00DDC98F /* common_Leaderboard_getTopScoresList.m */; };
+		C54EA6991754836300DDC98F /* common_Leaderboard_updateCurrentUserScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6971754836100DDC98F /* common_Leaderboard_updateCurrentUserScore.h */; };
+		C54EA69A1754836300DDC98F /* common_Leaderboard_updateCurrentUserScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6981754836200DDC98F /* common_Leaderboard_updateCurrentUserScore.m */; };
+		C54EA69E175485F000DDC98F /* common_People_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA69C175485F000DDC98F /* common_People_base.h */; };
+		C54EA69F175485F000DDC98F /* common_People_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA69D175485F000DDC98F /* common_People_base.m */; };
+		C54EA6A21754864900DDC98F /* common_People_getCurrentUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A01754864900DDC98F /* common_People_getCurrentUser.h */; };
+		C54EA6A31754864900DDC98F /* common_People_getCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A11754864900DDC98F /* common_People_getCurrentUser.m */; };
+		C54EA6A6175489FF00DDC98F /* common_People_getFriends.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A4175489FF00DDC98F /* common_People_getFriends.h */; };
+		C54EA6A7175489FF00DDC98F /* common_People_getFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A5175489FF00DDC98F /* common_People_getFriends.m */; };
+		C54EA6AA17548B5B00DDC98F /* common_People_getFriendsWithGame.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A817548B5A00DDC98F /* common_People_getFriendsWithGame.h */; };
+		C54EA6AB17548B5B00DDC98F /* common_People_getFriendsWithGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A917548B5A00DDC98F /* common_People_getFriendsWithGame.m */; };
+		C54EA6AE17548BF900DDC98F /* common_People_getUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6AC17548BF800DDC98F /* common_People_getUser.h */; };
+		C54EA6AF17548BF900DDC98F /* common_People_getUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6AD17548BF800DDC98F /* common_People_getUser.m */; };
+		C54EA6B217548C7300DDC98F /* common_People_getUsers.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B017548C7200DDC98F /* common_People_getUsers.h */; };
+		C54EA6B317548C7300DDC98F /* common_People_getUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6B117548C7300DDC98F /* common_People_getUsers.m */; };
+		C54EA6B717548D2900DDC98F /* common_Profanity_checkProfanity.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B517548D2900DDC98F /* common_Profanity_checkProfanity.h */; };
+		C54EA6B817548D2900DDC98F /* common_Profanity_checkProfanity.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6B617548D2900DDC98F /* common_Profanity_checkProfanity.m */; };
+		C54EA6BB17548DF000DDC98F /* common_RemoteNotification_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B917548DEF00DDC98F /* common_RemoteNotification_base.h */; };
+		C54EA6BC17548DF000DDC98F /* common_RemoteNotification_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6BA17548DEF00DDC98F /* common_RemoteNotification_base.m */; };
+		C54EA6BF17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6BD17548E1000DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h */; };
+		C54EA6C017548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6BE17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m */; };
+		C54EA6C317548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6C117548ED700DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h */; };
+		C54EA6C417548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6C217548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m */; };
+		C54EA6C717548FA700DDC98F /* common_RemoteNotification_send_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6C517548FA500DDC98F /* common_RemoteNotification_send_iOS.h */; };
+		C54EA6C817548FA700DDC98F /* common_RemoteNotification_send_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6C617548FA600DDC98F /* common_RemoteNotification_send_iOS.m */; };
+		C54EA6CC1754972600DDC98F /* common_Service_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6CA1754972600DDC98F /* common_Service_base.h */; };
+		C54EA6CD1754972600DDC98F /* common_Service_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6CB1754972600DDC98F /* common_Service_base.m */; };
+		C54EA6D01754975200DDC98F /* common_Service_getBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6CE1754975200DDC98F /* common_Service_getBalanceButton.h */; };
+		C54EA6D11754975200DDC98F /* common_Service_getBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6CF1754975200DDC98F /* common_Service_getBalanceButton.m */; };
+		C54EA6D4175499EF00DDC98F /* common_Service_removeBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6D2175499EF00DDC98F /* common_Service_removeBalanceButton.h */; };
+		C54EA6D5175499EF00DDC98F /* common_Service_removeBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6D3175499EF00DDC98F /* common_Service_removeBalanceButton.m */; };
+		C54EA6D817549A4400DDC98F /* common_Service_launchPortalApp.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6D617549A4400DDC98F /* common_Service_launchPortalApp.h */; };
+		C54EA6D917549A4400DDC98F /* common_Service_launchPortalApp.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6D717549A4400DDC98F /* common_Service_launchPortalApp.m */; };
+		C54EA6DC17549B1100DDC98F /* common_Service_openFriendPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6DA17549B1000DDC98F /* common_Service_openFriendPicker.h */; };
+		C54EA6DD17549B1100DDC98F /* common_Service_openFriendPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6DB17549B1100DDC98F /* common_Service_openFriendPicker.m */; };
+		C54EA6E017549C3600DDC98F /* common_Service_openUserProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6DE17549C3500DDC98F /* common_Service_openUserProfile.h */; };
+		C54EA6E117549C3600DDC98F /* common_Service_openUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6DF17549C3500DDC98F /* common_Service_openUserProfile.m */; };
+		C54EA6E417549CC400DDC98F /* common_Service_showBankUi.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6E217549CC300DDC98F /* common_Service_showBankUi.h */; };
+		C54EA6E517549CC400DDC98F /* common_Service_showBankUi.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6E317549CC300DDC98F /* common_Service_showBankUi.m */; };
+		C54EA6EA1754A53000DDC98F /* jp_Service_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6E81754A53000DDC98F /* jp_Service_base.h */; };
+		C54EA6EB1754A53000DDC98F /* jp_Service_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6E91754A53000DDC98F /* jp_Service_base.m */; };
+		C54EA6EE1754A56D00DDC98F /* jp_Service_openDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6EC1754A56D00DDC98F /* jp_Service_openDocument.h */; };
+		C54EA6EF1754A56D00DDC98F /* jp_Service_openDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6ED1754A56D00DDC98F /* jp_Service_openDocument.m */; };
+		C54EA6F21754ABC000DDC98F /* jp_Service_showCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F01754ABBF00DDC98F /* jp_Service_showCommunityButton.h */; };
+		C54EA6F31754ABC000DDC98F /* jp_Service_showCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F11754ABBF00DDC98F /* jp_Service_showCommunityButton.m */; };
+		C54EA6F61754AE3C00DDC98F /* jp_Service_hideCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F41754AE3B00DDC98F /* jp_Service_hideCommunityButton.h */; };
+		C54EA6F71754AE3C00DDC98F /* jp_Service_hideCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F51754AE3C00DDC98F /* jp_Service_hideCommunityButton.m */; };
+		C54EA6FA1754AECF00DDC98F /* jp_Service_shareMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F81754AECE00DDC98F /* jp_Service_shareMessage.h */; };
+		C54EA6FB1754AECF00DDC98F /* jp_Service_shareMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F91754AECF00DDC98F /* jp_Service_shareMessage.m */; };
+		C54EA6FF1754B02A00DDC98F /* jp_Textdata_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6FD1754B02A00DDC98F /* jp_Textdata_base.h */; };
+		C54EA7001754B02A00DDC98F /* jp_Textdata_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6FE1754B02A00DDC98F /* jp_Textdata_base.m */; };
+		C54EA7031754B05F00DDC98F /* jp_Textdata_createEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7011754B05E00DDC98F /* jp_Textdata_createEntry.h */; };
+		C54EA7041754B05F00DDC98F /* jp_Textdata_createEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7021754B05E00DDC98F /* jp_Textdata_createEntry.m */; };
+		C54EA7071754B63300DDC98F /* jp_Textdata_getEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7051754B63200DDC98F /* jp_Textdata_getEntries.h */; };
+		C54EA7081754B63300DDC98F /* jp_Textdata_getEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7061754B63300DDC98F /* jp_Textdata_getEntries.m */; };
+		C54EA70B1754B72500DDC98F /* jp_Textdata_updateEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7091754B72400DDC98F /* jp_Textdata_updateEntry.h */; };
+		C54EA70C1754B72500DDC98F /* jp_Textdata_updateEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA70A1754B72500DDC98F /* jp_Textdata_updateEntry.m */; };
+		C54EA70F1754B7DA00DDC98F /* jp_Textdata_deleteEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA70D1754B7D800DDC98F /* jp_Textdata_deleteEntry.h */; };
+		C54EA7101754B7DA00DDC98F /* jp_Textdata_deleteEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA70E1754B7D900DDC98F /* jp_Textdata_deleteEntry.m */; };
+		C54EA7191755E72400DDC98F /* AlertDialog_show.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7171755E6FF00DDC98F /* AlertDialog_show.h */; };
+		C54EA71A1755E72400DDC98F /* AlertDialog_show.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7181755E71000DDC98F /* AlertDialog_show.m */; };
+		C54EA71D1755EAC100DDC98F /* Log_print.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA71B1755EAA300DDC98F /* Log_print.h */; };
+		C54EA71E1755EAC100DDC98F /* Log_print.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA71C1755EAAF00DDC98F /* Log_print.m */; };
+		C54EA74B175C309200DDC98F /* Mobage_removePlatformListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA749175C308800DDC98F /* Mobage_removePlatformListener.h */; };
+		C54EA74C175C309200DDC98F /* Mobage_removePlatformListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA74A175C308D00DDC98F /* Mobage_removePlatformListener.m */; };
+		C5516D2817DD88F50070FBBA /* Mobage_addDashboardObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C5516D2617DD88F50070FBBA /* Mobage_addDashboardObserver.h */; };
+		C5516D2917DD88F50070FBBA /* Mobage_addDashboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516D2717DD88F50070FBBA /* Mobage_addDashboardObserver.m */; };
+		C5516D2C17DD8A9E0070FBBA /* Mobage_dashboardObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C5516D2A17DD8A9E0070FBBA /* Mobage_dashboardObserver.h */; };
+		C5516D2D17DD8A9E0070FBBA /* Mobage_dashboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516D2B17DD8A9E0070FBBA /* Mobage_dashboardObserver.m */; };
+		C5516D3017DD8AC50070FBBA /* Mobage_removeDashboardObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C5516D2E17DD8AC50070FBBA /* Mobage_removeDashboardObserver.h */; };
+		C5516D3117DD8AC50070FBBA /* Mobage_removeDashboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516D2F17DD8AC50070FBBA /* Mobage_removeDashboardObserver.m */; };
+		C574A414185EE270008064FC /* Account_getBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */; };
+		C574A415185EE274008064FC /* Account_getBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */; };
+		C57864BE1768728900C56F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009AC4D51453648D001C38F5 /* Foundation.framework */; };
+		C57864C9176875CE00C56F06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D8174B719900EA7A2B /* CoreGraphics.framework */; };
+		C57864CA176875D700C56F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D6174B718800EA7A2B /* UIKit.framework */; };
+		C57864CB176875DB00C56F06 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D4174B716D00EA7A2B /* Security.framework */; };
+		C57864CC176875DF00C56F06 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D2174B716000EA7A2B /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C57864CE176875E900C56F06 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0A745014A8932B0036DC5A /* StoreKit.framework */; };
+		C57864D01768767800C56F06 /* ANE4MobageSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F80F26F149EE7A90034C9BE /* ANE4MobageSDK.m */; };
+		C57864D11768768D00C56F06 /* Debit_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA63B1753A44C00DDC98F /* Debit_base.m */; };
+		C57864D21768769500C56F06 /* Debit_cancelTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6331753A35D00DDC98F /* Debit_cancelTransaction.m */; };
+		C57864D31768769A00C56F06 /* Debit_closeTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA63F1753A69300DDC98F /* Debit_closeTransaction.m */; };
+		C57864D41768769E00C56F06 /* Debit_continueTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6431754504300DDC98F /* Debit_continueTransaction.m */; };
+		C57864D5176876A200C56F06 /* Debit_createTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6471754559300DDC98F /* Debit_createTransaction.m */; };
+		C57864D6176876A500C56F06 /* Debit_getPendingTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA64B175456BA00DDC98F /* Debit_getPendingTransaction.m */; };
+		C57864D7176876A900C56F06 /* Debit_getTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA64F1754578600DDC98F /* Debit_getTransaction.m */; };
+		C57864D8176876AD00C56F06 /* Debit_openTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6531754583100DDC98F /* Debit_openTransaction.m */; };
+		C57864D9176876B200C56F06 /* Inventory_getItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6581754593700DDC98F /* Inventory_getItem.m */; };
+		C57864DA176876B900C56F06 /* common_Appdata_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA65D17545E0F00DDC98F /* common_Appdata_base.m */; };
+		C57864DB176876BD00C56F06 /* common_Appdata_deleteEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA66117545E7400DDC98F /* common_Appdata_deleteEntries.m */; };
+		C57864DC176876C000C56F06 /* common_Appdata_getEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6651754602300DDC98F /* common_Appdata_getEntries.m */; };
+		C57864DD176876CA00C56F06 /* common_Appdata_updateEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6691754611900DDC98F /* common_Appdata_updateEntries.m */; };
+		C57864DE176876D600C56F06 /* common_Auth_authorizeToken.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA66E1754623500DDC98F /* common_Auth_authorizeToken.m */; };
+		C57864DF176876DC00C56F06 /* common_Blacklist_checkBlacklist.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA673175464F100DDC98F /* common_Blacklist_checkBlacklist.m */; };
+		C57864E0176876E500C56F06 /* common_Leaderboard_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA678175479AA00DDC98F /* common_Leaderboard_base.m */; };
+		C57864E1176876E900C56F06 /* common_Leaderboard_deleteCurrentUserScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA67C175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m */; };
+		C57864E2176876ED00C56F06 /* common_Leaderboard_getAllLeaderboards.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68017547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m */; };
+		C57864E3176876F000C56F06 /* common_Leaderboard_getFriendsScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68417547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m */; };
+		C57864E4176876F400C56F06 /* common_Leaderboard_getLeaderboard.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68817547F6300DDC98F /* common_Leaderboard_getLeaderboard.m */; };
+		C57864E5176876F700C56F06 /* common_Leaderboard_getLeaderboards.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA68C1754802000DDC98F /* common_Leaderboard_getLeaderboards.m */; };
+		C57864E6176876FB00C56F06 /* common_Leaderboard_getScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA690175480CA00DDC98F /* common_Leaderboard_getScore.m */; };
+		C57864E7176876FF00C56F06 /* common_Leaderboard_getTopScoresList.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6941754829A00DDC98F /* common_Leaderboard_getTopScoresList.m */; };
+		C57864E81768770300C56F06 /* common_Leaderboard_updateCurrentUserScore.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6981754836200DDC98F /* common_Leaderboard_updateCurrentUserScore.m */; };
+		C57864E91768770900C56F06 /* common_People_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA69D175485F000DDC98F /* common_People_base.m */; };
+		C57864EA1768770D00C56F06 /* common_People_getCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A11754864900DDC98F /* common_People_getCurrentUser.m */; };
+		C57864EB1768771200C56F06 /* common_People_getFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A5175489FF00DDC98F /* common_People_getFriends.m */; };
+		C57864EC1768771500C56F06 /* common_People_getFriendsWithGame.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6A917548B5A00DDC98F /* common_People_getFriendsWithGame.m */; };
+		C57864ED1768771900C56F06 /* common_People_getUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6AD17548BF800DDC98F /* common_People_getUser.m */; };
+		C57864EE1768771C00C56F06 /* common_People_getUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6B117548C7300DDC98F /* common_People_getUsers.m */; };
+		C57864EF1768772200C56F06 /* common_Profanity_checkProfanity.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6B617548D2900DDC98F /* common_Profanity_checkProfanity.m */; };
+		C57864F01768772A00C56F06 /* common_RemoteNotification_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6BA17548DEF00DDC98F /* common_RemoteNotification_base.m */; };
+		C57864F11768772E00C56F06 /* common_RemoteNotification_getRemoteNotificationsEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6BE17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m */; };
+		C57864F21768773100C56F06 /* common_RemoteNotification_setRemoteNotificationsEnabled.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6C217548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m */; };
+		C57864F31768773300C56F06 /* common_RemoteNotification_send_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6C617548FA600DDC98F /* common_RemoteNotification_send_iOS.m */; };
+		C57864F41768773700C56F06 /* common_RemoteNotification_setListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA61A1753735500DDC98F /* common_RemoteNotification_setListener.m */; };
+		C57864F61768774100C56F06 /* common_Service_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6CB1754972600DDC98F /* common_Service_base.m */; };
+		C57864F71768774600C56F06 /* common_Service_getBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6CF1754975200DDC98F /* common_Service_getBalanceButton.m */; };
+		C57864F81768774900C56F06 /* common_Service_removeBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6D3175499EF00DDC98F /* common_Service_removeBalanceButton.m */; };
+		C57864F91768774D00C56F06 /* common_Service_launchPortalApp.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6D717549A4400DDC98F /* common_Service_launchPortalApp.m */; };
+		C57864FA1768775300C56F06 /* common_Service_openFriendPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6DB17549B1100DDC98F /* common_Service_openFriendPicker.m */; };
+		C57864FB1768775600C56F06 /* common_Service_openUserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6DF17549C3500DDC98F /* common_Service_openUserProfile.m */; };
+		C57864FC1768775A00C56F06 /* common_Service_showBankUi.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6E317549CC300DDC98F /* common_Service_showBankUi.m */; };
+		C57864FD1768776100C56F06 /* jp_Service_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6E91754A53000DDC98F /* jp_Service_base.m */; };
+		C57864FE1768776600C56F06 /* jp_Service_openDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6ED1754A56D00DDC98F /* jp_Service_openDocument.m */; };
+		C57864FF1768776900C56F06 /* jp_Service_showCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F11754ABBF00DDC98F /* jp_Service_showCommunityButton.m */; };
+		C57865001768776C00C56F06 /* jp_Service_hideCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F51754AE3C00DDC98F /* jp_Service_hideCommunityButton.m */; };
+		C57865011768777000C56F06 /* jp_Service_shareMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6F91754AECF00DDC98F /* jp_Service_shareMessage.m */; };
+		C57865021768777300C56F06 /* jp_Textdata_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6FE1754B02A00DDC98F /* jp_Textdata_base.m */; };
+		C57865031768777700C56F06 /* jp_Textdata_createEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7021754B05E00DDC98F /* jp_Textdata_createEntry.m */; };
+		C57865041768777A00C56F06 /* jp_Textdata_getEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7061754B63300DDC98F /* jp_Textdata_getEntries.m */; };
+		C57865051768777E00C56F06 /* jp_Textdata_updateEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA70A1754B72500DDC98F /* jp_Textdata_updateEntry.m */; };
+		C57865061768778200C56F06 /* jp_Textdata_deleteEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA70E1754B7D900DDC98F /* jp_Textdata_deleteEntry.m */; };
+		C57865071768778800C56F06 /* kr_Service_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA71417558DCF00DDC98F /* kr_Service_base.m */; };
+		C57865081768779000C56F06 /* Base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA6371753A3B300DDC98F /* Base.m */; };
+		C57865091768779500C56F06 /* AlertDialog_show.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA7181755E71000DDC98F /* AlertDialog_show.m */; };
+		C578650A1768779A00C56F06 /* Log_print.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA71C1755EAAF00DDC98F /* Log_print.m */; };
+		C578650B176877A100C56F06 /* FunctionSets.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5CE17530FEC00DDC98F /* FunctionSets.m */; };
+		C578650C176877A600C56F06 /* ContextOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA613175369EB00DDC98F /* ContextOwner.m */; };
+		C578650D176877AB00C56F06 /* ArgsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C506C924174F6EEA0016ED54 /* ArgsParser.m */; };
+		C578652D17687C8100C56F06 /* ANE4MobageSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F80F26E149EE7A90034C9BE /* ANE4MobageSDK.h */; };
+		C578652E17687C8F00C56F06 /* Debit_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA63A1753A44C00DDC98F /* Debit_base.h */; };
+		C578652F17687C8F00C56F06 /* Debit_cancelTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6321753A35D00DDC98F /* Debit_cancelTransaction.h */; };
+		C578653017687C8F00C56F06 /* Debit_closeTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA63E1753A69200DDC98F /* Debit_closeTransaction.h */; };
+		C578653117687C8F00C56F06 /* Debit_continueTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6421754504300DDC98F /* Debit_continueTransaction.h */; };
+		C578653217687C8F00C56F06 /* Debit_createTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6461754559300DDC98F /* Debit_createTransaction.h */; };
+		C578653317687C8F00C56F06 /* Debit_getPendingTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA64A175456B900DDC98F /* Debit_getPendingTransaction.h */; };
+		C578653417687C8F00C56F06 /* Debit_getTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA64E1754578500DDC98F /* Debit_getTransaction.h */; };
+		C578653517687C8F00C56F06 /* Debit_openTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6521754583100DDC98F /* Debit_openTransaction.h */; };
+		C578653617687C9700C56F06 /* Inventory_getItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6571754593700DDC98F /* Inventory_getItem.h */; };
+		C578653717687CC400C56F06 /* common_Appdata_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA65C17545E0F00DDC98F /* common_Appdata_base.h */; };
+		C578653817687CC400C56F06 /* common_Appdata_deleteEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA66017545E7400DDC98F /* common_Appdata_deleteEntries.h */; };
+		C578653917687CC400C56F06 /* common_Appdata_getEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6641754602300DDC98F /* common_Appdata_getEntries.h */; };
+		C578653A17687CC400C56F06 /* common_Appdata_updateEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6681754611900DDC98F /* common_Appdata_updateEntries.h */; };
+		C578653B17687CCA00C56F06 /* common_Auth_authorizeToken.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA66D1754623500DDC98F /* common_Auth_authorizeToken.h */; };
+		C578653C17687CD100C56F06 /* common_Blacklist_checkBlacklist.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA672175464F100DDC98F /* common_Blacklist_checkBlacklist.h */; };
+		C578653D17687CE700C56F06 /* common_Leaderboard_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA677175479AA00DDC98F /* common_Leaderboard_base.h */; };
+		C578653E17687CE700C56F06 /* common_Leaderboard_deleteCurrentUserScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA67B175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h */; };
+		C578653F17687CE700C56F06 /* common_Leaderboard_getAllLeaderboards.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA67F17547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h */; };
+		C578654017687CE700C56F06 /* common_Leaderboard_getFriendsScoresList.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68317547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h */; };
+		C578654117687CE700C56F06 /* common_Leaderboard_getLeaderboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68717547F6300DDC98F /* common_Leaderboard_getLeaderboard.h */; };
+		C578654217687CE700C56F06 /* common_Leaderboard_getLeaderboards.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68B1754802000DDC98F /* common_Leaderboard_getLeaderboards.h */; };
+		C578654317687CE700C56F06 /* common_Leaderboard_getScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA68F175480C900DDC98F /* common_Leaderboard_getScore.h */; };
+		C578654417687CE700C56F06 /* common_Leaderboard_getTopScoresList.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6931754829A00DDC98F /* common_Leaderboard_getTopScoresList.h */; };
+		C578654517687CE700C56F06 /* common_Leaderboard_updateCurrentUserScore.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6971754836100DDC98F /* common_Leaderboard_updateCurrentUserScore.h */; };
+		C578654617687CEF00C56F06 /* common_People_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA69C175485F000DDC98F /* common_People_base.h */; };
+		C578654717687CEF00C56F06 /* common_People_getCurrentUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A01754864900DDC98F /* common_People_getCurrentUser.h */; };
+		C578654817687CEF00C56F06 /* common_People_getFriends.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A4175489FF00DDC98F /* common_People_getFriends.h */; };
+		C578654917687CEF00C56F06 /* common_People_getFriendsWithGame.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6A817548B5A00DDC98F /* common_People_getFriendsWithGame.h */; };
+		C578654A17687CEF00C56F06 /* common_People_getUser.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6AC17548BF800DDC98F /* common_People_getUser.h */; };
+		C578654B17687CEF00C56F06 /* common_People_getUsers.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B017548C7200DDC98F /* common_People_getUsers.h */; };
+		C578654C17687D0400C56F06 /* common_Profanity_checkProfanity.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B517548D2900DDC98F /* common_Profanity_checkProfanity.h */; };
+		C578654D17687D4400C56F06 /* common_RemoteNotification_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6B917548DEF00DDC98F /* common_RemoteNotification_base.h */; };
+		C578654E17687D4400C56F06 /* common_RemoteNotification_getRemoteNotificationsEnabled.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6BD17548E1000DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h */; };
+		C578654F17687D4400C56F06 /* common_RemoteNotification_setRemoteNotificationsEnabled.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6C117548ED700DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h */; };
+		C578655017687D4400C56F06 /* common_RemoteNotification_send_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6C517548FA500DDC98F /* common_RemoteNotification_send_iOS.h */; };
+		C578655117687D4400C56F06 /* common_RemoteNotification_setListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6191753735500DDC98F /* common_RemoteNotification_setListener.h */; };
+		C578655317687DE000C56F06 /* common_Service_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6CA1754972600DDC98F /* common_Service_base.h */; };
+		C578655417687DE000C56F06 /* common_Service_getBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6CE1754975200DDC98F /* common_Service_getBalanceButton.h */; };
+		C578655517687DE000C56F06 /* common_Service_removeBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6D2175499EF00DDC98F /* common_Service_removeBalanceButton.h */; };
+		C578655617687DE000C56F06 /* common_Service_launchPortalApp.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6D617549A4400DDC98F /* common_Service_launchPortalApp.h */; };
+		C578655717687DE000C56F06 /* common_Service_openFriendPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6DA17549B1000DDC98F /* common_Service_openFriendPicker.h */; };
+		C578655817687DE000C56F06 /* common_Service_openUserProfile.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6DE17549C3500DDC98F /* common_Service_openUserProfile.h */; };
+		C578655917687DE000C56F06 /* common_Service_showBankUi.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6E217549CC300DDC98F /* common_Service_showBankUi.h */; };
+		C578655A17687E3200C56F06 /* jp_Service_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6E81754A53000DDC98F /* jp_Service_base.h */; };
+		C578655B17687E3200C56F06 /* jp_Service_openDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6EC1754A56D00DDC98F /* jp_Service_openDocument.h */; };
+		C578655C17687E3200C56F06 /* jp_Service_showCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F01754ABBF00DDC98F /* jp_Service_showCommunityButton.h */; };
+		C578655D17687E3200C56F06 /* jp_Service_hideCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F41754AE3B00DDC98F /* jp_Service_hideCommunityButton.h */; };
+		C578655E17687E3200C56F06 /* jp_Service_shareMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6F81754AECE00DDC98F /* jp_Service_shareMessage.h */; };
+		C578655F17687E4000C56F06 /* jp_Textdata_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6FD1754B02A00DDC98F /* jp_Textdata_base.h */; };
+		C578656017687E4000C56F06 /* jp_Textdata_createEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7011754B05E00DDC98F /* jp_Textdata_createEntry.h */; };
+		C578656117687E4000C56F06 /* jp_Textdata_getEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7051754B63200DDC98F /* jp_Textdata_getEntries.h */; };
+		C578656217687E4000C56F06 /* jp_Textdata_updateEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7091754B72400DDC98F /* jp_Textdata_updateEntry.h */; };
+		C578656317687E4000C56F06 /* jp_Textdata_deleteEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA70D1754B7D800DDC98F /* jp_Textdata_deleteEntry.h */; };
+		C578656417687E4700C56F06 /* kr_Service_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA71317558DCF00DDC98F /* kr_Service_base.h */; };
+		C578656517687E5400C56F06 /* Base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA6361753A3B200DDC98F /* Base.h */; };
+		C578656617687E5400C56F06 /* AlertDialog_show.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA7171755E6FF00DDC98F /* AlertDialog_show.h */; };
+		C578656717687E5400C56F06 /* Log_print.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA71B1755EAA300DDC98F /* Log_print.h */; };
+		C578656817687E5E00C56F06 /* FunctionSets.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5CD17530FEC00DDC98F /* FunctionSets.h */; };
+		C578656917687E5E00C56F06 /* ContextOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA612175369EA00DDC98F /* ContextOwner.h */; };
+		C578656A17687E5E00C56F06 /* ArgsParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C506C923174F6EEA0016ED54 /* ArgsParser.h */; };
+		C578656B17687E5E00C56F06 /* ANE4MobageSDK-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 5F80F26D149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch */; };
+		C578658D176884E100C56F06 /* Mobage_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA60E1753617000DDC98F /* Mobage_base.h */; };
+		C578658E176884E100C56F06 /* Mobage_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60F1753617000DDC98F /* Mobage_base.m */; };
+		C578658F176884E100C56F06 /* Mobage_initialize.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DF17533C5F00DDC98F /* Mobage_initialize.h */; };
+		C5786590176884E100C56F06 /* Mobage_initialize.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5E017533C5F00DDC98F /* Mobage_initialize.m */; };
+		C5786591176884E100C56F06 /* Mobage_addPlatformListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DB17533C5F00DDC98F /* Mobage_addPlatformListener.h */; };
+		C5786592176884E100C56F06 /* Mobage_addPlatformListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5DC17533C5F00DDC98F /* Mobage_addPlatformListener.m */; };
+		C5786593176884E100C56F06 /* Mobage_removePlatformListener.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA749175C308800DDC98F /* Mobage_removePlatformListener.h */; };
+		C5786594176884E100C56F06 /* Mobage_removePlatformListener.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA74A175C308D00DDC98F /* Mobage_removePlatformListener.m */; };
+		C5786595176884E100C56F06 /* Mobage_checkLoginStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5DD17533C5F00DDC98F /* Mobage_checkLoginStatus.h */; };
+		C5786596176884E100C56F06 /* Mobage_checkLoginStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5DE17533C5F00DDC98F /* Mobage_checkLoginStatus.m */; };
+		C5786597176884E100C56F06 /* Mobage_getSdkVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5E717533CCA00DDC98F /* Mobage_getSdkVersion.h */; };
+		C5786598176884E100C56F06 /* Mobage_getSdkVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5E817533CCA00DDC98F /* Mobage_getSdkVersion.m */; };
+		C578659B176884E100C56F06 /* Mobage_onPause.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5EF17533D3700DDC98F /* Mobage_onPause.h */; };
+		C578659C176884E100C56F06 /* Mobage_onPause.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F017533D3700DDC98F /* Mobage_onPause.m */; };
+		C578659D176884E100C56F06 /* Mobage_onResume.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5F317533D5900DDC98F /* Mobage_onResume.h */; };
+		C578659E176884E100C56F06 /* Mobage_onResume.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F417533D5900DDC98F /* Mobage_onResume.m */; };
+		C578659F176884E100C56F06 /* Mobage_showLoginDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5F717533D8000DDC98F /* Mobage_showLoginDialog.h */; };
+		C57865A0176884E100C56F06 /* Mobage_showLoginDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5F817533D8000DDC98F /* Mobage_showLoginDialog.m */; };
+		C57865A1176884E100C56F06 /* Mobage_showLogoutDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5FB17533DA000DDC98F /* Mobage_showLogoutDialog.h */; };
+		C57865A2176884E100C56F06 /* Mobage_showLogoutDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA5FC17533DA000DDC98F /* Mobage_showLogoutDialog.m */; };
+		C57865A3176884E100C56F06 /* Mobage_hideSplashScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA5FF17533DC700DDC98F /* Mobage_hideSplashScreen.h */; };
+		C57865A4176884E100C56F06 /* Mobage_hideSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60017533DC700DDC98F /* Mobage_hideSplashScreen.m */; };
+		C57865A5176884E100C56F06 /* Mobage_tick.h in Headers */ = {isa = PBXBuildFile; fileRef = C54EA60317533DEC00DDC98F /* Mobage_tick.h */; };
+		C57865A6176884E100C56F06 /* Mobage_tick.m in Sources */ = {isa = PBXBuildFile; fileRef = C54EA60417533DEC00DDC98F /* Mobage_tick.m */; };
+		C57865AB1769A50500C56F06 /* common_Service_updateBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865A91769A4FE00C56F06 /* common_Service_updateBalanceButton.h */; };
+		C57865AC1769A50500C56F06 /* common_Service_updateBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865AA1769A50100C56F06 /* common_Service_updateBalanceButton.m */; };
+		C57865AD1769A60D00C56F06 /* common_Service_updateBalanceButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865A91769A4FE00C56F06 /* common_Service_updateBalanceButton.h */; };
+		C57865AE1769A60D00C56F06 /* common_Service_updateBalanceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865AA1769A50100C56F06 /* common_Service_updateBalanceButton.m */; };
+		C57865B11769A6A100C56F06 /* kr_Service_hideCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865AF1769A69F00C56F06 /* kr_Service_hideCommunityButton.h */; };
+		C57865B21769A6A100C56F06 /* kr_Service_hideCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865B01769A6A000C56F06 /* kr_Service_hideCommunityButton.m */; };
+		C57865B51769A6D700C56F06 /* kr_Service_openDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865B31769A6D600C56F06 /* kr_Service_openDocument.h */; };
+		C57865B61769A6D700C56F06 /* kr_Service_openDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865B41769A6D600C56F06 /* kr_Service_openDocument.m */; };
+		C57865B91769A72200C56F06 /* kr_Service_openFriendRequestSender.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865B71769A72000C56F06 /* kr_Service_openFriendRequestSender.h */; };
+		C57865BA1769A72200C56F06 /* kr_Service_openFriendRequestSender.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865B81769A72100C56F06 /* kr_Service_openFriendRequestSender.m */; };
+		C57865BD1769A74F00C56F06 /* kr_Service_shareMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865BB1769A74C00C56F06 /* kr_Service_shareMessage.h */; };
+		C57865BE1769A74F00C56F06 /* kr_Service_shareMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865BC1769A74E00C56F06 /* kr_Service_shareMessage.m */; };
+		C57865C11769A77400C56F06 /* kr_Service_showCommunityButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865BF1769A77000C56F06 /* kr_Service_showCommunityButton.h */; };
+		C57865C21769A77400C56F06 /* kr_Service_showCommunityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865C01769A77200C56F06 /* kr_Service_showCommunityButton.m */; };
+		C57865CE1769AD7900C56F06 /* kr_Textdata_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865C41769AD7900C56F06 /* kr_Textdata_base.h */; };
+		C57865CF1769AD7900C56F06 /* kr_Textdata_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865C51769AD7900C56F06 /* kr_Textdata_base.m */; };
+		C57865D01769AD7900C56F06 /* kr_Textdata_createEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865C61769AD7900C56F06 /* kr_Textdata_createEntry.h */; };
+		C57865D11769AD7900C56F06 /* kr_Textdata_createEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865C71769AD7900C56F06 /* kr_Textdata_createEntry.m */; };
+		C57865D21769AD7900C56F06 /* kr_Textdata_deleteEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865C81769AD7900C56F06 /* kr_Textdata_deleteEntry.h */; };
+		C57865D31769AD7900C56F06 /* kr_Textdata_deleteEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865C91769AD7900C56F06 /* kr_Textdata_deleteEntry.m */; };
+		C57865D41769AD7900C56F06 /* kr_Textdata_getEntries.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865CA1769AD7900C56F06 /* kr_Textdata_getEntries.h */; };
+		C57865D51769AD7900C56F06 /* kr_Textdata_getEntries.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865CB1769AD7900C56F06 /* kr_Textdata_getEntries.m */; };
+		C57865D61769AD7900C56F06 /* kr_Textdata_updateEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = C57865CC1769AD7900C56F06 /* kr_Textdata_updateEntry.h */; };
+		C57865D71769AD7900C56F06 /* kr_Textdata_updateEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C57865CD1769AD7900C56F06 /* kr_Textdata_updateEntry.m */; };
+		C5B46DD1182B8233005A78FD /* Mobage_registerTick.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B46DCF182B8233005A78FD /* Mobage_registerTick.h */; };
+		C5B46DD2182B8233005A78FD /* Mobage_registerTick.h in Headers */ = {isa = PBXBuildFile; fileRef = C5B46DCF182B8233005A78FD /* Mobage_registerTick.h */; };
+		C5B46DD3182B8233005A78FD /* Mobage_registerTick.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B46DD0182B8233005A78FD /* Mobage_registerTick.m */; };
+		C5B46DD4182B8233005A78FD /* Mobage_registerTick.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B46DD0182B8233005A78FD /* Mobage_registerTick.m */; };
+		C5B46DD5182B9258005A78FD /* AppDelegatePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C509EB0617C24E2D00F06F23 /* AppDelegatePatch.m */; };
+		C5B46DD6182B9259005A78FD /* AppDelegatePatch.m in Sources */ = {isa = PBXBuildFile; fileRef = C509EB0617C24E2D00F06F23 /* AppDelegatePatch.m */; };
+		C5B46DD7182B925D005A78FD /* AppDelegatePatch.h in Headers */ = {isa = PBXBuildFile; fileRef = C509EB0517C24E1E00F06F23 /* AppDelegatePatch.h */; };
+		C5B46DD8182B925E005A78FD /* AppDelegatePatch.h in Headers */ = {isa = PBXBuildFile; fileRef = C509EB0517C24E1E00F06F23 /* AppDelegatePatch.h */; };
+		C5C8156D183DC45A00DD2D41 /* MobageAd_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81567183DC45A00DD2D41 /* MobageAd_base.h */; };
+		C5C8156E183DC45A00DD2D41 /* MobageAd_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81567183DC45A00DD2D41 /* MobageAd_base.h */; };
+		C5C8156F183DC45A00DD2D41 /* MobageAd_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81568183DC45A00DD2D41 /* MobageAd_base.m */; };
+		C5C81570183DC45A00DD2D41 /* MobageAd_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81568183DC45A00DD2D41 /* MobageAd_base.m */; };
+		C5C81571183DC45A00DD2D41 /* MobageAd_hideIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81569183DC45A00DD2D41 /* MobageAd_hideIconListView.h */; };
+		C5C81572183DC45A00DD2D41 /* MobageAd_hideIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81569183DC45A00DD2D41 /* MobageAd_hideIconListView.h */; };
+		C5C81573183DC45A00DD2D41 /* MobageAd_hideIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8156A183DC45A00DD2D41 /* MobageAd_hideIconListView.m */; };
+		C5C81574183DC45A00DD2D41 /* MobageAd_hideIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8156A183DC45A00DD2D41 /* MobageAd_hideIconListView.m */; };
+		C5C81575183DC45A00DD2D41 /* MobageAd_showIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C8156B183DC45A00DD2D41 /* MobageAd_showIconListView.h */; };
+		C5C81576183DC45A00DD2D41 /* MobageAd_showIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C8156B183DC45A00DD2D41 /* MobageAd_showIconListView.h */; };
+		C5C81577183DC45A00DD2D41 /* MobageAd_showIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8156C183DC45A00DD2D41 /* MobageAd_showIconListView.m */; };
+		C5C81578183DC45A00DD2D41 /* MobageAd_showIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8156C183DC45A00DD2D41 /* MobageAd_showIconListView.m */; };
+		C5C8157B183DC4E600DD2D41 /* MobageAd_loadIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81579183DC4E600DD2D41 /* MobageAd_loadIconListView.h */; };
+		C5C8157C183DC4E600DD2D41 /* MobageAd_loadIconListView.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81579183DC4E600DD2D41 /* MobageAd_loadIconListView.h */; };
+		C5C8157D183DC4E600DD2D41 /* MobageAd_loadIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8157A183DC4E600DD2D41 /* MobageAd_loadIconListView.m */; };
+		C5C8157E183DC4E600DD2D41 /* MobageAd_loadIconListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C8157A183DC4E600DD2D41 /* MobageAd_loadIconListView.m */; };
+		C5C81581183DCC3000DD2D41 /* MobageAd_showPopupDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C8157F183DCC3000DD2D41 /* MobageAd_showPopupDialog.h */; };
+		C5C81582183DCC3000DD2D41 /* MobageAd_showPopupDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C8157F183DCC3000DD2D41 /* MobageAd_showPopupDialog.h */; };
+		C5C81583183DCC3000DD2D41 /* MobageAd_showPopupDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81580183DCC3000DD2D41 /* MobageAd_showPopupDialog.m */; };
+		C5C81584183DCC3000DD2D41 /* MobageAd_showPopupDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81580183DCC3000DD2D41 /* MobageAd_showPopupDialog.m */; };
+		C5C81587183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81585183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h */; };
+		C5C81588183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81585183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h */; };
+		C5C81589183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81586183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m */; };
+		C5C8158A183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81586183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m */; };
+		C5C81594183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81592183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h */; };
+		C5C81595183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81592183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h */; };
+		C5C81596183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81593183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m */; };
+		C5C81597183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81593183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m */; };
+		C5C8159A183F450900DD2D41 /* MobageAdEventReporter_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81598183F450900DD2D41 /* MobageAdEventReporter_base.h */; };
+		C5C8159B183F450900DD2D41 /* MobageAdEventReporter_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C81598183F450900DD2D41 /* MobageAdEventReporter_base.h */; };
+		C5C8159C183F450900DD2D41 /* MobageAdEventReporter_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81599183F450900DD2D41 /* MobageAdEventReporter_base.m */; };
+		C5C8159D183F450900DD2D41 /* MobageAdEventReporter_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C81599183F450900DD2D41 /* MobageAdEventReporter_base.m */; };
+		C5C815AC1843013500DD2D41 /* MBGADError+MobageAd_error.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */; };
+		C5C815AD1843013500DD2D41 /* MBGADError+MobageAd_error.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */; };
+		C5C815AE1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */; };
+		C5C815AF1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */; };
+		C5FF19EE1828B9C3009A00DE /* Account_getBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */; };
+		C5FF19EF1828B9C3009A00DE /* Account_getBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */; };
+		C5FF19F21828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */; };
+		C5FF19F31828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */; };
+		C5FF19F41828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */; };
+		C5FF19F51828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C57864BB1768728900C56F06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		009AC4D21453648D001C38F5 /* ANE4MobageSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ANE4MobageSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		009AC4D51453648D001C38F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F0A745014A8932B0036DC5A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5F0A745214A893370036DC5A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5F80F26D149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ANE4MobageSDK-Prefix.pch"; sourceTree = "<group>"; };
+		5F80F26E149EE7A90034C9BE /* ANE4MobageSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANE4MobageSDK.h; sourceTree = "<group>"; };
+		5F80F26F149EE7A90034C9BE /* ANE4MobageSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANE4MobageSDK.m; sourceTree = "<group>"; };
+		C506C923174F6EEA0016ED54 /* ArgsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArgsParser.h; sourceTree = "<group>"; };
+		C506C924174F6EEA0016ED54 /* ArgsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArgsParser.m; sourceTree = "<group>"; };
+		C508BDAD17F435D40004E6CB /* libmobage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmobage.a; path = MobageSDK/lib/libmobage.a; sourceTree = "<group>"; };
+		C509EB0517C24E1E00F06F23 /* AppDelegatePatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegatePatch.h; sourceTree = "<group>"; };
+		C509EB0617C24E2D00F06F23 /* AppDelegatePatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegatePatch.m; sourceTree = "<group>"; };
+		C511FB6217D5823800C6292B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C53F73D0174B715800EA7A2B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		C53F73D2174B716000EA7A2B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		C53F73D4174B716D00EA7A2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C53F73D6174B718800EA7A2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C53F73D8174B719900EA7A2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C54EA5CD17530FEC00DDC98F /* FunctionSets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionSets.h; sourceTree = "<group>"; };
+		C54EA5CE17530FEC00DDC98F /* FunctionSets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionSets.m; sourceTree = "<group>"; };
+		C54EA5DB17533C5F00DDC98F /* Mobage_addPlatformListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_addPlatformListener.h; sourceTree = "<group>"; };
+		C54EA5DC17533C5F00DDC98F /* Mobage_addPlatformListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_addPlatformListener.m; sourceTree = "<group>"; };
+		C54EA5DD17533C5F00DDC98F /* Mobage_checkLoginStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_checkLoginStatus.h; sourceTree = "<group>"; };
+		C54EA5DE17533C5F00DDC98F /* Mobage_checkLoginStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_checkLoginStatus.m; sourceTree = "<group>"; };
+		C54EA5DF17533C5F00DDC98F /* Mobage_initialize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_initialize.h; sourceTree = "<group>"; };
+		C54EA5E017533C5F00DDC98F /* Mobage_initialize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_initialize.m; sourceTree = "<group>"; };
+		C54EA5E717533CCA00DDC98F /* Mobage_getSdkVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_getSdkVersion.h; sourceTree = "<group>"; };
+		C54EA5E817533CCA00DDC98F /* Mobage_getSdkVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_getSdkVersion.m; sourceTree = "<group>"; };
+		C54EA5EF17533D3700DDC98F /* Mobage_onPause.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_onPause.h; sourceTree = "<group>"; };
+		C54EA5F017533D3700DDC98F /* Mobage_onPause.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_onPause.m; sourceTree = "<group>"; };
+		C54EA5F317533D5900DDC98F /* Mobage_onResume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_onResume.h; sourceTree = "<group>"; };
+		C54EA5F417533D5900DDC98F /* Mobage_onResume.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_onResume.m; sourceTree = "<group>"; };
+		C54EA5F717533D8000DDC98F /* Mobage_showLoginDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_showLoginDialog.h; sourceTree = "<group>"; };
+		C54EA5F817533D8000DDC98F /* Mobage_showLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_showLoginDialog.m; sourceTree = "<group>"; };
+		C54EA5FB17533DA000DDC98F /* Mobage_showLogoutDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_showLogoutDialog.h; sourceTree = "<group>"; };
+		C54EA5FC17533DA000DDC98F /* Mobage_showLogoutDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_showLogoutDialog.m; sourceTree = "<group>"; };
+		C54EA5FF17533DC700DDC98F /* Mobage_hideSplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_hideSplashScreen.h; sourceTree = "<group>"; };
+		C54EA60017533DC700DDC98F /* Mobage_hideSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_hideSplashScreen.m; sourceTree = "<group>"; };
+		C54EA60317533DEC00DDC98F /* Mobage_tick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_tick.h; sourceTree = "<group>"; };
+		C54EA60417533DEC00DDC98F /* Mobage_tick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_tick.m; sourceTree = "<group>"; };
+		C54EA60E1753617000DDC98F /* Mobage_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_base.h; sourceTree = "<group>"; };
+		C54EA60F1753617000DDC98F /* Mobage_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_base.m; sourceTree = "<group>"; };
+		C54EA612175369EA00DDC98F /* ContextOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextOwner.h; sourceTree = "<group>"; };
+		C54EA613175369EB00DDC98F /* ContextOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextOwner.m; sourceTree = "<group>"; };
+		C54EA6191753735500DDC98F /* common_RemoteNotification_setListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_RemoteNotification_setListener.h; sourceTree = "<group>"; };
+		C54EA61A1753735500DDC98F /* common_RemoteNotification_setListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_RemoteNotification_setListener.m; sourceTree = "<group>"; };
+		C54EA62C1753A0C800DDC98F /* Mobage_openUpgradeDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_openUpgradeDialog.h; sourceTree = "<group>"; };
+		C54EA62D1753A0C900DDC98F /* Mobage_openUpgradeDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_openUpgradeDialog.m; sourceTree = "<group>"; };
+		C54EA6321753A35D00DDC98F /* Debit_cancelTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_cancelTransaction.h; sourceTree = "<group>"; };
+		C54EA6331753A35D00DDC98F /* Debit_cancelTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_cancelTransaction.m; sourceTree = "<group>"; };
+		C54EA6361753A3B200DDC98F /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		C54EA6371753A3B300DDC98F /* Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base.m; sourceTree = "<group>"; };
+		C54EA63A1753A44C00DDC98F /* Debit_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_base.h; sourceTree = "<group>"; };
+		C54EA63B1753A44C00DDC98F /* Debit_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_base.m; sourceTree = "<group>"; };
+		C54EA63E1753A69200DDC98F /* Debit_closeTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_closeTransaction.h; sourceTree = "<group>"; };
+		C54EA63F1753A69300DDC98F /* Debit_closeTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_closeTransaction.m; sourceTree = "<group>"; };
+		C54EA6421754504300DDC98F /* Debit_continueTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_continueTransaction.h; sourceTree = "<group>"; };
+		C54EA6431754504300DDC98F /* Debit_continueTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_continueTransaction.m; sourceTree = "<group>"; };
+		C54EA6461754559300DDC98F /* Debit_createTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_createTransaction.h; sourceTree = "<group>"; };
+		C54EA6471754559300DDC98F /* Debit_createTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_createTransaction.m; sourceTree = "<group>"; };
+		C54EA64A175456B900DDC98F /* Debit_getPendingTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_getPendingTransaction.h; sourceTree = "<group>"; };
+		C54EA64B175456BA00DDC98F /* Debit_getPendingTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_getPendingTransaction.m; sourceTree = "<group>"; };
+		C54EA64E1754578500DDC98F /* Debit_getTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_getTransaction.h; sourceTree = "<group>"; };
+		C54EA64F1754578600DDC98F /* Debit_getTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_getTransaction.m; sourceTree = "<group>"; };
+		C54EA6521754583100DDC98F /* Debit_openTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debit_openTransaction.h; sourceTree = "<group>"; };
+		C54EA6531754583100DDC98F /* Debit_openTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Debit_openTransaction.m; sourceTree = "<group>"; };
+		C54EA6571754593700DDC98F /* Inventory_getItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inventory_getItem.h; sourceTree = "<group>"; };
+		C54EA6581754593700DDC98F /* Inventory_getItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Inventory_getItem.m; sourceTree = "<group>"; };
+		C54EA65C17545E0F00DDC98F /* common_Appdata_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Appdata_base.h; sourceTree = "<group>"; };
+		C54EA65D17545E0F00DDC98F /* common_Appdata_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Appdata_base.m; sourceTree = "<group>"; };
+		C54EA66017545E7400DDC98F /* common_Appdata_deleteEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Appdata_deleteEntries.h; sourceTree = "<group>"; };
+		C54EA66117545E7400DDC98F /* common_Appdata_deleteEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Appdata_deleteEntries.m; sourceTree = "<group>"; };
+		C54EA6641754602300DDC98F /* common_Appdata_getEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Appdata_getEntries.h; sourceTree = "<group>"; };
+		C54EA6651754602300DDC98F /* common_Appdata_getEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Appdata_getEntries.m; sourceTree = "<group>"; };
+		C54EA6681754611900DDC98F /* common_Appdata_updateEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Appdata_updateEntries.h; sourceTree = "<group>"; };
+		C54EA6691754611900DDC98F /* common_Appdata_updateEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Appdata_updateEntries.m; sourceTree = "<group>"; };
+		C54EA66D1754623500DDC98F /* common_Auth_authorizeToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Auth_authorizeToken.h; sourceTree = "<group>"; };
+		C54EA66E1754623500DDC98F /* common_Auth_authorizeToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Auth_authorizeToken.m; sourceTree = "<group>"; };
+		C54EA672175464F100DDC98F /* common_Blacklist_checkBlacklist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Blacklist_checkBlacklist.h; sourceTree = "<group>"; };
+		C54EA673175464F100DDC98F /* common_Blacklist_checkBlacklist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Blacklist_checkBlacklist.m; sourceTree = "<group>"; };
+		C54EA677175479AA00DDC98F /* common_Leaderboard_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_base.h; sourceTree = "<group>"; };
+		C54EA678175479AA00DDC98F /* common_Leaderboard_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_base.m; sourceTree = "<group>"; };
+		C54EA67B175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_deleteCurrentUserScore.h; sourceTree = "<group>"; };
+		C54EA67C175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_deleteCurrentUserScore.m; sourceTree = "<group>"; };
+		C54EA67F17547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getAllLeaderboards.h; sourceTree = "<group>"; };
+		C54EA68017547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getAllLeaderboards.m; sourceTree = "<group>"; };
+		C54EA68317547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getFriendsScoresList.h; sourceTree = "<group>"; };
+		C54EA68417547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getFriendsScoresList.m; sourceTree = "<group>"; };
+		C54EA68717547F6300DDC98F /* common_Leaderboard_getLeaderboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getLeaderboard.h; sourceTree = "<group>"; };
+		C54EA68817547F6300DDC98F /* common_Leaderboard_getLeaderboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getLeaderboard.m; sourceTree = "<group>"; };
+		C54EA68B1754802000DDC98F /* common_Leaderboard_getLeaderboards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getLeaderboards.h; sourceTree = "<group>"; };
+		C54EA68C1754802000DDC98F /* common_Leaderboard_getLeaderboards.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getLeaderboards.m; sourceTree = "<group>"; };
+		C54EA68F175480C900DDC98F /* common_Leaderboard_getScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getScore.h; sourceTree = "<group>"; };
+		C54EA690175480CA00DDC98F /* common_Leaderboard_getScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getScore.m; sourceTree = "<group>"; };
+		C54EA6931754829A00DDC98F /* common_Leaderboard_getTopScoresList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_getTopScoresList.h; sourceTree = "<group>"; };
+		C54EA6941754829A00DDC98F /* common_Leaderboard_getTopScoresList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_getTopScoresList.m; sourceTree = "<group>"; };
+		C54EA6971754836100DDC98F /* common_Leaderboard_updateCurrentUserScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Leaderboard_updateCurrentUserScore.h; sourceTree = "<group>"; };
+		C54EA6981754836200DDC98F /* common_Leaderboard_updateCurrentUserScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Leaderboard_updateCurrentUserScore.m; sourceTree = "<group>"; };
+		C54EA69C175485F000DDC98F /* common_People_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_base.h; sourceTree = "<group>"; };
+		C54EA69D175485F000DDC98F /* common_People_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_base.m; sourceTree = "<group>"; };
+		C54EA6A01754864900DDC98F /* common_People_getCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_getCurrentUser.h; sourceTree = "<group>"; };
+		C54EA6A11754864900DDC98F /* common_People_getCurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_getCurrentUser.m; sourceTree = "<group>"; };
+		C54EA6A4175489FF00DDC98F /* common_People_getFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_getFriends.h; sourceTree = "<group>"; };
+		C54EA6A5175489FF00DDC98F /* common_People_getFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_getFriends.m; sourceTree = "<group>"; };
+		C54EA6A817548B5A00DDC98F /* common_People_getFriendsWithGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_getFriendsWithGame.h; sourceTree = "<group>"; };
+		C54EA6A917548B5A00DDC98F /* common_People_getFriendsWithGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_getFriendsWithGame.m; sourceTree = "<group>"; };
+		C54EA6AC17548BF800DDC98F /* common_People_getUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_getUser.h; sourceTree = "<group>"; };
+		C54EA6AD17548BF800DDC98F /* common_People_getUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_getUser.m; sourceTree = "<group>"; };
+		C54EA6B017548C7200DDC98F /* common_People_getUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_People_getUsers.h; sourceTree = "<group>"; };
+		C54EA6B117548C7300DDC98F /* common_People_getUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_People_getUsers.m; sourceTree = "<group>"; };
+		C54EA6B517548D2900DDC98F /* common_Profanity_checkProfanity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Profanity_checkProfanity.h; sourceTree = "<group>"; };
+		C54EA6B617548D2900DDC98F /* common_Profanity_checkProfanity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Profanity_checkProfanity.m; sourceTree = "<group>"; };
+		C54EA6B917548DEF00DDC98F /* common_RemoteNotification_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_RemoteNotification_base.h; sourceTree = "<group>"; };
+		C54EA6BA17548DEF00DDC98F /* common_RemoteNotification_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_RemoteNotification_base.m; sourceTree = "<group>"; };
+		C54EA6BD17548E1000DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_RemoteNotification_getRemoteNotificationsEnabled.h; sourceTree = "<group>"; };
+		C54EA6BE17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_RemoteNotification_getRemoteNotificationsEnabled.m; sourceTree = "<group>"; };
+		C54EA6C117548ED700DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_RemoteNotification_setRemoteNotificationsEnabled.h; sourceTree = "<group>"; };
+		C54EA6C217548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_RemoteNotification_setRemoteNotificationsEnabled.m; sourceTree = "<group>"; };
+		C54EA6C517548FA500DDC98F /* common_RemoteNotification_send_iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_RemoteNotification_send_iOS.h; sourceTree = "<group>"; };
+		C54EA6C617548FA600DDC98F /* common_RemoteNotification_send_iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_RemoteNotification_send_iOS.m; sourceTree = "<group>"; };
+		C54EA6CA1754972600DDC98F /* common_Service_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_base.h; sourceTree = "<group>"; };
+		C54EA6CB1754972600DDC98F /* common_Service_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_base.m; sourceTree = "<group>"; };
+		C54EA6CE1754975200DDC98F /* common_Service_getBalanceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_getBalanceButton.h; sourceTree = "<group>"; };
+		C54EA6CF1754975200DDC98F /* common_Service_getBalanceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_getBalanceButton.m; sourceTree = "<group>"; };
+		C54EA6D2175499EF00DDC98F /* common_Service_removeBalanceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_removeBalanceButton.h; sourceTree = "<group>"; };
+		C54EA6D3175499EF00DDC98F /* common_Service_removeBalanceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_removeBalanceButton.m; sourceTree = "<group>"; };
+		C54EA6D617549A4400DDC98F /* common_Service_launchPortalApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_launchPortalApp.h; sourceTree = "<group>"; };
+		C54EA6D717549A4400DDC98F /* common_Service_launchPortalApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_launchPortalApp.m; sourceTree = "<group>"; };
+		C54EA6DA17549B1000DDC98F /* common_Service_openFriendPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_openFriendPicker.h; sourceTree = "<group>"; };
+		C54EA6DB17549B1100DDC98F /* common_Service_openFriendPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_openFriendPicker.m; sourceTree = "<group>"; };
+		C54EA6DE17549C3500DDC98F /* common_Service_openUserProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_openUserProfile.h; sourceTree = "<group>"; };
+		C54EA6DF17549C3500DDC98F /* common_Service_openUserProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_openUserProfile.m; sourceTree = "<group>"; };
+		C54EA6E217549CC300DDC98F /* common_Service_showBankUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_showBankUi.h; sourceTree = "<group>"; };
+		C54EA6E317549CC300DDC98F /* common_Service_showBankUi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_showBankUi.m; sourceTree = "<group>"; };
+		C54EA6E81754A53000DDC98F /* jp_Service_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Service_base.h; sourceTree = "<group>"; };
+		C54EA6E91754A53000DDC98F /* jp_Service_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Service_base.m; sourceTree = "<group>"; };
+		C54EA6EC1754A56D00DDC98F /* jp_Service_openDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Service_openDocument.h; sourceTree = "<group>"; };
+		C54EA6ED1754A56D00DDC98F /* jp_Service_openDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Service_openDocument.m; sourceTree = "<group>"; };
+		C54EA6F01754ABBF00DDC98F /* jp_Service_showCommunityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Service_showCommunityButton.h; sourceTree = "<group>"; };
+		C54EA6F11754ABBF00DDC98F /* jp_Service_showCommunityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Service_showCommunityButton.m; sourceTree = "<group>"; };
+		C54EA6F41754AE3B00DDC98F /* jp_Service_hideCommunityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Service_hideCommunityButton.h; sourceTree = "<group>"; };
+		C54EA6F51754AE3C00DDC98F /* jp_Service_hideCommunityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Service_hideCommunityButton.m; sourceTree = "<group>"; };
+		C54EA6F81754AECE00DDC98F /* jp_Service_shareMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Service_shareMessage.h; sourceTree = "<group>"; };
+		C54EA6F91754AECF00DDC98F /* jp_Service_shareMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Service_shareMessage.m; sourceTree = "<group>"; };
+		C54EA6FD1754B02A00DDC98F /* jp_Textdata_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Textdata_base.h; sourceTree = "<group>"; };
+		C54EA6FE1754B02A00DDC98F /* jp_Textdata_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Textdata_base.m; sourceTree = "<group>"; };
+		C54EA7011754B05E00DDC98F /* jp_Textdata_createEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Textdata_createEntry.h; sourceTree = "<group>"; };
+		C54EA7021754B05E00DDC98F /* jp_Textdata_createEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Textdata_createEntry.m; sourceTree = "<group>"; };
+		C54EA7051754B63200DDC98F /* jp_Textdata_getEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Textdata_getEntries.h; sourceTree = "<group>"; };
+		C54EA7061754B63300DDC98F /* jp_Textdata_getEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Textdata_getEntries.m; sourceTree = "<group>"; };
+		C54EA7091754B72400DDC98F /* jp_Textdata_updateEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Textdata_updateEntry.h; sourceTree = "<group>"; };
+		C54EA70A1754B72500DDC98F /* jp_Textdata_updateEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Textdata_updateEntry.m; sourceTree = "<group>"; };
+		C54EA70D1754B7D800DDC98F /* jp_Textdata_deleteEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jp_Textdata_deleteEntry.h; sourceTree = "<group>"; };
+		C54EA70E1754B7D900DDC98F /* jp_Textdata_deleteEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jp_Textdata_deleteEntry.m; sourceTree = "<group>"; };
+		C54EA71317558DCF00DDC98F /* kr_Service_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_base.h; sourceTree = "<group>"; };
+		C54EA71417558DCF00DDC98F /* kr_Service_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_base.m; sourceTree = "<group>"; };
+		C54EA7171755E6FF00DDC98F /* AlertDialog_show.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertDialog_show.h; sourceTree = "<group>"; };
+		C54EA7181755E71000DDC98F /* AlertDialog_show.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertDialog_show.m; sourceTree = "<group>"; };
+		C54EA71B1755EAA300DDC98F /* Log_print.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log_print.h; sourceTree = "<group>"; };
+		C54EA71C1755EAAF00DDC98F /* Log_print.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log_print.m; sourceTree = "<group>"; };
+		C54EA749175C308800DDC98F /* Mobage_removePlatformListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_removePlatformListener.h; sourceTree = "<group>"; };
+		C54EA74A175C308D00DDC98F /* Mobage_removePlatformListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_removePlatformListener.m; sourceTree = "<group>"; };
+		C54F0D69174CF29E00F634FF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C54F0D6C174CF29E00F634FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C5516D2617DD88F50070FBBA /* Mobage_addDashboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_addDashboardObserver.h; sourceTree = "<group>"; };
+		C5516D2717DD88F50070FBBA /* Mobage_addDashboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_addDashboardObserver.m; sourceTree = "<group>"; };
+		C5516D2A17DD8A9E0070FBBA /* Mobage_dashboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_dashboardObserver.h; sourceTree = "<group>"; };
+		C5516D2B17DD8A9E0070FBBA /* Mobage_dashboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_dashboardObserver.m; sourceTree = "<group>"; };
+		C5516D2E17DD8AC50070FBBA /* Mobage_removeDashboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_removeDashboardObserver.h; sourceTree = "<group>"; };
+		C5516D2F17DD8AC50070FBBA /* Mobage_removeDashboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_removeDashboardObserver.m; sourceTree = "<group>"; };
+		C57864BD1768728900C56F06 /* ANE4MobageSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ANE4MobageSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C57865A91769A4FE00C56F06 /* common_Service_updateBalanceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_updateBalanceButton.h; sourceTree = "<group>"; };
+		C57865AA1769A50100C56F06 /* common_Service_updateBalanceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_updateBalanceButton.m; sourceTree = "<group>"; };
+		C57865AF1769A69F00C56F06 /* kr_Service_hideCommunityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_hideCommunityButton.h; sourceTree = "<group>"; };
+		C57865B01769A6A000C56F06 /* kr_Service_hideCommunityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_hideCommunityButton.m; sourceTree = "<group>"; };
+		C57865B31769A6D600C56F06 /* kr_Service_openDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_openDocument.h; sourceTree = "<group>"; };
+		C57865B41769A6D600C56F06 /* kr_Service_openDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_openDocument.m; sourceTree = "<group>"; };
+		C57865B71769A72000C56F06 /* kr_Service_openFriendRequestSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_openFriendRequestSender.h; sourceTree = "<group>"; };
+		C57865B81769A72100C56F06 /* kr_Service_openFriendRequestSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_openFriendRequestSender.m; sourceTree = "<group>"; };
+		C57865BB1769A74C00C56F06 /* kr_Service_shareMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_shareMessage.h; sourceTree = "<group>"; };
+		C57865BC1769A74E00C56F06 /* kr_Service_shareMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_shareMessage.m; sourceTree = "<group>"; };
+		C57865BF1769A77000C56F06 /* kr_Service_showCommunityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Service_showCommunityButton.h; sourceTree = "<group>"; };
+		C57865C01769A77200C56F06 /* kr_Service_showCommunityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Service_showCommunityButton.m; sourceTree = "<group>"; };
+		C57865C41769AD7900C56F06 /* kr_Textdata_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Textdata_base.h; sourceTree = "<group>"; };
+		C57865C51769AD7900C56F06 /* kr_Textdata_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Textdata_base.m; sourceTree = "<group>"; };
+		C57865C61769AD7900C56F06 /* kr_Textdata_createEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Textdata_createEntry.h; sourceTree = "<group>"; };
+		C57865C71769AD7900C56F06 /* kr_Textdata_createEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Textdata_createEntry.m; sourceTree = "<group>"; };
+		C57865C81769AD7900C56F06 /* kr_Textdata_deleteEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Textdata_deleteEntry.h; sourceTree = "<group>"; };
+		C57865C91769AD7900C56F06 /* kr_Textdata_deleteEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Textdata_deleteEntry.m; sourceTree = "<group>"; };
+		C57865CA1769AD7900C56F06 /* kr_Textdata_getEntries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Textdata_getEntries.h; sourceTree = "<group>"; };
+		C57865CB1769AD7900C56F06 /* kr_Textdata_getEntries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Textdata_getEntries.m; sourceTree = "<group>"; };
+		C57865CC1769AD7900C56F06 /* kr_Textdata_updateEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kr_Textdata_updateEntry.h; sourceTree = "<group>"; };
+		C57865CD1769AD7900C56F06 /* kr_Textdata_updateEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kr_Textdata_updateEntry.m; sourceTree = "<group>"; };
+		C5B46DCF182B8233005A78FD /* Mobage_registerTick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_registerTick.h; sourceTree = "<group>"; };
+		C5B46DD0182B8233005A78FD /* Mobage_registerTick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_registerTick.m; sourceTree = "<group>"; };
+		C5C81567183DC45A00DD2D41 /* MobageAd_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_base.h; sourceTree = "<group>"; };
+		C5C81568183DC45A00DD2D41 /* MobageAd_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_base.m; sourceTree = "<group>"; };
+		C5C81569183DC45A00DD2D41 /* MobageAd_hideIconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_hideIconListView.h; sourceTree = "<group>"; };
+		C5C8156A183DC45A00DD2D41 /* MobageAd_hideIconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_hideIconListView.m; sourceTree = "<group>"; };
+		C5C8156B183DC45A00DD2D41 /* MobageAd_showIconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_showIconListView.h; sourceTree = "<group>"; };
+		C5C8156C183DC45A00DD2D41 /* MobageAd_showIconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_showIconListView.m; sourceTree = "<group>"; };
+		C5C81579183DC4E600DD2D41 /* MobageAd_loadIconListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_loadIconListView.h; sourceTree = "<group>"; };
+		C5C8157A183DC4E600DD2D41 /* MobageAd_loadIconListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_loadIconListView.m; sourceTree = "<group>"; };
+		C5C8157F183DCC3000DD2D41 /* MobageAd_showPopupDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_showPopupDialog.h; sourceTree = "<group>"; };
+		C5C81580183DCC3000DD2D41 /* MobageAd_showPopupDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_showPopupDialog.m; sourceTree = "<group>"; };
+		C5C81585183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_loadPopupDialog.h; sourceTree = "<group>"; };
+		C5C81586183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_loadPopupDialog.m; sourceTree = "<group>"; };
+		C5C81592183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAdEventReporter_sendCustomEvent.h; sourceTree = "<group>"; };
+		C5C81593183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAdEventReporter_sendCustomEvent.m; sourceTree = "<group>"; };
+		C5C81598183F450900DD2D41 /* MobageAdEventReporter_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAdEventReporter_base.h; sourceTree = "<group>"; };
+		C5C81599183F450900DD2D41 /* MobageAdEventReporter_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAdEventReporter_base.m; sourceTree = "<group>"; };
+		C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBGADError+MobageAd_error.h"; sourceTree = "<group>"; };
+		C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBGADError+MobageAd_error.m"; sourceTree = "<group>"; };
+		C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account_getBalance.h; sourceTree = "<group>"; };
+		C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account_getBalance.m; sourceTree = "<group>"; };
+		C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_showCommunityUI.h; sourceTree = "<group>"; };
+		C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_showCommunityUI.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		009AC4CF1453648D001C38F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C511FB6317D5823800C6292B /* SystemConfiguration.framework in Frameworks */,
+				C53F73D9174B719900EA7A2B /* CoreGraphics.framework in Frameworks */,
+				C53F73D7174B718800EA7A2B /* UIKit.framework in Frameworks */,
+				5F0A745114A8932B0036DC5A /* StoreKit.framework in Frameworks */,
+				C53F73D5174B716D00EA7A2B /* Security.framework in Frameworks */,
+				C53F73D3174B716000EA7A2B /* AdSupport.framework in Frameworks */,
+				009AC4D61453648D001C38F5 /* Foundation.framework in Frameworks */,
+				C508BDAE17F435D40004E6CB /* libmobage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57864BA1768728900C56F06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C511FB6417D582A000C6292B /* SystemConfiguration.framework in Frameworks */,
+				C57864BE1768728900C56F06 /* Foundation.framework in Frameworks */,
+				C57864C9176875CE00C56F06 /* CoreGraphics.framework in Frameworks */,
+				C57864CA176875D700C56F06 /* UIKit.framework in Frameworks */,
+				C57864CB176875DB00C56F06 /* Security.framework in Frameworks */,
+				C57864CC176875DF00C56F06 /* AdSupport.framework in Frameworks */,
+				C57864CE176875E900C56F06 /* StoreKit.framework in Frameworks */,
+				C508BDAF17F435D40004E6CB /* libmobage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		009AC4C71453648D001C38F5 = {
+			isa = PBXGroup;
+			children = (
+				C508BDAD17F435D40004E6CB /* libmobage.a */,
+				5F80F26C149EE7A90034C9BE /* src */,
+				5F0A744414A891D00036DC5A /* lib */,
+				009AC4D41453648D001C38F5 /* Frameworks */,
+				009AC4D31453648D001C38F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		009AC4D31453648D001C38F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				009AC4D21453648D001C38F5 /* ANE4MobageSDK.a */,
+				C57864BD1768728900C56F06 /* ANE4MobageSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		009AC4D41453648D001C38F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C511FB6217D5823800C6292B /* SystemConfiguration.framework */,
+				C53F73D8174B719900EA7A2B /* CoreGraphics.framework */,
+				C53F73D6174B718800EA7A2B /* UIKit.framework */,
+				C53F73D4174B716D00EA7A2B /* Security.framework */,
+				C53F73D2174B716000EA7A2B /* AdSupport.framework */,
+				C53F73D0174B715800EA7A2B /* MessageUI.framework */,
+				5F0A745014A8932B0036DC5A /* StoreKit.framework */,
+				009AC4D51453648D001C38F5 /* Foundation.framework */,
+				C54F0D69174CF29E00F634FF /* UIKit.framework */,
+				C54F0D6C174CF29E00F634FF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F0A744414A891D00036DC5A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5F0A745214A893370036DC5A /* libz.dylib */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		5F80F26C149EE7A90034C9BE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5F80F26E149EE7A90034C9BE /* ANE4MobageSDK.h */,
+				5F80F26F149EE7A90034C9BE /* ANE4MobageSDK.m */,
+				C54EA5C817530D9800DDC98F /* com.mobage.air.extension */,
+				C54EA5CD17530FEC00DDC98F /* FunctionSets.h */,
+				C54EA5CE17530FEC00DDC98F /* FunctionSets.m */,
+				C54EA612175369EA00DDC98F /* ContextOwner.h */,
+				C54EA613175369EB00DDC98F /* ContextOwner.m */,
+				C506C923174F6EEA0016ED54 /* ArgsParser.h */,
+				C506C924174F6EEA0016ED54 /* ArgsParser.m */,
+				C509EB0517C24E1E00F06F23 /* AppDelegatePatch.h */,
+				C509EB0617C24E2D00F06F23 /* AppDelegatePatch.m */,
+				5F80F26D149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C54EA5C817530D9800DDC98F /* com.mobage.air.extension */ = {
+			isa = PBXGroup;
+			children = (
+				C5C81546183DB01A00DD2D41 /* ad */,
+				C54EA6301753A30400DDC98F /* bank */,
+				C54EA616175372FC00DDC98F /* social */,
+				C54EA5DA17533C5F00DDC98F /* Mobage */,
+				C54EA6361753A3B200DDC98F /* Base.h */,
+				C54EA6371753A3B300DDC98F /* Base.m */,
+				C54EA7171755E6FF00DDC98F /* AlertDialog_show.h */,
+				C54EA7181755E71000DDC98F /* AlertDialog_show.m */,
+				C54EA71B1755EAA300DDC98F /* Log_print.h */,
+				C54EA71C1755EAAF00DDC98F /* Log_print.m */,
+			);
+			path = com.mobage.air.extension;
+			sourceTree = "<group>";
+		};
+		C54EA5DA17533C5F00DDC98F /* Mobage */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA60E1753617000DDC98F /* Mobage_base.h */,
+				C54EA60F1753617000DDC98F /* Mobage_base.m */,
+				C54EA5DF17533C5F00DDC98F /* Mobage_initialize.h */,
+				C54EA5E017533C5F00DDC98F /* Mobage_initialize.m */,
+				C54EA5DB17533C5F00DDC98F /* Mobage_addPlatformListener.h */,
+				C54EA5DC17533C5F00DDC98F /* Mobage_addPlatformListener.m */,
+				C54EA749175C308800DDC98F /* Mobage_removePlatformListener.h */,
+				C54EA74A175C308D00DDC98F /* Mobage_removePlatformListener.m */,
+				C54EA5DD17533C5F00DDC98F /* Mobage_checkLoginStatus.h */,
+				C54EA5DE17533C5F00DDC98F /* Mobage_checkLoginStatus.m */,
+				C54EA5E717533CCA00DDC98F /* Mobage_getSdkVersion.h */,
+				C54EA5E817533CCA00DDC98F /* Mobage_getSdkVersion.m */,
+				C54EA5EF17533D3700DDC98F /* Mobage_onPause.h */,
+				C54EA5F017533D3700DDC98F /* Mobage_onPause.m */,
+				C54EA5F317533D5900DDC98F /* Mobage_onResume.h */,
+				C54EA5F417533D5900DDC98F /* Mobage_onResume.m */,
+				C54EA5F717533D8000DDC98F /* Mobage_showLoginDialog.h */,
+				C54EA5F817533D8000DDC98F /* Mobage_showLoginDialog.m */,
+				C54EA5FB17533DA000DDC98F /* Mobage_showLogoutDialog.h */,
+				C54EA5FC17533DA000DDC98F /* Mobage_showLogoutDialog.m */,
+				C54EA5FF17533DC700DDC98F /* Mobage_hideSplashScreen.h */,
+				C54EA60017533DC700DDC98F /* Mobage_hideSplashScreen.m */,
+				C54EA60317533DEC00DDC98F /* Mobage_tick.h */,
+				C54EA60417533DEC00DDC98F /* Mobage_tick.m */,
+				C54EA62C1753A0C800DDC98F /* Mobage_openUpgradeDialog.h */,
+				C54EA62D1753A0C900DDC98F /* Mobage_openUpgradeDialog.m */,
+				C5516D2617DD88F50070FBBA /* Mobage_addDashboardObserver.h */,
+				C5516D2717DD88F50070FBBA /* Mobage_addDashboardObserver.m */,
+				C5516D2E17DD8AC50070FBBA /* Mobage_removeDashboardObserver.h */,
+				C5516D2F17DD8AC50070FBBA /* Mobage_removeDashboardObserver.m */,
+				C5516D2A17DD8A9E0070FBBA /* Mobage_dashboardObserver.h */,
+				C5516D2B17DD8A9E0070FBBA /* Mobage_dashboardObserver.m */,
+				C5B46DCF182B8233005A78FD /* Mobage_registerTick.h */,
+				C5B46DD0182B8233005A78FD /* Mobage_registerTick.m */,
+			);
+			path = Mobage;
+			sourceTree = "<group>";
+		};
+		C54EA616175372FC00DDC98F /* social */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA617175372FC00DDC98F /* common */,
+				C54EA6E617549DA200DDC98F /* jp */,
+				C54EA71117558D6800DDC98F /* kr */,
+			);
+			path = social;
+			sourceTree = "<group>";
+		};
+		C54EA617175372FC00DDC98F /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA65B17545DCB00DDC98F /* Appdata */,
+				C54EA66C1754621900DDC98F /* Auth */,
+				C54EA671175464C800DDC98F /* Blacklist */,
+				C54EA6761754798F00DDC98F /* Leaderboard */,
+				C54EA69B175485D100DDC98F /* People */,
+				C54EA6B417548D0F00DDC98F /* Profanity */,
+				C54EA618175372FC00DDC98F /* RemoteNotification */,
+				C54EA6C91754970700DDC98F /* Service */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C54EA618175372FC00DDC98F /* RemoteNotification */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6B917548DEF00DDC98F /* common_RemoteNotification_base.h */,
+				C54EA6BA17548DEF00DDC98F /* common_RemoteNotification_base.m */,
+				C54EA6BD17548E1000DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h */,
+				C54EA6BE17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m */,
+				C54EA6C117548ED700DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h */,
+				C54EA6C217548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m */,
+				C54EA6C517548FA500DDC98F /* common_RemoteNotification_send_iOS.h */,
+				C54EA6C617548FA600DDC98F /* common_RemoteNotification_send_iOS.m */,
+				C54EA6191753735500DDC98F /* common_RemoteNotification_setListener.h */,
+				C54EA61A1753735500DDC98F /* common_RemoteNotification_setListener.m */,
+			);
+			path = RemoteNotification;
+			sourceTree = "<group>";
+		};
+		C54EA6301753A30400DDC98F /* bank */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF19EB1828B961009A00DE /* Account */,
+				C54EA6311753A33900DDC98F /* Debit */,
+				C54EA656175458F300DDC98F /* Inventory */,
+			);
+			path = bank;
+			sourceTree = "<group>";
+		};
+		C54EA6311753A33900DDC98F /* Debit */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA63A1753A44C00DDC98F /* Debit_base.h */,
+				C54EA63B1753A44C00DDC98F /* Debit_base.m */,
+				C54EA6321753A35D00DDC98F /* Debit_cancelTransaction.h */,
+				C54EA6331753A35D00DDC98F /* Debit_cancelTransaction.m */,
+				C54EA63E1753A69200DDC98F /* Debit_closeTransaction.h */,
+				C54EA63F1753A69300DDC98F /* Debit_closeTransaction.m */,
+				C54EA6421754504300DDC98F /* Debit_continueTransaction.h */,
+				C54EA6431754504300DDC98F /* Debit_continueTransaction.m */,
+				C54EA6461754559300DDC98F /* Debit_createTransaction.h */,
+				C54EA6471754559300DDC98F /* Debit_createTransaction.m */,
+				C54EA64A175456B900DDC98F /* Debit_getPendingTransaction.h */,
+				C54EA64B175456BA00DDC98F /* Debit_getPendingTransaction.m */,
+				C54EA64E1754578500DDC98F /* Debit_getTransaction.h */,
+				C54EA64F1754578600DDC98F /* Debit_getTransaction.m */,
+				C54EA6521754583100DDC98F /* Debit_openTransaction.h */,
+				C54EA6531754583100DDC98F /* Debit_openTransaction.m */,
+			);
+			path = Debit;
+			sourceTree = "<group>";
+		};
+		C54EA656175458F300DDC98F /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6571754593700DDC98F /* Inventory_getItem.h */,
+				C54EA6581754593700DDC98F /* Inventory_getItem.m */,
+			);
+			path = Inventory;
+			sourceTree = "<group>";
+		};
+		C54EA65B17545DCB00DDC98F /* Appdata */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA65C17545E0F00DDC98F /* common_Appdata_base.h */,
+				C54EA65D17545E0F00DDC98F /* common_Appdata_base.m */,
+				C54EA66017545E7400DDC98F /* common_Appdata_deleteEntries.h */,
+				C54EA66117545E7400DDC98F /* common_Appdata_deleteEntries.m */,
+				C54EA6641754602300DDC98F /* common_Appdata_getEntries.h */,
+				C54EA6651754602300DDC98F /* common_Appdata_getEntries.m */,
+				C54EA6681754611900DDC98F /* common_Appdata_updateEntries.h */,
+				C54EA6691754611900DDC98F /* common_Appdata_updateEntries.m */,
+			);
+			path = Appdata;
+			sourceTree = "<group>";
+		};
+		C54EA66C1754621900DDC98F /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA66D1754623500DDC98F /* common_Auth_authorizeToken.h */,
+				C54EA66E1754623500DDC98F /* common_Auth_authorizeToken.m */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C54EA671175464C800DDC98F /* Blacklist */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA672175464F100DDC98F /* common_Blacklist_checkBlacklist.h */,
+				C54EA673175464F100DDC98F /* common_Blacklist_checkBlacklist.m */,
+			);
+			path = Blacklist;
+			sourceTree = "<group>";
+		};
+		C54EA6761754798F00DDC98F /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA677175479AA00DDC98F /* common_Leaderboard_base.h */,
+				C54EA678175479AA00DDC98F /* common_Leaderboard_base.m */,
+				C54EA67B175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h */,
+				C54EA67C175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m */,
+				C54EA67F17547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h */,
+				C54EA68017547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m */,
+				C54EA68317547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h */,
+				C54EA68417547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m */,
+				C54EA68717547F6300DDC98F /* common_Leaderboard_getLeaderboard.h */,
+				C54EA68817547F6300DDC98F /* common_Leaderboard_getLeaderboard.m */,
+				C54EA68B1754802000DDC98F /* common_Leaderboard_getLeaderboards.h */,
+				C54EA68C1754802000DDC98F /* common_Leaderboard_getLeaderboards.m */,
+				C54EA68F175480C900DDC98F /* common_Leaderboard_getScore.h */,
+				C54EA690175480CA00DDC98F /* common_Leaderboard_getScore.m */,
+				C54EA6931754829A00DDC98F /* common_Leaderboard_getTopScoresList.h */,
+				C54EA6941754829A00DDC98F /* common_Leaderboard_getTopScoresList.m */,
+				C54EA6971754836100DDC98F /* common_Leaderboard_updateCurrentUserScore.h */,
+				C54EA6981754836200DDC98F /* common_Leaderboard_updateCurrentUserScore.m */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		C54EA69B175485D100DDC98F /* People */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA69C175485F000DDC98F /* common_People_base.h */,
+				C54EA69D175485F000DDC98F /* common_People_base.m */,
+				C54EA6A01754864900DDC98F /* common_People_getCurrentUser.h */,
+				C54EA6A11754864900DDC98F /* common_People_getCurrentUser.m */,
+				C54EA6A4175489FF00DDC98F /* common_People_getFriends.h */,
+				C54EA6A5175489FF00DDC98F /* common_People_getFriends.m */,
+				C54EA6A817548B5A00DDC98F /* common_People_getFriendsWithGame.h */,
+				C54EA6A917548B5A00DDC98F /* common_People_getFriendsWithGame.m */,
+				C54EA6AC17548BF800DDC98F /* common_People_getUser.h */,
+				C54EA6AD17548BF800DDC98F /* common_People_getUser.m */,
+				C54EA6B017548C7200DDC98F /* common_People_getUsers.h */,
+				C54EA6B117548C7300DDC98F /* common_People_getUsers.m */,
+			);
+			path = People;
+			sourceTree = "<group>";
+		};
+		C54EA6B417548D0F00DDC98F /* Profanity */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6B517548D2900DDC98F /* common_Profanity_checkProfanity.h */,
+				C54EA6B617548D2900DDC98F /* common_Profanity_checkProfanity.m */,
+			);
+			path = Profanity;
+			sourceTree = "<group>";
+		};
+		C54EA6C91754970700DDC98F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6CA1754972600DDC98F /* common_Service_base.h */,
+				C54EA6CB1754972600DDC98F /* common_Service_base.m */,
+				C54EA6CE1754975200DDC98F /* common_Service_getBalanceButton.h */,
+				C54EA6CF1754975200DDC98F /* common_Service_getBalanceButton.m */,
+				C57865A91769A4FE00C56F06 /* common_Service_updateBalanceButton.h */,
+				C57865AA1769A50100C56F06 /* common_Service_updateBalanceButton.m */,
+				C54EA6D2175499EF00DDC98F /* common_Service_removeBalanceButton.h */,
+				C54EA6D3175499EF00DDC98F /* common_Service_removeBalanceButton.m */,
+				C54EA6D617549A4400DDC98F /* common_Service_launchPortalApp.h */,
+				C54EA6D717549A4400DDC98F /* common_Service_launchPortalApp.m */,
+				C54EA6DA17549B1000DDC98F /* common_Service_openFriendPicker.h */,
+				C54EA6DB17549B1100DDC98F /* common_Service_openFriendPicker.m */,
+				C54EA6DE17549C3500DDC98F /* common_Service_openUserProfile.h */,
+				C54EA6DF17549C3500DDC98F /* common_Service_openUserProfile.m */,
+				C54EA6E217549CC300DDC98F /* common_Service_showBankUi.h */,
+				C54EA6E317549CC300DDC98F /* common_Service_showBankUi.m */,
+				C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */,
+				C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C54EA6E617549DA200DDC98F /* jp */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6E71754A4EA00DDC98F /* Service */,
+				C54EA6FC1754AFFF00DDC98F /* Textdata */,
+			);
+			path = jp;
+			sourceTree = "<group>";
+		};
+		C54EA6E71754A4EA00DDC98F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6E81754A53000DDC98F /* jp_Service_base.h */,
+				C54EA6E91754A53000DDC98F /* jp_Service_base.m */,
+				C54EA6EC1754A56D00DDC98F /* jp_Service_openDocument.h */,
+				C54EA6ED1754A56D00DDC98F /* jp_Service_openDocument.m */,
+				C54EA6F01754ABBF00DDC98F /* jp_Service_showCommunityButton.h */,
+				C54EA6F11754ABBF00DDC98F /* jp_Service_showCommunityButton.m */,
+				C54EA6F41754AE3B00DDC98F /* jp_Service_hideCommunityButton.h */,
+				C54EA6F51754AE3C00DDC98F /* jp_Service_hideCommunityButton.m */,
+				C54EA6F81754AECE00DDC98F /* jp_Service_shareMessage.h */,
+				C54EA6F91754AECF00DDC98F /* jp_Service_shareMessage.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C54EA6FC1754AFFF00DDC98F /* Textdata */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA6FD1754B02A00DDC98F /* jp_Textdata_base.h */,
+				C54EA6FE1754B02A00DDC98F /* jp_Textdata_base.m */,
+				C54EA7011754B05E00DDC98F /* jp_Textdata_createEntry.h */,
+				C54EA7021754B05E00DDC98F /* jp_Textdata_createEntry.m */,
+				C54EA7051754B63200DDC98F /* jp_Textdata_getEntries.h */,
+				C54EA7061754B63300DDC98F /* jp_Textdata_getEntries.m */,
+				C54EA7091754B72400DDC98F /* jp_Textdata_updateEntry.h */,
+				C54EA70A1754B72500DDC98F /* jp_Textdata_updateEntry.m */,
+				C54EA70D1754B7D800DDC98F /* jp_Textdata_deleteEntry.h */,
+				C54EA70E1754B7D900DDC98F /* jp_Textdata_deleteEntry.m */,
+			);
+			path = Textdata;
+			sourceTree = "<group>";
+		};
+		C54EA71117558D6800DDC98F /* kr */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA71217558DAA00DDC98F /* Service */,
+				C57865C31769ABE400C56F06 /* Textdata */,
+			);
+			path = kr;
+			sourceTree = "<group>";
+		};
+		C54EA71217558DAA00DDC98F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C54EA71317558DCF00DDC98F /* kr_Service_base.h */,
+				C54EA71417558DCF00DDC98F /* kr_Service_base.m */,
+				C57865B31769A6D600C56F06 /* kr_Service_openDocument.h */,
+				C57865B41769A6D600C56F06 /* kr_Service_openDocument.m */,
+				C57865BF1769A77000C56F06 /* kr_Service_showCommunityButton.h */,
+				C57865C01769A77200C56F06 /* kr_Service_showCommunityButton.m */,
+				C57865AF1769A69F00C56F06 /* kr_Service_hideCommunityButton.h */,
+				C57865B01769A6A000C56F06 /* kr_Service_hideCommunityButton.m */,
+				C57865BB1769A74C00C56F06 /* kr_Service_shareMessage.h */,
+				C57865BC1769A74E00C56F06 /* kr_Service_shareMessage.m */,
+				C57865B71769A72000C56F06 /* kr_Service_openFriendRequestSender.h */,
+				C57865B81769A72100C56F06 /* kr_Service_openFriendRequestSender.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C57865C31769ABE400C56F06 /* Textdata */ = {
+			isa = PBXGroup;
+			children = (
+				C57865C41769AD7900C56F06 /* kr_Textdata_base.h */,
+				C57865C51769AD7900C56F06 /* kr_Textdata_base.m */,
+				C57865C61769AD7900C56F06 /* kr_Textdata_createEntry.h */,
+				C57865C71769AD7900C56F06 /* kr_Textdata_createEntry.m */,
+				C57865C81769AD7900C56F06 /* kr_Textdata_deleteEntry.h */,
+				C57865C91769AD7900C56F06 /* kr_Textdata_deleteEntry.m */,
+				C57865CA1769AD7900C56F06 /* kr_Textdata_getEntries.h */,
+				C57865CB1769AD7900C56F06 /* kr_Textdata_getEntries.m */,
+				C57865CC1769AD7900C56F06 /* kr_Textdata_updateEntry.h */,
+				C57865CD1769AD7900C56F06 /* kr_Textdata_updateEntry.m */,
+			);
+			path = Textdata;
+			sourceTree = "<group>";
+		};
+		C5C81546183DB01A00DD2D41 /* ad */ = {
+			isa = PBXGroup;
+			children = (
+				C5C81591183F448100DD2D41 /* MobageAdEventReporter */,
+				C5C81566183DC45A00DD2D41 /* MobageAd */,
+			);
+			path = ad;
+			sourceTree = "<group>";
+		};
+		C5C81566183DC45A00DD2D41 /* MobageAd */ = {
+			isa = PBXGroup;
+			children = (
+				C5C81567183DC45A00DD2D41 /* MobageAd_base.h */,
+				C5C81568183DC45A00DD2D41 /* MobageAd_base.m */,
+				C5C81569183DC45A00DD2D41 /* MobageAd_hideIconListView.h */,
+				C5C8156A183DC45A00DD2D41 /* MobageAd_hideIconListView.m */,
+				C5C8156B183DC45A00DD2D41 /* MobageAd_showIconListView.h */,
+				C5C8156C183DC45A00DD2D41 /* MobageAd_showIconListView.m */,
+				C5C81579183DC4E600DD2D41 /* MobageAd_loadIconListView.h */,
+				C5C8157A183DC4E600DD2D41 /* MobageAd_loadIconListView.m */,
+				C5C8157F183DCC3000DD2D41 /* MobageAd_showPopupDialog.h */,
+				C5C81580183DCC3000DD2D41 /* MobageAd_showPopupDialog.m */,
+				C5C81585183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h */,
+				C5C81586183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m */,
+				C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */,
+				C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */,
+			);
+			path = MobageAd;
+			sourceTree = "<group>";
+		};
+		C5C81591183F448100DD2D41 /* MobageAdEventReporter */ = {
+			isa = PBXGroup;
+			children = (
+				C5C81598183F450900DD2D41 /* MobageAdEventReporter_base.h */,
+				C5C81599183F450900DD2D41 /* MobageAdEventReporter_base.m */,
+				C5C81592183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h */,
+				C5C81593183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m */,
+			);
+			path = MobageAdEventReporter;
+			sourceTree = "<group>";
+		};
+		C5FF19EB1828B961009A00DE /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */,
+				C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		009AC4D01453648D001C38F5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F80F270149EE7A90034C9BE /* ANE4MobageSDK-Prefix.pch in Headers */,
+				5F80F271149EE7A90034C9BE /* ANE4MobageSDK.h in Headers */,
+				C506C925174F6EEA0016ED54 /* ArgsParser.h in Headers */,
+				C5C81587183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h in Headers */,
+				C54EA5CF17530FEC00DDC98F /* FunctionSets.h in Headers */,
+				C5C81581183DCC3000DD2D41 /* MobageAd_showPopupDialog.h in Headers */,
+				C54EA5E117533C5F00DDC98F /* Mobage_addPlatformListener.h in Headers */,
+				C54EA5E317533C5F00DDC98F /* Mobage_checkLoginStatus.h in Headers */,
+				C5C81571183DC45A00DD2D41 /* MobageAd_hideIconListView.h in Headers */,
+				C54EA5E517533C5F00DDC98F /* Mobage_initialize.h in Headers */,
+				C54EA5E917533CCA00DDC98F /* Mobage_getSdkVersion.h in Headers */,
+				C54EA5F117533D3700DDC98F /* Mobage_onPause.h in Headers */,
+				C54EA5F517533D5900DDC98F /* Mobage_onResume.h in Headers */,
+				C54EA5F917533D8000DDC98F /* Mobage_showLoginDialog.h in Headers */,
+				C54EA5FD17533DA000DDC98F /* Mobage_showLogoutDialog.h in Headers */,
+				C54EA60117533DC700DDC98F /* Mobage_hideSplashScreen.h in Headers */,
+				C54EA60517533DED00DDC98F /* Mobage_tick.h in Headers */,
+				C54EA6101753617100DDC98F /* Mobage_base.h in Headers */,
+				C54EA614175369EB00DDC98F /* ContextOwner.h in Headers */,
+				C54EA61B1753735500DDC98F /* common_RemoteNotification_setListener.h in Headers */,
+				C5FF19F21828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */,
+				C54EA62E1753A0CA00DDC98F /* Mobage_openUpgradeDialog.h in Headers */,
+				C54EA6341753A35D00DDC98F /* Debit_cancelTransaction.h in Headers */,
+				C54EA6381753A3B300DDC98F /* Base.h in Headers */,
+				C54EA63C1753A44C00DDC98F /* Debit_base.h in Headers */,
+				C54EA6401753A69300DDC98F /* Debit_closeTransaction.h in Headers */,
+				C54EA6441754504300DDC98F /* Debit_continueTransaction.h in Headers */,
+				C54EA6481754559300DDC98F /* Debit_createTransaction.h in Headers */,
+				C54EA64C175456BA00DDC98F /* Debit_getPendingTransaction.h in Headers */,
+				C54EA6501754578600DDC98F /* Debit_getTransaction.h in Headers */,
+				C54EA6541754583200DDC98F /* Debit_openTransaction.h in Headers */,
+				C54EA6591754593700DDC98F /* Inventory_getItem.h in Headers */,
+				C54EA65E17545E0F00DDC98F /* common_Appdata_base.h in Headers */,
+				C5B46DD8182B925E005A78FD /* AppDelegatePatch.h in Headers */,
+				C54EA66217545E7400DDC98F /* common_Appdata_deleteEntries.h in Headers */,
+				C54EA6661754602300DDC98F /* common_Appdata_getEntries.h in Headers */,
+				C54EA66A1754611A00DDC98F /* common_Appdata_updateEntries.h in Headers */,
+				C54EA66F1754623500DDC98F /* common_Auth_authorizeToken.h in Headers */,
+				C54EA674175464F100DDC98F /* common_Blacklist_checkBlacklist.h in Headers */,
+				C54EA679175479AA00DDC98F /* common_Leaderboard_base.h in Headers */,
+				C54EA67D175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.h in Headers */,
+				C54EA68117547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.h in Headers */,
+				C54EA68517547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.h in Headers */,
+				C54EA68917547F6300DDC98F /* common_Leaderboard_getLeaderboard.h in Headers */,
+				C54EA68D1754802000DDC98F /* common_Leaderboard_getLeaderboards.h in Headers */,
+				C54EA691175480CA00DDC98F /* common_Leaderboard_getScore.h in Headers */,
+				C5C8156D183DC45A00DD2D41 /* MobageAd_base.h in Headers */,
+				C54EA6951754829B00DDC98F /* common_Leaderboard_getTopScoresList.h in Headers */,
+				C54EA6991754836300DDC98F /* common_Leaderboard_updateCurrentUserScore.h in Headers */,
+				C54EA69E175485F000DDC98F /* common_People_base.h in Headers */,
+				C5FF19EE1828B9C3009A00DE /* Account_getBalance.h in Headers */,
+				C54EA6A21754864900DDC98F /* common_People_getCurrentUser.h in Headers */,
+				C5C81594183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h in Headers */,
+				C54EA6A6175489FF00DDC98F /* common_People_getFriends.h in Headers */,
+				C54EA6AA17548B5B00DDC98F /* common_People_getFriendsWithGame.h in Headers */,
+				C54EA6AE17548BF900DDC98F /* common_People_getUser.h in Headers */,
+				C54EA6B217548C7300DDC98F /* common_People_getUsers.h in Headers */,
+				C5B46DD1182B8233005A78FD /* Mobage_registerTick.h in Headers */,
+				C54EA6B717548D2900DDC98F /* common_Profanity_checkProfanity.h in Headers */,
+				C54EA6BB17548DF000DDC98F /* common_RemoteNotification_base.h in Headers */,
+				C54EA6BF17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h in Headers */,
+				C54EA6C317548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.h in Headers */,
+				C5C81575183DC45A00DD2D41 /* MobageAd_showIconListView.h in Headers */,
+				C54EA6C717548FA700DDC98F /* common_RemoteNotification_send_iOS.h in Headers */,
+				C54EA6CC1754972600DDC98F /* common_Service_base.h in Headers */,
+				C54EA6D01754975200DDC98F /* common_Service_getBalanceButton.h in Headers */,
+				C54EA6D4175499EF00DDC98F /* common_Service_removeBalanceButton.h in Headers */,
+				C54EA6D817549A4400DDC98F /* common_Service_launchPortalApp.h in Headers */,
+				C54EA6DC17549B1100DDC98F /* common_Service_openFriendPicker.h in Headers */,
+				C54EA6E017549C3600DDC98F /* common_Service_openUserProfile.h in Headers */,
+				C54EA6E417549CC400DDC98F /* common_Service_showBankUi.h in Headers */,
+				C54EA6EA1754A53000DDC98F /* jp_Service_base.h in Headers */,
+				C54EA6EE1754A56D00DDC98F /* jp_Service_openDocument.h in Headers */,
+				C54EA6F21754ABC000DDC98F /* jp_Service_showCommunityButton.h in Headers */,
+				C54EA6F61754AE3C00DDC98F /* jp_Service_hideCommunityButton.h in Headers */,
+				C5C8159A183F450900DD2D41 /* MobageAdEventReporter_base.h in Headers */,
+				C54EA6FA1754AECF00DDC98F /* jp_Service_shareMessage.h in Headers */,
+				C54EA6FF1754B02A00DDC98F /* jp_Textdata_base.h in Headers */,
+				C54EA7031754B05F00DDC98F /* jp_Textdata_createEntry.h in Headers */,
+				C54EA7071754B63300DDC98F /* jp_Textdata_getEntries.h in Headers */,
+				C54EA70B1754B72500DDC98F /* jp_Textdata_updateEntry.h in Headers */,
+				C54EA70F1754B7DA00DDC98F /* jp_Textdata_deleteEntry.h in Headers */,
+				C5C8157B183DC4E600DD2D41 /* MobageAd_loadIconListView.h in Headers */,
+				C54EA7191755E72400DDC98F /* AlertDialog_show.h in Headers */,
+				C54EA71D1755EAC100DDC98F /* Log_print.h in Headers */,
+				C54EA74B175C309200DDC98F /* Mobage_removePlatformListener.h in Headers */,
+				C57865AD1769A60D00C56F06 /* common_Service_updateBalanceButton.h in Headers */,
+				C5C815AC1843013500DD2D41 /* MBGADError+MobageAd_error.h in Headers */,
+				C5516D2817DD88F50070FBBA /* Mobage_addDashboardObserver.h in Headers */,
+				C5516D2C17DD8A9E0070FBBA /* Mobage_dashboardObserver.h in Headers */,
+				C5516D3017DD8AC50070FBBA /* Mobage_removeDashboardObserver.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C578651217687C3800C56F06 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C578652D17687C8100C56F06 /* ANE4MobageSDK.h in Headers */,
+				C578652E17687C8F00C56F06 /* Debit_base.h in Headers */,
+				C578652F17687C8F00C56F06 /* Debit_cancelTransaction.h in Headers */,
+				C578653017687C8F00C56F06 /* Debit_closeTransaction.h in Headers */,
+				C5C81582183DCC3000DD2D41 /* MobageAd_showPopupDialog.h in Headers */,
+				C578653117687C8F00C56F06 /* Debit_continueTransaction.h in Headers */,
+				C578653217687C8F00C56F06 /* Debit_createTransaction.h in Headers */,
+				C5C815AD1843013500DD2D41 /* MBGADError+MobageAd_error.h in Headers */,
+				C578653317687C8F00C56F06 /* Debit_getPendingTransaction.h in Headers */,
+				C578653417687C8F00C56F06 /* Debit_getTransaction.h in Headers */,
+				C578653517687C8F00C56F06 /* Debit_openTransaction.h in Headers */,
+				C578653617687C9700C56F06 /* Inventory_getItem.h in Headers */,
+				C578653717687CC400C56F06 /* common_Appdata_base.h in Headers */,
+				C578653817687CC400C56F06 /* common_Appdata_deleteEntries.h in Headers */,
+				C578653917687CC400C56F06 /* common_Appdata_getEntries.h in Headers */,
+				C578653A17687CC400C56F06 /* common_Appdata_updateEntries.h in Headers */,
+				C578653B17687CCA00C56F06 /* common_Auth_authorizeToken.h in Headers */,
+				C578653C17687CD100C56F06 /* common_Blacklist_checkBlacklist.h in Headers */,
+				C578653D17687CE700C56F06 /* common_Leaderboard_base.h in Headers */,
+				C578653E17687CE700C56F06 /* common_Leaderboard_deleteCurrentUserScore.h in Headers */,
+				C574A415185EE274008064FC /* Account_getBalance.h in Headers */,
+				C578653F17687CE700C56F06 /* common_Leaderboard_getAllLeaderboards.h in Headers */,
+				C578654017687CE700C56F06 /* common_Leaderboard_getFriendsScoresList.h in Headers */,
+				C578654117687CE700C56F06 /* common_Leaderboard_getLeaderboard.h in Headers */,
+				C578654217687CE700C56F06 /* common_Leaderboard_getLeaderboards.h in Headers */,
+				C578654317687CE700C56F06 /* common_Leaderboard_getScore.h in Headers */,
+				C578654417687CE700C56F06 /* common_Leaderboard_getTopScoresList.h in Headers */,
+				C5C8157C183DC4E600DD2D41 /* MobageAd_loadIconListView.h in Headers */,
+				C578654517687CE700C56F06 /* common_Leaderboard_updateCurrentUserScore.h in Headers */,
+				C578654617687CEF00C56F06 /* common_People_base.h in Headers */,
+				C578654717687CEF00C56F06 /* common_People_getCurrentUser.h in Headers */,
+				C578654817687CEF00C56F06 /* common_People_getFriends.h in Headers */,
+				C578654917687CEF00C56F06 /* common_People_getFriendsWithGame.h in Headers */,
+				C578654A17687CEF00C56F06 /* common_People_getUser.h in Headers */,
+				C5C81576183DC45A00DD2D41 /* MobageAd_showIconListView.h in Headers */,
+				C578654B17687CEF00C56F06 /* common_People_getUsers.h in Headers */,
+				C578654C17687D0400C56F06 /* common_Profanity_checkProfanity.h in Headers */,
+				C5C81588183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h in Headers */,
+				C5FF19F31828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */,
+				C578654D17687D4400C56F06 /* common_RemoteNotification_base.h in Headers */,
+				C578654E17687D4400C56F06 /* common_RemoteNotification_getRemoteNotificationsEnabled.h in Headers */,
+				C578654F17687D4400C56F06 /* common_RemoteNotification_setRemoteNotificationsEnabled.h in Headers */,
+				C578655017687D4400C56F06 /* common_RemoteNotification_send_iOS.h in Headers */,
+				C578655117687D4400C56F06 /* common_RemoteNotification_setListener.h in Headers */,
+				C578655317687DE000C56F06 /* common_Service_base.h in Headers */,
+				C578655417687DE000C56F06 /* common_Service_getBalanceButton.h in Headers */,
+				C578655517687DE000C56F06 /* common_Service_removeBalanceButton.h in Headers */,
+				C578655617687DE000C56F06 /* common_Service_launchPortalApp.h in Headers */,
+				C578655717687DE000C56F06 /* common_Service_openFriendPicker.h in Headers */,
+				C578655817687DE000C56F06 /* common_Service_openUserProfile.h in Headers */,
+				C578655917687DE000C56F06 /* common_Service_showBankUi.h in Headers */,
+				C578655A17687E3200C56F06 /* jp_Service_base.h in Headers */,
+				C578655B17687E3200C56F06 /* jp_Service_openDocument.h in Headers */,
+				C578655C17687E3200C56F06 /* jp_Service_showCommunityButton.h in Headers */,
+				C578655D17687E3200C56F06 /* jp_Service_hideCommunityButton.h in Headers */,
+				C578655E17687E3200C56F06 /* jp_Service_shareMessage.h in Headers */,
+				C578655F17687E4000C56F06 /* jp_Textdata_base.h in Headers */,
+				C578656017687E4000C56F06 /* jp_Textdata_createEntry.h in Headers */,
+				C578656117687E4000C56F06 /* jp_Textdata_getEntries.h in Headers */,
+				C578656217687E4000C56F06 /* jp_Textdata_updateEntry.h in Headers */,
+				C5C81572183DC45A00DD2D41 /* MobageAd_hideIconListView.h in Headers */,
+				C578656317687E4000C56F06 /* jp_Textdata_deleteEntry.h in Headers */,
+				C578656417687E4700C56F06 /* kr_Service_base.h in Headers */,
+				C578656517687E5400C56F06 /* Base.h in Headers */,
+				C578656617687E5400C56F06 /* AlertDialog_show.h in Headers */,
+				C578656717687E5400C56F06 /* Log_print.h in Headers */,
+				C578656817687E5E00C56F06 /* FunctionSets.h in Headers */,
+				C5C81595183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.h in Headers */,
+				C578656917687E5E00C56F06 /* ContextOwner.h in Headers */,
+				C578656A17687E5E00C56F06 /* ArgsParser.h in Headers */,
+				C578656B17687E5E00C56F06 /* ANE4MobageSDK-Prefix.pch in Headers */,
+				C578658D176884E100C56F06 /* Mobage_base.h in Headers */,
+				C578658F176884E100C56F06 /* Mobage_initialize.h in Headers */,
+				C5786591176884E100C56F06 /* Mobage_addPlatformListener.h in Headers */,
+				C5786593176884E100C56F06 /* Mobage_removePlatformListener.h in Headers */,
+				C5786595176884E100C56F06 /* Mobage_checkLoginStatus.h in Headers */,
+				C5786597176884E100C56F06 /* Mobage_getSdkVersion.h in Headers */,
+				C578659B176884E100C56F06 /* Mobage_onPause.h in Headers */,
+				C578659D176884E100C56F06 /* Mobage_onResume.h in Headers */,
+				C5C8156E183DC45A00DD2D41 /* MobageAd_base.h in Headers */,
+				C578659F176884E100C56F06 /* Mobage_showLoginDialog.h in Headers */,
+				C57865A1176884E100C56F06 /* Mobage_showLogoutDialog.h in Headers */,
+				C57865A3176884E100C56F06 /* Mobage_hideSplashScreen.h in Headers */,
+				C5C8159B183F450900DD2D41 /* MobageAdEventReporter_base.h in Headers */,
+				C57865A5176884E100C56F06 /* Mobage_tick.h in Headers */,
+				C57865AB1769A50500C56F06 /* common_Service_updateBalanceButton.h in Headers */,
+				C57865B11769A6A100C56F06 /* kr_Service_hideCommunityButton.h in Headers */,
+				C57865B51769A6D700C56F06 /* kr_Service_openDocument.h in Headers */,
+				C57865B91769A72200C56F06 /* kr_Service_openFriendRequestSender.h in Headers */,
+				C57865BD1769A74F00C56F06 /* kr_Service_shareMessage.h in Headers */,
+				C57865C11769A77400C56F06 /* kr_Service_showCommunityButton.h in Headers */,
+				C5B46DD2182B8233005A78FD /* Mobage_registerTick.h in Headers */,
+				C57865CE1769AD7900C56F06 /* kr_Textdata_base.h in Headers */,
+				C57865D01769AD7900C56F06 /* kr_Textdata_createEntry.h in Headers */,
+				C5B46DD7182B925D005A78FD /* AppDelegatePatch.h in Headers */,
+				C57865D21769AD7900C56F06 /* kr_Textdata_deleteEntry.h in Headers */,
+				C57865D41769AD7900C56F06 /* kr_Textdata_getEntries.h in Headers */,
+				C57865D61769AD7900C56F06 /* kr_Textdata_updateEntry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		009AC4D11453648D001C38F5 /* ANE4MobageSDK_JP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 009AC4DF1453648D001C38F5 /* Build configuration list for PBXNativeTarget "ANE4MobageSDK_JP" */;
+			buildPhases = (
+				009AC4CE1453648D001C38F5 /* Sources */,
+				009AC4CF1453648D001C38F5 /* Frameworks */,
+				009AC4D01453648D001C38F5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANE4MobageSDK_JP;
+			productName = NativeAlert;
+			productReference = 009AC4D21453648D001C38F5 /* ANE4MobageSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C57864BC1768728900C56F06 /* ANE4MobageSDK_KR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C57864C61768728A00C56F06 /* Build configuration list for PBXNativeTarget "ANE4MobageSDK_KR" */;
+			buildPhases = (
+				C57864B91768728900C56F06 /* Sources */,
+				C57864BA1768728900C56F06 /* Frameworks */,
+				C57864BB1768728900C56F06 /* CopyFiles */,
+				C578651217687C3800C56F06 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ANE4MobageSDK_KR;
+			productName = ANE4MobageSDK_KR;
+			productReference = C57864BD1768728900C56F06 /* ANE4MobageSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		009AC4C91453648D001C38F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = 009AC4CC1453648D001C38F5 /* Build configuration list for PBXProject "ANE4MobageSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 009AC4C71453648D001C38F5;
+			productRefGroup = 009AC4D31453648D001C38F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				009AC4D11453648D001C38F5 /* ANE4MobageSDK_JP */,
+				C57864BC1768728900C56F06 /* ANE4MobageSDK_KR */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		009AC4CE1453648D001C38F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F80F272149EE7A90034C9BE /* ANE4MobageSDK.m in Sources */,
+				C506C926174F6EEA0016ED54 /* ArgsParser.m in Sources */,
+				C54EA5D017530FEC00DDC98F /* FunctionSets.m in Sources */,
+				C54EA5E217533C5F00DDC98F /* Mobage_addPlatformListener.m in Sources */,
+				C54EA5E417533C5F00DDC98F /* Mobage_checkLoginStatus.m in Sources */,
+				C54EA5E617533C5F00DDC98F /* Mobage_initialize.m in Sources */,
+				C54EA5EA17533CCA00DDC98F /* Mobage_getSdkVersion.m in Sources */,
+				C5FF19EF1828B9C3009A00DE /* Account_getBalance.m in Sources */,
+				C54EA5F217533D3700DDC98F /* Mobage_onPause.m in Sources */,
+				C54EA5F617533D5900DDC98F /* Mobage_onResume.m in Sources */,
+				C54EA5FA17533D8000DDC98F /* Mobage_showLoginDialog.m in Sources */,
+				C54EA5FE17533DA000DDC98F /* Mobage_showLogoutDialog.m in Sources */,
+				C54EA60217533DC700DDC98F /* Mobage_hideSplashScreen.m in Sources */,
+				C54EA60617533DED00DDC98F /* Mobage_tick.m in Sources */,
+				C54EA6111753617100DDC98F /* Mobage_base.m in Sources */,
+				C5C815AE1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */,
+				C54EA615175369EB00DDC98F /* ContextOwner.m in Sources */,
+				C5C8157D183DC4E600DD2D41 /* MobageAd_loadIconListView.m in Sources */,
+				C54EA61C1753735500DDC98F /* common_RemoteNotification_setListener.m in Sources */,
+				C54EA62F1753A0CA00DDC98F /* Mobage_openUpgradeDialog.m in Sources */,
+				C54EA6351753A35D00DDC98F /* Debit_cancelTransaction.m in Sources */,
+				C54EA6391753A3B300DDC98F /* Base.m in Sources */,
+				C54EA63D1753A44C00DDC98F /* Debit_base.m in Sources */,
+				C54EA6411753A69300DDC98F /* Debit_closeTransaction.m in Sources */,
+				C54EA6451754504300DDC98F /* Debit_continueTransaction.m in Sources */,
+				C54EA6491754559300DDC98F /* Debit_createTransaction.m in Sources */,
+				C54EA64D175456BA00DDC98F /* Debit_getPendingTransaction.m in Sources */,
+				C54EA6511754578600DDC98F /* Debit_getTransaction.m in Sources */,
+				C54EA6551754583200DDC98F /* Debit_openTransaction.m in Sources */,
+				C54EA65A1754593700DDC98F /* Inventory_getItem.m in Sources */,
+				C54EA65F17545E0F00DDC98F /* common_Appdata_base.m in Sources */,
+				C54EA66317545E7400DDC98F /* common_Appdata_deleteEntries.m in Sources */,
+				C5FF19F41828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */,
+				C54EA6671754602300DDC98F /* common_Appdata_getEntries.m in Sources */,
+				C54EA66B1754611A00DDC98F /* common_Appdata_updateEntries.m in Sources */,
+				C5B46DD6182B9259005A78FD /* AppDelegatePatch.m in Sources */,
+				C54EA6701754623500DDC98F /* common_Auth_authorizeToken.m in Sources */,
+				C5C81589183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m in Sources */,
+				C54EA675175464F100DDC98F /* common_Blacklist_checkBlacklist.m in Sources */,
+				C54EA67A175479AA00DDC98F /* common_Leaderboard_base.m in Sources */,
+				C54EA67E175479F100DDC98F /* common_Leaderboard_deleteCurrentUserScore.m in Sources */,
+				C54EA68217547AA900DDC98F /* common_Leaderboard_getAllLeaderboards.m in Sources */,
+				C54EA68617547E2D00DDC98F /* common_Leaderboard_getFriendsScoresList.m in Sources */,
+				C54EA68A17547F6300DDC98F /* common_Leaderboard_getLeaderboard.m in Sources */,
+				C5C81573183DC45A00DD2D41 /* MobageAd_hideIconListView.m in Sources */,
+				C54EA68E1754802000DDC98F /* common_Leaderboard_getLeaderboards.m in Sources */,
+				C5B46DD3182B8233005A78FD /* Mobage_registerTick.m in Sources */,
+				C54EA692175480CA00DDC98F /* common_Leaderboard_getScore.m in Sources */,
+				C54EA6961754829B00DDC98F /* common_Leaderboard_getTopScoresList.m in Sources */,
+				C5C81583183DCC3000DD2D41 /* MobageAd_showPopupDialog.m in Sources */,
+				C54EA69A1754836300DDC98F /* common_Leaderboard_updateCurrentUserScore.m in Sources */,
+				C54EA69F175485F000DDC98F /* common_People_base.m in Sources */,
+				C54EA6A31754864900DDC98F /* common_People_getCurrentUser.m in Sources */,
+				C54EA6A7175489FF00DDC98F /* common_People_getFriends.m in Sources */,
+				C54EA6AB17548B5B00DDC98F /* common_People_getFriendsWithGame.m in Sources */,
+				C54EA6AF17548BF900DDC98F /* common_People_getUser.m in Sources */,
+				C54EA6B317548C7300DDC98F /* common_People_getUsers.m in Sources */,
+				C54EA6B817548D2900DDC98F /* common_Profanity_checkProfanity.m in Sources */,
+				C54EA6BC17548DF000DDC98F /* common_RemoteNotification_base.m in Sources */,
+				C5C8159C183F450900DD2D41 /* MobageAdEventReporter_base.m in Sources */,
+				C54EA6C017548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m in Sources */,
+				C54EA6C417548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m in Sources */,
+				C54EA6C817548FA700DDC98F /* common_RemoteNotification_send_iOS.m in Sources */,
+				C54EA6CD1754972600DDC98F /* common_Service_base.m in Sources */,
+				C54EA6D11754975200DDC98F /* common_Service_getBalanceButton.m in Sources */,
+				C54EA6D5175499EF00DDC98F /* common_Service_removeBalanceButton.m in Sources */,
+				C54EA6D917549A4400DDC98F /* common_Service_launchPortalApp.m in Sources */,
+				C54EA6DD17549B1100DDC98F /* common_Service_openFriendPicker.m in Sources */,
+				C54EA6E117549C3600DDC98F /* common_Service_openUserProfile.m in Sources */,
+				C54EA6E517549CC400DDC98F /* common_Service_showBankUi.m in Sources */,
+				C54EA6EB1754A53000DDC98F /* jp_Service_base.m in Sources */,
+				C54EA6EF1754A56D00DDC98F /* jp_Service_openDocument.m in Sources */,
+				C54EA6F31754ABC000DDC98F /* jp_Service_showCommunityButton.m in Sources */,
+				C54EA6F71754AE3C00DDC98F /* jp_Service_hideCommunityButton.m in Sources */,
+				C54EA6FB1754AECF00DDC98F /* jp_Service_shareMessage.m in Sources */,
+				C54EA7001754B02A00DDC98F /* jp_Textdata_base.m in Sources */,
+				C5C8156F183DC45A00DD2D41 /* MobageAd_base.m in Sources */,
+				C54EA7041754B05F00DDC98F /* jp_Textdata_createEntry.m in Sources */,
+				C54EA7081754B63300DDC98F /* jp_Textdata_getEntries.m in Sources */,
+				C5C81596183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m in Sources */,
+				C54EA70C1754B72500DDC98F /* jp_Textdata_updateEntry.m in Sources */,
+				C54EA7101754B7DA00DDC98F /* jp_Textdata_deleteEntry.m in Sources */,
+				C54EA71A1755E72400DDC98F /* AlertDialog_show.m in Sources */,
+				C54EA71E1755EAC100DDC98F /* Log_print.m in Sources */,
+				C54EA74C175C309200DDC98F /* Mobage_removePlatformListener.m in Sources */,
+				C57865AE1769A60D00C56F06 /* common_Service_updateBalanceButton.m in Sources */,
+				C5516D2917DD88F50070FBBA /* Mobage_addDashboardObserver.m in Sources */,
+				C5516D2D17DD8A9E0070FBBA /* Mobage_dashboardObserver.m in Sources */,
+				C5C81577183DC45A00DD2D41 /* MobageAd_showIconListView.m in Sources */,
+				C5516D3117DD8AC50070FBBA /* Mobage_removeDashboardObserver.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C57864B91768728900C56F06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5B46DD5182B9258005A78FD /* AppDelegatePatch.m in Sources */,
+				C57864D01768767800C56F06 /* ANE4MobageSDK.m in Sources */,
+				C57864D11768768D00C56F06 /* Debit_base.m in Sources */,
+				C57864D21768769500C56F06 /* Debit_cancelTransaction.m in Sources */,
+				C57864D31768769A00C56F06 /* Debit_closeTransaction.m in Sources */,
+				C57864D41768769E00C56F06 /* Debit_continueTransaction.m in Sources */,
+				C57864D5176876A200C56F06 /* Debit_createTransaction.m in Sources */,
+				C5C8157E183DC4E600DD2D41 /* MobageAd_loadIconListView.m in Sources */,
+				C5FF19F51828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */,
+				C57864D6176876A500C56F06 /* Debit_getPendingTransaction.m in Sources */,
+				C57864D7176876A900C56F06 /* Debit_getTransaction.m in Sources */,
+				C574A414185EE270008064FC /* Account_getBalance.m in Sources */,
+				C57864D8176876AD00C56F06 /* Debit_openTransaction.m in Sources */,
+				C57864D9176876B200C56F06 /* Inventory_getItem.m in Sources */,
+				C57864DA176876B900C56F06 /* common_Appdata_base.m in Sources */,
+				C57864DB176876BD00C56F06 /* common_Appdata_deleteEntries.m in Sources */,
+				C5C8159D183F450900DD2D41 /* MobageAdEventReporter_base.m in Sources */,
+				C57864DC176876C000C56F06 /* common_Appdata_getEntries.m in Sources */,
+				C57864DD176876CA00C56F06 /* common_Appdata_updateEntries.m in Sources */,
+				C57864DE176876D600C56F06 /* common_Auth_authorizeToken.m in Sources */,
+				C57864DF176876DC00C56F06 /* common_Blacklist_checkBlacklist.m in Sources */,
+				C57864E0176876E500C56F06 /* common_Leaderboard_base.m in Sources */,
+				C57864E1176876E900C56F06 /* common_Leaderboard_deleteCurrentUserScore.m in Sources */,
+				C57864E2176876ED00C56F06 /* common_Leaderboard_getAllLeaderboards.m in Sources */,
+				C57864E3176876F000C56F06 /* common_Leaderboard_getFriendsScoresList.m in Sources */,
+				C57864E4176876F400C56F06 /* common_Leaderboard_getLeaderboard.m in Sources */,
+				C57864E5176876F700C56F06 /* common_Leaderboard_getLeaderboards.m in Sources */,
+				C57864E6176876FB00C56F06 /* common_Leaderboard_getScore.m in Sources */,
+				C57864E7176876FF00C56F06 /* common_Leaderboard_getTopScoresList.m in Sources */,
+				C57864E81768770300C56F06 /* common_Leaderboard_updateCurrentUserScore.m in Sources */,
+				C57864E91768770900C56F06 /* common_People_base.m in Sources */,
+				C57864EA1768770D00C56F06 /* common_People_getCurrentUser.m in Sources */,
+				C57864EB1768771200C56F06 /* common_People_getFriends.m in Sources */,
+				C57864EC1768771500C56F06 /* common_People_getFriendsWithGame.m in Sources */,
+				C5C81574183DC45A00DD2D41 /* MobageAd_hideIconListView.m in Sources */,
+				C57864ED1768771900C56F06 /* common_People_getUser.m in Sources */,
+				C57864EE1768771C00C56F06 /* common_People_getUsers.m in Sources */,
+				C57864EF1768772200C56F06 /* common_Profanity_checkProfanity.m in Sources */,
+				C57864F01768772A00C56F06 /* common_RemoteNotification_base.m in Sources */,
+				C57864F11768772E00C56F06 /* common_RemoteNotification_getRemoteNotificationsEnabled.m in Sources */,
+				C5C81570183DC45A00DD2D41 /* MobageAd_base.m in Sources */,
+				C57864F21768773100C56F06 /* common_RemoteNotification_setRemoteNotificationsEnabled.m in Sources */,
+				C57864F31768773300C56F06 /* common_RemoteNotification_send_iOS.m in Sources */,
+				C57864F41768773700C56F06 /* common_RemoteNotification_setListener.m in Sources */,
+				C57864F61768774100C56F06 /* common_Service_base.m in Sources */,
+				C57864F71768774600C56F06 /* common_Service_getBalanceButton.m in Sources */,
+				C57864F81768774900C56F06 /* common_Service_removeBalanceButton.m in Sources */,
+				C5C81584183DCC3000DD2D41 /* MobageAd_showPopupDialog.m in Sources */,
+				C57864F91768774D00C56F06 /* common_Service_launchPortalApp.m in Sources */,
+				C57864FA1768775300C56F06 /* common_Service_openFriendPicker.m in Sources */,
+				C57864FB1768775600C56F06 /* common_Service_openUserProfile.m in Sources */,
+				C57864FC1768775A00C56F06 /* common_Service_showBankUi.m in Sources */,
+				C57864FD1768776100C56F06 /* jp_Service_base.m in Sources */,
+				C57864FE1768776600C56F06 /* jp_Service_openDocument.m in Sources */,
+				C57864FF1768776900C56F06 /* jp_Service_showCommunityButton.m in Sources */,
+				C5C81597183F448100DD2D41 /* MobageAdEventReporter_sendCustomEvent.m in Sources */,
+				C57865001768776C00C56F06 /* jp_Service_hideCommunityButton.m in Sources */,
+				C57865011768777000C56F06 /* jp_Service_shareMessage.m in Sources */,
+				C57865021768777300C56F06 /* jp_Textdata_base.m in Sources */,
+				C57865031768777700C56F06 /* jp_Textdata_createEntry.m in Sources */,
+				C57865041768777A00C56F06 /* jp_Textdata_getEntries.m in Sources */,
+				C57865051768777E00C56F06 /* jp_Textdata_updateEntry.m in Sources */,
+				C57865061768778200C56F06 /* jp_Textdata_deleteEntry.m in Sources */,
+				C57865071768778800C56F06 /* kr_Service_base.m in Sources */,
+				C5C815AF1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */,
+				C57865081768779000C56F06 /* Base.m in Sources */,
+				C57865091768779500C56F06 /* AlertDialog_show.m in Sources */,
+				C578650A1768779A00C56F06 /* Log_print.m in Sources */,
+				C578650B176877A100C56F06 /* FunctionSets.m in Sources */,
+				C578650C176877A600C56F06 /* ContextOwner.m in Sources */,
+				C5C81578183DC45A00DD2D41 /* MobageAd_showIconListView.m in Sources */,
+				C578650D176877AB00C56F06 /* ArgsParser.m in Sources */,
+				C578658E176884E100C56F06 /* Mobage_base.m in Sources */,
+				C5786590176884E100C56F06 /* Mobage_initialize.m in Sources */,
+				C5786592176884E100C56F06 /* Mobage_addPlatformListener.m in Sources */,
+				C5786594176884E100C56F06 /* Mobage_removePlatformListener.m in Sources */,
+				C5786596176884E100C56F06 /* Mobage_checkLoginStatus.m in Sources */,
+				C5786598176884E100C56F06 /* Mobage_getSdkVersion.m in Sources */,
+				C578659C176884E100C56F06 /* Mobage_onPause.m in Sources */,
+				C5C8158A183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m in Sources */,
+				C578659E176884E100C56F06 /* Mobage_onResume.m in Sources */,
+				C57865A0176884E100C56F06 /* Mobage_showLoginDialog.m in Sources */,
+				C57865A2176884E100C56F06 /* Mobage_showLogoutDialog.m in Sources */,
+				C57865A4176884E100C56F06 /* Mobage_hideSplashScreen.m in Sources */,
+				C57865A6176884E100C56F06 /* Mobage_tick.m in Sources */,
+				C57865AC1769A50500C56F06 /* common_Service_updateBalanceButton.m in Sources */,
+				C57865B21769A6A100C56F06 /* kr_Service_hideCommunityButton.m in Sources */,
+				C57865B61769A6D700C56F06 /* kr_Service_openDocument.m in Sources */,
+				C57865BA1769A72200C56F06 /* kr_Service_openFriendRequestSender.m in Sources */,
+				C57865BE1769A74F00C56F06 /* kr_Service_shareMessage.m in Sources */,
+				C57865C21769A77400C56F06 /* kr_Service_showCommunityButton.m in Sources */,
+				C57865CF1769AD7900C56F06 /* kr_Textdata_base.m in Sources */,
+				C57865D11769AD7900C56F06 /* kr_Textdata_createEntry.m in Sources */,
+				C57865D31769AD7900C56F06 /* kr_Textdata_deleteEntry.m in Sources */,
+				C5B46DD4182B8233005A78FD /* Mobage_registerTick.m in Sources */,
+				C57865D51769AD7900C56F06 /* kr_Textdata_getEntries.m in Sources */,
+				C57865D71769AD7900C56F06 /* kr_Textdata_updateEntry.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		009AC4DD1453648D001C38F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_THUMB_SUPPORT = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		009AC4DE1453648D001C38F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_MODEL_TUNING = G5;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Release;
+		};
+		009AC4E01453648D001C38F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "src/ANE4MobageSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"JP=1",
+				);
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs\"",
+					"\"$(SRCROOT)/MobageSDK/include\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MobageSDK/lib\"",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = /usr/local/include;
+				PRODUCT_NAME = ANE4MobageSDK;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Debug;
+		};
+		009AC4E11453648D001C38F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_ENTITLEMENTS = "";
+				EXECUTABLE_PREFIX = "";
+				GCC_PREFIX_HEADER = "src/ANE4MobageSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "JP=1";
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs\"",
+					"\"$(SRCROOT)/MobageSDK/include\"",
+				);
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MobageSDK/lib\"",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = /usr/local/include;
+				PRODUCT_NAME = ANE4MobageSDK;
+				PUBLIC_HEADERS_FOLDER_PATH = /usr/local/include;
+				VALID_ARCHS = "armv7 armv7s i386";
+			};
+			name = Release;
+		};
+		C57864C71768728A00C56F06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DSTROOT = /tmp/ANE4MobageSDK.dst;
+				EXECUTABLE_PREFIX = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "src/ANE4MobageSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"KR=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs\"",
+					"\"$(SRCROOT)/MobageSDK/include\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MobageSDK/lib\"",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ANE4MobageSDK;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C57864C81768728A00C56F06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				DSTROOT = /tmp/ANE4MobageSDK.dst;
+				EXECUTABLE_PREFIX = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "src/ANE4MobageSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "KR=1";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/libs\"",
+					"\"$(SRCROOT)/MobageSDK/include\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/MobageSDK/lib\"",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ANE4MobageSDK;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		009AC4CC1453648D001C38F5 /* Build configuration list for PBXProject "ANE4MobageSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009AC4DD1453648D001C38F5 /* Debug */,
+				009AC4DE1453648D001C38F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		009AC4DF1453648D001C38F5 /* Build configuration list for PBXNativeTarget "ANE4MobageSDK_JP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				009AC4E01453648D001C38F5 /* Debug */,
+				009AC4E11453648D001C38F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C57864C61768728A00C56F06 /* Build configuration list for PBXNativeTarget "ANE4MobageSDK_KR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C57864C71768728A00C56F06 /* Debug */,
+				C57864C81768728A00C56F06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 009AC4C91453648D001C38F5 /* Project object */;
+}

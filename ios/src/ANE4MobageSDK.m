@@ -51,9 +51,7 @@
 #import "MobageAdEventReporter_sendCustomEvent.h"
 
 // bank Account.as
-#ifdef JP
 #import "Account_getBalance.h"
-#endif
 
 // bank Debit.as
 #import "Debit_cancelTransaction.h"
@@ -232,9 +230,7 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [MobageAdEventReporter_sendCustomEvent ContextInitializer:funcSets];
     
     // bank Account.as
-#ifdef JP
     [Account_getBalance ContextInitializer:funcSets];
-#endif
     
     // bank Debit.as
     [Debit_cancelTransaction ContextInitializer:funcSets];
