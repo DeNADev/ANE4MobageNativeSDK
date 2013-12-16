@@ -589,9 +589,7 @@ static ArgsParser *_argParser = nil;
                          @(user.age), @"age",
                          user.birthday, @"birthday",
                          user.gender, @"gender",
-#ifdef JP
                          @(user.grade), @"grade",
-#endif
                          user.thumbnailUrl, @"thumbnailUrl",
                          user.jobType, @"jobType",
                          user.bloodType, @"bloodType",
