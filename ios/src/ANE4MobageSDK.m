@@ -40,6 +40,7 @@
 #import "Mobage_openUpgradeDialog.h"
 #import "Mobage_addDashboardObserver.h"
 #import "Mobage_removeDashboardObserver.h"
+#import "Mobage_showNicknameRegistrationDialog.h"
 #endif
 
 // ad MobageAd.as
@@ -49,6 +50,10 @@
 #import "MobageAd_showPopupDialog.h"
 #import "MobageAd_loadPopupDialog.h"
 #import "MobageAdEventReporter_sendCustomEvent.h"
+#ifdef JP
+#import "MobageAd_loadOfferwall.h"
+#import "MobageAd_showOfferwall.h"
+#endif
 
 // bank Account.as
 #import "Account_getBalance.h"
@@ -218,6 +223,7 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [Mobage_openUpgradeDialog ContextInitializer:funcSets];
     [Mobage_addDashboardObserver ContextInitializer:funcSets];
     [Mobage_removeDashboardObserver ContextInitializer:funcSets];
+    [Mobage_showNicknameRegistrationDialog ContextInitializer:funcSets];
 #endif
     
     // ad MobageAd.as
@@ -226,6 +232,10 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [MobageAd_loadIconListView ContextInitializer:funcSets];
     [MobageAd_showPopupDialog ContextInitializer:funcSets];
     [MobageAd_loadPopupDialog ContextInitializer:funcSets];
+#ifdef JP
+    [MobageAd_loadOfferwall ContextInitializer:funcSets];
+    [MobageAd_showOfferwall ContextInitializer:funcSets];
+#endif
     
     [MobageAdEventReporter_sendCustomEvent ContextInitializer:funcSets];
     

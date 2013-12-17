@@ -21,17 +21,8 @@
  * THE SOFTWARE.
  **/
 
-#import "Base.h"
+#import "Mobage_base.h"
 
-#import <MBGADError.h>
-#import <MBGADIconListView.h>
-#import <MBGADPopupDialog.h>
-#import <MBGADOfferwall.h>
-
-@interface MobageAd_base : Base
-
-+ (MBGADIconListView *)sharedIconListView;
-+ (MBGADPopupDialog *)sharedPopupDialog;
-+ (MBGADOfferwall *)sharedOfferwall;
+@interface Mobage_showNicknameRegistrationDialog : Mobage_base
 
 @end

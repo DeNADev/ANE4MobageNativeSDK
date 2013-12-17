@@ -81,6 +81,29 @@ package com.mobage.air.ad
 			}
 		}
 		
-		
+        /**
+         * 
+         * 
+         */		
+        public static function showOfferWallDialog() :void{
+            const funcId :String = 'com.mobage.air.extension.ad.MobageAd.showOfferwall';
+            Extension.call(funcId);
+        }
+        
+        /**
+         * 
+         * @param frameID
+         * @param extraParam
+         * 
+         */
+        public static function loadOfferWallDialog(frameID :FrameID, extraParam :String) :void{
+            const funcId :String = 'com.mobage.air.extension.ad.MobageAd.loadOfferwall';
+            if(extraParam == null){
+                Extension.call(funcId, frameID);
+            }else {
+                Extension.call(funcId, frameID, extraParam);
+            }
+        }
+        
 	}
 }

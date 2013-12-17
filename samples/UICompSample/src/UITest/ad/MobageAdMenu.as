@@ -40,10 +40,13 @@ package UITest.ad
 				com.mobage.air.ad.MobageAd.hideIconListView();
 			});
 			
-			
 			adButtons.add("Load PopUpDialog",function() :void {
 				com.mobage.air.ad.MobageAd.loadPopupDialog(FrameID.A, "Hello This a Test For me");
-			})
+			});
+            
+            adButtons.add("Load OfferwallDialog",function() :void {
+                com.mobage.air.ad.MobageAd.loadOfferWallDialog(FrameID.A, "Hello This a Test For me");
+            })
 			
 			adButtons.add("Send Custom Event",function() :void {
 				com.mobage.air.ad.MobageAdEventReporter.sendCustomEvent("YES_WE_CAN",
@@ -94,8 +97,10 @@ package UITest.ad
 			trace("onReceiveAd");
 			if(adType == "IconListView"){
 			com.mobage.air.ad.MobageAd.showIconListView("BOTTOM");}
-			else {
+			else if (adType == "PopupDialog") {
 			com.mobage.air.ad.MobageAd.showPopupDialog();}
+            else if (adType == "OfferWallDialog") {
+            com.mobage.air.ad.MobageAd.showOfferWallDialog();}
 		}
 		
 		

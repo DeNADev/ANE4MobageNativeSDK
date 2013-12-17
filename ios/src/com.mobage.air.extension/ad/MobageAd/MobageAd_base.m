@@ -26,23 +26,27 @@
 
 static MBGADIconListView *_iconListView = nil;
 static MBGADPopupDialog *_popupDialog = nil;
+static MBGADOfferwall *_offerwallDialog = nil;
 static NSString *_adTypeIconListView = @"IconListView";
 static NSString *_adTypePopupDialog = @"PopupDialog";
+static NSString *_adTypeOfferWallDialog = @"OfferWallDialog";
 
 
 @implementation MobageAd_base
 
 + (MBGADIconListView *)sharedIconListView {
     LOG_METHOD;
+    
     if (!_iconListView) {
         _iconListView = [[MBGADIconListView iconListWithFrameID:MBGADFrameID_A] retain];
+        NSString *adType = _adTypeIconListView;
         
         [_iconListView setDidReceiveAd:^(MBGADIconListView* iconListView){
             LOG_METHOD;
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onReceiveAd",
-                                          _adTypeIconListView);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -53,7 +57,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             LOG_METHOD;
             FREContext context = [ContextOwner sharedContext];
             
-            error.adType = _adTypeIconListView;
+            error.adType = adType;
             FREResult result = TCDispatch(context,
                                           @"AdListener.onFailedToReceiveAd",
                                           error);
@@ -68,7 +72,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onLeaveApplication",
-                                          _adTypeIconListView);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -80,15 +84,18 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
 }
 
 + (MBGADPopupDialog *)sharedPopupDialog {
+    LOG_METHOD;
+    
     if (!_popupDialog) {
         _popupDialog = [[MBGADPopupDialog dialogWithFrameID:MBGADFrameID_A] retain];
+        NSString *adType = _adTypePopupDialog;
         
         [_popupDialog setDidReceiveAd:^(MBGADPopupDialog* popupDialog){
             LOG_METHOD;
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onReceiveAd",
-                                          _adTypePopupDialog);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -100,7 +107,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             LOG_METHOD;
             FREContext context = [ContextOwner sharedContext];
             
-            error.adType = _adTypePopupDialog;
+            error.adType = adType;
             
             FREResult result = TCDispatch(context,
                                           @"AdListener.onFailedToReceiveAd",
@@ -116,7 +123,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onLeaveApplication",
-                                          _adTypePopupDialog);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -128,7 +135,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onPresentScreen",
-                                          _adTypePopupDialog);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -140,7 +147,7 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
             FREContext context = [ContextOwner sharedContext];
             FREResult result = TCDispatch(context,
                                           @"AdListener.onDismissScreen",
-                                          _adTypePopupDialog);
+                                          adType);
             
             if(result != FRE_OK) {
                 [ArgsParser reportResult:result];
@@ -148,6 +155,81 @@ static NSString *_adTypePopupDialog = @"PopupDialog";
         }];
     }
     return _popupDialog;
+}
+
++ (MBGADOfferwall *)sharedOfferwall {
+    LOG_METHOD;
+    
+    if (!_offerwallDialog) {
+        _offerwallDialog = [[MBGADOfferwall offerwallWithFrameID:MBGADFrameID_A] retain];
+        NSString *adType = _adTypeOfferWallDialog;
+        
+        [_offerwallDialog setDidReceiveAd:^(MBGADOfferwall *offerwall) {
+            LOG_METHOD;
+            FREContext context = [ContextOwner sharedContext];
+            FREResult result = TCDispatch(context,
+                                          @"AdListener.onReceiveAd",
+                                          adType);
+            
+            if(result != FRE_OK) {
+                [ArgsParser reportResult:result];
+            };
+        }];
+        
+        [_offerwallDialog setDidDismissScreen:^(MBGADOfferwall *offerwall) {
+            LOG_METHOD;
+            FREContext context = [ContextOwner sharedContext];
+            FREResult result = TCDispatch(context,
+                                          @"AdListener.onDismissScreen",
+                                          adType);
+            
+            if(result != FRE_OK) {
+                [ArgsParser reportResult:result];
+            };
+        }];
+
+        
+        [_offerwallDialog setDidFailToReceiveAdWithError:^(MBGADOfferwall *offerwall, MBGADError *error) {
+            LOG_METHOD;
+            FREContext context = [ContextOwner sharedContext];
+            
+            error.adType = adType;
+            
+            FREResult result = TCDispatch(context,
+                                          @"AdListener.onFailedToReceiveAd",
+                                          error);
+            
+            if(result != FRE_OK) {
+                [ArgsParser reportResult:result];
+            };
+        }];
+        
+        [_offerwallDialog setWillLeaveApplication:^(MBGADOfferwall *offerwall) {
+            LOG_METHOD;
+            FREContext context = [ContextOwner sharedContext];
+            FREResult result = TCDispatch(context,
+                                          @"AdListener.onLeaveApplication",
+                                          adType);
+            
+            if(result != FRE_OK) {
+                [ArgsParser reportResult:result];
+            };
+        }];
+        
+        [_offerwallDialog setWillPresentScreen:^(MBGADOfferwall *offerwall) {
+            LOG_METHOD;
+            FREContext context = [ContextOwner sharedContext];
+            FREResult result = TCDispatch(context,
+                                          @"AdListener.onPresentScreen",
+                                          adType);
+            
+            if(result != FRE_OK) {
+                [ArgsParser reportResult:result];
+            };
+        }];
+    }
+    
+    return _offerwallDialog;
 }
 
 @end

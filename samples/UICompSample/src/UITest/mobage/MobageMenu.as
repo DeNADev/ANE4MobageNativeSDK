@@ -43,6 +43,37 @@ package UITest.mobage
                         });
                     });
                 });
+                
+                mbuttons.add("addDashboardObserver", function() :void {
+                    trace('addDashboardObserver');
+                    com.mobage.air.Mobage.addDashboardObserver();
+                    AlertDialog.show({
+                        title: "DashboardObserver",
+                        message: "added"
+                    });
+                });
+                
+                mbuttons.add("removeDashboardObserver", function() :void {
+                    trace('removeDashboardObserver');
+                    com.mobage.air.Mobage.removeDashboardObserver();
+                    AlertDialog.show({
+                        title: "DashboardObserver",
+                        message: "removed"
+                    });
+                });
+                
+                mbuttons.add("showNicknameRegistrationDialog", function() :void {
+                    trace('showNicknameRegistrationDialog');
+                    com.mobage.air.Mobage.showNicknameRegistrationDialog(
+                        "abcdefghijklmn",
+                        function(alreadyRegistered :Boolean) :void {
+                            AlertDialog.show({
+                                title: "showNicknameRegistrationDialog",
+                                message: "" + alreadyRegistered
+                            });
+                        });
+                    
+                });
             }
             
             mbuttons.add("Logout", function() :void {

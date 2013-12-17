@@ -172,6 +172,12 @@
 		C5516D3117DD8AC50070FBBA /* Mobage_removeDashboardObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = C5516D2F17DD8AC50070FBBA /* Mobage_removeDashboardObserver.m */; };
 		C574A414185EE270008064FC /* Account_getBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */; };
 		C574A415185EE274008064FC /* Account_getBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */; };
+		C574A418185EE76F008064FC /* MobageAd_showOfferwall.h in Headers */ = {isa = PBXBuildFile; fileRef = C574A416185EE76E008064FC /* MobageAd_showOfferwall.h */; };
+		C574A419185EE76F008064FC /* MobageAd_showOfferwall.m in Sources */ = {isa = PBXBuildFile; fileRef = C574A417185EE76E008064FC /* MobageAd_showOfferwall.m */; };
+		C574A41C185EED24008064FC /* MobageAd_loadOfferwall.h in Headers */ = {isa = PBXBuildFile; fileRef = C574A41A185EED24008064FC /* MobageAd_loadOfferwall.h */; };
+		C574A41D185EED24008064FC /* MobageAd_loadOfferwall.m in Sources */ = {isa = PBXBuildFile; fileRef = C574A41B185EED24008064FC /* MobageAd_loadOfferwall.m */; };
+		C574A465185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = C574A463185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.h */; };
+		C574A466185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C574A464185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m */; };
 		C57864BE1768728900C56F06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 009AC4D51453648D001C38F5 /* Foundation.framework */; };
 		C57864C9176875CE00C56F06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D8174B719900EA7A2B /* CoreGraphics.framework */; };
 		C57864CA176875D700C56F06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53F73D6174B718800EA7A2B /* UIKit.framework */; };
@@ -584,6 +590,12 @@
 		C5516D2B17DD8A9E0070FBBA /* Mobage_dashboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_dashboardObserver.m; sourceTree = "<group>"; };
 		C5516D2E17DD8AC50070FBBA /* Mobage_removeDashboardObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_removeDashboardObserver.h; sourceTree = "<group>"; };
 		C5516D2F17DD8AC50070FBBA /* Mobage_removeDashboardObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_removeDashboardObserver.m; sourceTree = "<group>"; };
+		C574A416185EE76E008064FC /* MobageAd_showOfferwall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_showOfferwall.h; sourceTree = "<group>"; };
+		C574A417185EE76E008064FC /* MobageAd_showOfferwall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_showOfferwall.m; sourceTree = "<group>"; };
+		C574A41A185EED24008064FC /* MobageAd_loadOfferwall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobageAd_loadOfferwall.h; sourceTree = "<group>"; };
+		C574A41B185EED24008064FC /* MobageAd_loadOfferwall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAd_loadOfferwall.m; sourceTree = "<group>"; };
+		C574A463185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobage_showNicknameRegistrationDialog.h; sourceTree = "<group>"; };
+		C574A464185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobage_showNicknameRegistrationDialog.m; sourceTree = "<group>"; };
 		C57864BD1768728900C56F06 /* ANE4MobageSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = ANE4MobageSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57865A91769A4FE00C56F06 /* common_Service_updateBalanceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_updateBalanceButton.h; sourceTree = "<group>"; };
 		C57865AA1769A50100C56F06 /* common_Service_updateBalanceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_updateBalanceButton.m; sourceTree = "<group>"; };
@@ -785,6 +797,8 @@
 				C5516D2B17DD8A9E0070FBBA /* Mobage_dashboardObserver.m */,
 				C5B46DCF182B8233005A78FD /* Mobage_registerTick.h */,
 				C5B46DD0182B8233005A78FD /* Mobage_registerTick.m */,
+				C574A463185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.h */,
+				C574A464185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m */,
 			);
 			path = Mobage;
 			sourceTree = "<group>";
@@ -1096,6 +1110,10 @@
 				C5C81580183DCC3000DD2D41 /* MobageAd_showPopupDialog.m */,
 				C5C81585183DCC8500DD2D41 /* MobageAd_loadPopupDialog.h */,
 				C5C81586183DCC8500DD2D41 /* MobageAd_loadPopupDialog.m */,
+				C574A416185EE76E008064FC /* MobageAd_showOfferwall.h */,
+				C574A417185EE76E008064FC /* MobageAd_showOfferwall.m */,
+				C574A41A185EED24008064FC /* MobageAd_loadOfferwall.h */,
+				C574A41B185EED24008064FC /* MobageAd_loadOfferwall.m */,
 				C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */,
 				C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */,
 			);
@@ -1142,6 +1160,7 @@
 				C54EA5E917533CCA00DDC98F /* Mobage_getSdkVersion.h in Headers */,
 				C54EA5F117533D3700DDC98F /* Mobage_onPause.h in Headers */,
 				C54EA5F517533D5900DDC98F /* Mobage_onResume.h in Headers */,
+				C574A465185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.h in Headers */,
 				C54EA5F917533D8000DDC98F /* Mobage_showLoginDialog.h in Headers */,
 				C54EA5FD17533DA000DDC98F /* Mobage_showLogoutDialog.h in Headers */,
 				C54EA60117533DC700DDC98F /* Mobage_hideSplashScreen.h in Headers */,
@@ -1158,6 +1177,7 @@
 				C54EA6441754504300DDC98F /* Debit_continueTransaction.h in Headers */,
 				C54EA6481754559300DDC98F /* Debit_createTransaction.h in Headers */,
 				C54EA64C175456BA00DDC98F /* Debit_getPendingTransaction.h in Headers */,
+				C574A41C185EED24008064FC /* MobageAd_loadOfferwall.h in Headers */,
 				C54EA6501754578600DDC98F /* Debit_getTransaction.h in Headers */,
 				C54EA6541754583200DDC98F /* Debit_openTransaction.h in Headers */,
 				C54EA6591754593700DDC98F /* Inventory_getItem.h in Headers */,
@@ -1187,6 +1207,7 @@
 				C54EA6AE17548BF900DDC98F /* common_People_getUser.h in Headers */,
 				C54EA6B217548C7300DDC98F /* common_People_getUsers.h in Headers */,
 				C5B46DD1182B8233005A78FD /* Mobage_registerTick.h in Headers */,
+				C574A418185EE76F008064FC /* MobageAd_showOfferwall.h in Headers */,
 				C54EA6B717548D2900DDC98F /* common_Profanity_checkProfanity.h in Headers */,
 				C54EA6BB17548DF000DDC98F /* common_RemoteNotification_base.h in Headers */,
 				C54EA6BF17548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.h in Headers */,
@@ -1402,6 +1423,7 @@
 				C54EA5D017530FEC00DDC98F /* FunctionSets.m in Sources */,
 				C54EA5E217533C5F00DDC98F /* Mobage_addPlatformListener.m in Sources */,
 				C54EA5E417533C5F00DDC98F /* Mobage_checkLoginStatus.m in Sources */,
+				C574A419185EE76F008064FC /* MobageAd_showOfferwall.m in Sources */,
 				C54EA5E617533C5F00DDC98F /* Mobage_initialize.m in Sources */,
 				C54EA5EA17533CCA00DDC98F /* Mobage_getSdkVersion.m in Sources */,
 				C5FF19EF1828B9C3009A00DE /* Account_getBalance.m in Sources */,
@@ -1430,6 +1452,7 @@
 				C54EA65F17545E0F00DDC98F /* common_Appdata_base.m in Sources */,
 				C54EA66317545E7400DDC98F /* common_Appdata_deleteEntries.m in Sources */,
 				C5FF19F41828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */,
+				C574A466185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m in Sources */,
 				C54EA6671754602300DDC98F /* common_Appdata_getEntries.m in Sources */,
 				C54EA66B1754611A00DDC98F /* common_Appdata_updateEntries.m in Sources */,
 				C5B46DD6182B9259005A78FD /* AppDelegatePatch.m in Sources */,
@@ -1458,6 +1481,7 @@
 				C54EA6BC17548DF000DDC98F /* common_RemoteNotification_base.m in Sources */,
 				C5C8159C183F450900DD2D41 /* MobageAdEventReporter_base.m in Sources */,
 				C54EA6C017548E1100DDC98F /* common_RemoteNotification_getRemoteNotificationsEnabled.m in Sources */,
+				C574A41D185EED24008064FC /* MobageAd_loadOfferwall.m in Sources */,
 				C54EA6C417548ED800DDC98F /* common_RemoteNotification_setRemoteNotificationsEnabled.m in Sources */,
 				C54EA6C817548FA700DDC98F /* common_RemoteNotification_send_iOS.m in Sources */,
 				C54EA6CD1754972600DDC98F /* common_Service_base.m in Sources */,
@@ -1602,8 +1626,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1634,8 +1658,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1660,8 +1684,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = "";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				EXECUTABLE_PREFIX = "";
@@ -1693,8 +1717,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_ENTITLEMENTS = "";
 				EXECUTABLE_PREFIX = "";
 				GCC_PREFIX_HEADER = "src/ANE4MobageSDK-Prefix.pch";
@@ -1721,7 +1745,7 @@
 		C57864C71768728A00C56F06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_EMPTY_BODY = NO;
@@ -1757,7 +1781,7 @@
 		C57864C81768728A00C56F06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_EMPTY_BODY = NO;

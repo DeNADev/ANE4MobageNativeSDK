@@ -21,17 +21,32 @@
  * THE SOFTWARE.
  **/
 
-#import "Base.h"
+#import "MobageAd_showOfferwall.h"
 
-#import <MBGADError.h>
-#import <MBGADIconListView.h>
-#import <MBGADPopupDialog.h>
-#import <MBGADOfferwall.h>
+@interface MobageAd_showOfferwall()
+FREObject ANE4MBG_ad_MobageAd_showOfferwall(FREContext cxt,
+                                            void* functionData,
+                                            uint32_t argc,
+                                            FREObject argv[]);
+@end
 
-@interface MobageAd_base : Base
+@implementation MobageAd_showOfferwall
++ (void)ContextInitializer:(FunctionSets *)funcSets {
+    LOG_METHOD;
+    [funcSets addFuncSet:@"ANE4MBG_ad_MobageAd_showOfferwall"
+                 pointer:&ANE4MBG_ad_MobageAd_showOfferwall];
+    
+}
 
-+ (MBGADIconListView *)sharedIconListView;
-+ (MBGADPopupDialog *)sharedPopupDialog;
-+ (MBGADOfferwall *)sharedOfferwall;
-
+FREObject ANE4MBG_ad_MobageAd_showOfferwall(FREContext cxt,
+                                            void* functionData,
+                                            uint32_t argc,
+                                            FREObject argv[]) {
+    LOG_METHOD;
+    
+    MBGADOfferwall *offerwallDialog = [MobageAd_showOfferwall sharedOfferwall];
+    [offerwallDialog show];
+    
+    return NULL;
+}
 @end

@@ -71,6 +71,7 @@ package UITest.social.common
                     {
                         style:"",
                         message:text_message.text,collapseKey:"",
+                        sound:"default",
                         extras:["This is Extra"],iconUrl:""
                     });
                 

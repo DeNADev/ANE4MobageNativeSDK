@@ -315,5 +315,15 @@ package com.mobage.air
 			Extension.call(funcId);
 		}
 		
+        /**
+         * show Nickname Registration Dialog for 1CR User (Only for JP)
+         * 
+         */		
+        public static function showNicknameRegistrationDialog(defaultNickname :String, onSuccess :Function) :void
+        {
+            const funcId :String = 'com.mobage.air.extension.Mobage.showNicknameRegistrationDialog';
+            const dId    :String = Mobage.once(funcId, onSuccess);
+            Extension.call(funcId, defaultNickname, onSuccess);
+        }
     }
 }
