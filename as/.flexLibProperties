@@ -12,8 +12,10 @@
     <classEntry path="com.mobage.air.ad.AdListener"/>
     <classEntry path="com.mobage.air.ad.FrameID"/>
     <classEntry path="com.mobage.air.ad.MobageAd"/>
+    <classEntry path="com.mobage.air.ad.MobageAdError"/>
     <classEntry path="com.mobage.air.ad.MobageAdEventReporter"/>
     <classEntry path="com.mobage.air.ad.MobageAdListener"/>
+    <classEntry path="com.mobage.air.analytics.EventReporter"/>
     <classEntry path="com.mobage.air.bank.Account"/>
     <classEntry path="com.mobage.air.bank.BillingItem"/>
     <classEntry path="com.mobage.air.bank.Debit"/>
@@ -53,7 +55,6 @@
     <classEntry path="com.mobage.air.util.Log"/>
     <classEntry path="com.mobage.air.util.NotImplementedError"/>
     <classEntry path="com.mobage.air.util.Struct"/>
-    <classEntry path="com.mobage.air.ad.MobageAdError"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>

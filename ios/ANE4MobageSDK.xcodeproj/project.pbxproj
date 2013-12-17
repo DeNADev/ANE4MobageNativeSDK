@@ -399,6 +399,12 @@
 		C5C815AD1843013500DD2D41 /* MBGADError+MobageAd_error.h in Headers */ = {isa = PBXBuildFile; fileRef = C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */; };
 		C5C815AE1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */; };
 		C5C815AF1843013500DD2D41 /* MBGADError+MobageAd_error.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */; };
+		C5F61B1E18601D240085CDCB /* EventReporter_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F61B1C18601D240085CDCB /* EventReporter_base.h */; };
+		C5F61B1F18601D240085CDCB /* EventReporter_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F61B1D18601D240085CDCB /* EventReporter_base.m */; };
+		C5F61B2218601D410085CDCB /* GameEvent_base.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F61B2018601D410085CDCB /* GameEvent_base.h */; };
+		C5F61B2318601D410085CDCB /* GameEvent_base.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F61B2118601D410085CDCB /* GameEvent_base.m */; };
+		C5F61B2618601E190085CDCB /* EventReporter_report.h in Headers */ = {isa = PBXBuildFile; fileRef = C5F61B2418601E190085CDCB /* EventReporter_report.h */; };
+		C5F61B2718601E190085CDCB /* EventReporter_report.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F61B2518601E190085CDCB /* EventReporter_report.m */; };
 		C5FF19EE1828B9C3009A00DE /* Account_getBalance.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */; };
 		C5FF19EF1828B9C3009A00DE /* Account_getBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */; };
 		C5FF19F21828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */; };
@@ -639,6 +645,12 @@
 		C5C81599183F450900DD2D41 /* MobageAdEventReporter_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobageAdEventReporter_base.m; sourceTree = "<group>"; };
 		C5C815AA1843013500DD2D41 /* MBGADError+MobageAd_error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBGADError+MobageAd_error.h"; sourceTree = "<group>"; };
 		C5C815AB1843013500DD2D41 /* MBGADError+MobageAd_error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBGADError+MobageAd_error.m"; sourceTree = "<group>"; };
+		C5F61B1C18601D240085CDCB /* EventReporter_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventReporter_base.h; sourceTree = "<group>"; };
+		C5F61B1D18601D240085CDCB /* EventReporter_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventReporter_base.m; sourceTree = "<group>"; };
+		C5F61B2018601D410085CDCB /* GameEvent_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEvent_base.h; sourceTree = "<group>"; };
+		C5F61B2118601D410085CDCB /* GameEvent_base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameEvent_base.m; sourceTree = "<group>"; };
+		C5F61B2418601E190085CDCB /* EventReporter_report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventReporter_report.h; sourceTree = "<group>"; };
+		C5F61B2518601E190085CDCB /* EventReporter_report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventReporter_report.m; sourceTree = "<group>"; };
 		C5FF19EC1828B9C3009A00DE /* Account_getBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account_getBalance.h; sourceTree = "<group>"; };
 		C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account_getBalance.m; sourceTree = "<group>"; };
 		C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_showCommunityUI.h; sourceTree = "<group>"; };
@@ -747,6 +759,7 @@
 			isa = PBXGroup;
 			children = (
 				C5C81546183DB01A00DD2D41 /* ad */,
+				C5F61B1918601CF50085CDCB /* analytics */,
 				C54EA6301753A30400DDC98F /* bank */,
 				C54EA616175372FC00DDC98F /* social */,
 				C54EA5DA17533C5F00DDC98F /* Mobage */,
@@ -1131,6 +1144,35 @@
 			path = MobageAdEventReporter;
 			sourceTree = "<group>";
 		};
+		C5F61B1918601CF50085CDCB /* analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C5F61B1A18601CF50085CDCB /* EventReporter */,
+				C5F61B1B18601CF50085CDCB /* GameEvent */,
+			);
+			path = analytics;
+			sourceTree = "<group>";
+		};
+		C5F61B1A18601CF50085CDCB /* EventReporter */ = {
+			isa = PBXGroup;
+			children = (
+				C5F61B1C18601D240085CDCB /* EventReporter_base.h */,
+				C5F61B1D18601D240085CDCB /* EventReporter_base.m */,
+				C5F61B2418601E190085CDCB /* EventReporter_report.h */,
+				C5F61B2518601E190085CDCB /* EventReporter_report.m */,
+			);
+			path = EventReporter;
+			sourceTree = "<group>";
+		};
+		C5F61B1B18601CF50085CDCB /* GameEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C5F61B2018601D410085CDCB /* GameEvent_base.h */,
+				C5F61B2118601D410085CDCB /* GameEvent_base.m */,
+			);
+			path = GameEvent;
+			sourceTree = "<group>";
+		};
 		C5FF19EB1828B961009A00DE /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -1175,6 +1217,7 @@
 				C54EA63C1753A44C00DDC98F /* Debit_base.h in Headers */,
 				C54EA6401753A69300DDC98F /* Debit_closeTransaction.h in Headers */,
 				C54EA6441754504300DDC98F /* Debit_continueTransaction.h in Headers */,
+				C5F61B2218601D410085CDCB /* GameEvent_base.h in Headers */,
 				C54EA6481754559300DDC98F /* Debit_createTransaction.h in Headers */,
 				C54EA64C175456BA00DDC98F /* Debit_getPendingTransaction.h in Headers */,
 				C574A41C185EED24008064FC /* MobageAd_loadOfferwall.h in Headers */,
@@ -1182,9 +1225,11 @@
 				C54EA6541754583200DDC98F /* Debit_openTransaction.h in Headers */,
 				C54EA6591754593700DDC98F /* Inventory_getItem.h in Headers */,
 				C54EA65E17545E0F00DDC98F /* common_Appdata_base.h in Headers */,
+				C5F61B1E18601D240085CDCB /* EventReporter_base.h in Headers */,
 				C5B46DD8182B925E005A78FD /* AppDelegatePatch.h in Headers */,
 				C54EA66217545E7400DDC98F /* common_Appdata_deleteEntries.h in Headers */,
 				C54EA6661754602300DDC98F /* common_Appdata_getEntries.h in Headers */,
+				C5F61B2618601E190085CDCB /* EventReporter_report.h in Headers */,
 				C54EA66A1754611A00DDC98F /* common_Appdata_updateEntries.h in Headers */,
 				C54EA66F1754623500DDC98F /* common_Auth_authorizeToken.h in Headers */,
 				C54EA674175464F100DDC98F /* common_Blacklist_checkBlacklist.h in Headers */,
@@ -1451,6 +1496,7 @@
 				C54EA65A1754593700DDC98F /* Inventory_getItem.m in Sources */,
 				C54EA65F17545E0F00DDC98F /* common_Appdata_base.m in Sources */,
 				C54EA66317545E7400DDC98F /* common_Appdata_deleteEntries.m in Sources */,
+				C5F61B2718601E190085CDCB /* EventReporter_report.m in Sources */,
 				C5FF19F41828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */,
 				C574A466185F1C8D008064FC /* Mobage_showNicknameRegistrationDialog.m in Sources */,
 				C54EA6671754602300DDC98F /* common_Appdata_getEntries.m in Sources */,
@@ -1474,8 +1520,10 @@
 				C54EA69F175485F000DDC98F /* common_People_base.m in Sources */,
 				C54EA6A31754864900DDC98F /* common_People_getCurrentUser.m in Sources */,
 				C54EA6A7175489FF00DDC98F /* common_People_getFriends.m in Sources */,
+				C5F61B2318601D410085CDCB /* GameEvent_base.m in Sources */,
 				C54EA6AB17548B5B00DDC98F /* common_People_getFriendsWithGame.m in Sources */,
 				C54EA6AF17548BF900DDC98F /* common_People_getUser.m in Sources */,
+				C5F61B1F18601D240085CDCB /* EventReporter_base.m in Sources */,
 				C54EA6B317548C7300DDC98F /* common_People_getUsers.m in Sources */,
 				C54EA6B817548D2900DDC98F /* common_Profanity_checkProfanity.m in Sources */,
 				C54EA6BC17548DF000DDC98F /* common_RemoteNotification_base.m in Sources */,

@@ -43,6 +43,11 @@
 #import "Mobage_showNicknameRegistrationDialog.h"
 #endif
 
+// analytics Analytics.as
+#ifdef JP
+#import "EventReporter_report.h"
+#endif
+
 // ad MobageAd.as
 #import "MobageAd_hideIconListView.h"
 #import "MobageAd_showIconListView.h"
@@ -224,6 +229,11 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [Mobage_addDashboardObserver ContextInitializer:funcSets];
     [Mobage_removeDashboardObserver ContextInitializer:funcSets];
     [Mobage_showNicknameRegistrationDialog ContextInitializer:funcSets];
+#endif
+    
+    // analytics Analytics.as
+#ifdef JP
+    [EventReporter_report ContextInitializer:funcSets];
 #endif
     
     // ad MobageAd.as

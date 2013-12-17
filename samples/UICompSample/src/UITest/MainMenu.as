@@ -2,12 +2,13 @@ package UITest
 {
     import flash.display.Sprite;
     
+    import UITest.ad.MobageAdMenu;
+    import UITest.analytics.AnalyticsMenu;
+    import UITest.bank.BankMenu;
+    import UITest.mobage.MobageMenu;
     import UITest.social.SocialMenu;
     
     import util.ButtonList;
-    import UITest.bank.BankMenu;
-    import UITest.mobage.MobageMenu;
-    import UITest.ad.MobageAdMenu;
     
     public class MainMenu extends Sprite {	
         private var userID :String = null;
@@ -41,13 +42,19 @@ package UITest
                 mobage.createMobageMenu();
             });
 			
-			
 			buttons.add("Ad", function() :void {
 				var mobagead :MobageAdMenu = new MobageAdMenu(userID);
 				removeChild(buttons);
 				addChild(mobagead);
 				mobagead.createMobageAdMenu();
 			});
+            
+            buttons.add("Analytics", function() :void {
+                var mobagead :AnalyticsMenu = new AnalyticsMenu(userID);
+                removeChild(buttons);
+                addChild(mobagead);
+                mobagead.createAnalyticsMenu();
+            });
         }
     }
 }
