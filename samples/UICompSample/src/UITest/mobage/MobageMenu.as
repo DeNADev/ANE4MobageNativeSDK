@@ -65,11 +65,12 @@ package UITest.mobage
                 mbuttons.add("showNicknameRegistrationDialog", function() :void {
                     trace('showNicknameRegistrationDialog');
                     com.mobage.air.Mobage.showNicknameRegistrationDialog(
-                        "abcdefghijklmn",
+                        "abcdef",
                         function(alreadyRegistered :Boolean) :void {
+                            trace('showNicknameRegistrationDialog alreadyRegistered : ' + alreadyRegistered);
                             AlertDialog.show({
                                 title: "showNicknameRegistrationDialog",
-                                message: "" + alreadyRegistered
+                                message: "alreadyRegistered : " + alreadyRegistered
                             });
                         });
                     

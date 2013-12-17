@@ -31,8 +31,8 @@
 }
 
 FREResult TCDispatch(FREContext ctx,
-                   NSString *code,
-                   id level) {
+                     NSString *code,
+                     id level) {
     LOG_METHOD;
     
     const uint8_t* dispatchCode = (const uint8_t*)[code UTF8String];

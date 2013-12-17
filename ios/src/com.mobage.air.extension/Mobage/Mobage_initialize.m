@@ -54,8 +54,8 @@ FREObject ANE4MBG_Mobage_initialize(FREContext cxt,
     
     [MBGPlatform initialize: region
                  serverType: serverMode
-                 cosumerKey: consumerKey
-              cosumerSecret: consumerSecret
+                consumerKey: consumerKey
+             consumerSecret: consumerSecret
                       appId: appId
      ];
     

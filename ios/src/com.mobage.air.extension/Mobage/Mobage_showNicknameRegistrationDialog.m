@@ -25,9 +25,9 @@
 
 @interface Mobage_showNicknameRegistrationDialog()
 FREObject ANE4MBG_Mobage_showNicknameRegistrationDialog(FREContext cxt,
-                                          void* functionData,
-                                          uint32_t argc,
-                                          FREObject argv[]);
+                                                        void* functionData,
+                                                        uint32_t argc,
+                                                        FREObject argv[]);
 @end
 
 @implementation Mobage_showNicknameRegistrationDialog
@@ -38,16 +38,16 @@ FREObject ANE4MBG_Mobage_showNicknameRegistrationDialog(FREContext cxt,
 }
 
 FREObject ANE4MBG_Mobage_showNicknameRegistrationDialog(FREContext cxt,
-                                          void* functionData,
-                                          uint32_t argc,
-                                          FREObject argv[]) {
+                                                        void* functionData,
+                                                        uint32_t argc,
+                                                        FREObject argv[]) {
     LOG_METHOD;
     
     ArgsParser *parser = [ArgsParser sharedParser];
     [parser setArgc:argc argv:argv];
     
     NSString* defaultNickname  = [parser nextString];
-    NSString* onSuccessCB = [parser nextString];
+    NSString* onSuccess = [parser nextString];
     
     FREContext context = [ContextOwner sharedContext];
     
@@ -55,7 +55,7 @@ FREObject ANE4MBG_Mobage_showNicknameRegistrationDialog(FREContext cxt,
      showNicknameRegistrationDialog:defaultNickname
      onSuccess:^(BOOL alreadyRegistered) {
          FREResult result = TCDispatch(context,
-                                       onSuccessCB,
+                                       onSuccess,
                                        [NSNumber numberWithBool:alreadyRegistered]);
          
          if(result != FRE_OK) [ArgsParser reportResult:result];

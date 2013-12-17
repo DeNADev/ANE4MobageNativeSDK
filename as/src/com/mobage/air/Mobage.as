@@ -323,7 +323,7 @@ package com.mobage.air
         {
             const funcId :String = 'com.mobage.air.extension.Mobage.showNicknameRegistrationDialog';
             const dId    :String = Mobage.once(funcId, onSuccess);
-            Extension.call(funcId, defaultNickname, onSuccess);
+            Extension.call(funcId, defaultNickname, dId);
         }
     }
 }
