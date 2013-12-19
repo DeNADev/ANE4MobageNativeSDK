@@ -22,48 +22,26 @@
  ******************************************************************************/
 package com.mobage.air.extension.ad;
 
-
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
-import com.mobage.air.extension.ArgsParser;
 import com.mobage.air.extension.Dispatcher;
-import com.mobage.android.Error;
-import com.mobage.android.ad.MobageAdEventReporter;
+import com.mobage.air.extension.SharedInstance;
 
-public class MobageAdEventReporter_sendCustomEvent implements FREFunction {
+public class MobageAd_showOfferwall implements FREFunction {
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
-		
-		try{
-			ArgsParser a = new ArgsParser(args);
-			String eventId = a.nextString();
-			final String OnsendCustomEventSuccessId = a.nextString();
-			final String onErrorId = a.nextString();
-			a.finish();
-			
-			MobageAdEventReporter.OnSendCustomEventComplete cb = new MobageAdEventReporter.OnSendCustomEventComplete() {
-				
-				@Override
-				public void onSuccess() {
-					Dispatcher.dispatch(context, OnsendCustomEventSuccessId);
-					
-				}
-				
-				@Override
-				public void onError(Error error) {
-					Dispatcher.dispatch(context, onErrorId, error);
-					
-				}
-			};
-			
-			MobageAdEventReporter.sendCustomEvent(eventId, cb);
-			
-		}catch (Exception e) {
-			Dispatcher.exception(context, e);
+		SharedInstance.initInstance();
+		if (SharedInstance.getInstance().offerwall != null) {
+			try {
+				SharedInstance.getInstance().offerwall.show();
+
+			} catch (Exception e) {
+				Dispatcher.exception(context, e);
+			}
 		}
-		
+
 		return null;
 	}
 

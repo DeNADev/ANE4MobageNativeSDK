@@ -44,7 +44,7 @@ public class MobageAd_loadPopupDialog implements FREFunction {
 		SharedInstance.initInstance();
 		try{
 			ArgsParser a = new ArgsParser(args);
-			final MobageAd.FrameId frameId =a.nextFrameId();
+			MobageAd.FrameId frameId =a.nextFrameId();
 			String extraParam = null;
 			if(args.length == 2){
 				extraParam = a.nextString();

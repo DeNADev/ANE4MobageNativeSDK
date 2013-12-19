@@ -32,9 +32,12 @@ import com.adobe.fre.FREFunction;
 import com.mobage.air.extension.ad.MobageAdEventReporter_sendCustomEvent;
 import com.mobage.air.extension.ad.MobageAd_hideIconListView;
 import com.mobage.air.extension.ad.MobageAd_loadIconListView;
+import com.mobage.air.extension.ad.MobageAd_loadOfferwall;
 import com.mobage.air.extension.ad.MobageAd_loadPopupDialog;
 import com.mobage.air.extension.ad.MobageAd_showIconListView;
+import com.mobage.air.extension.ad.MobageAd_showOfferwall;
 import com.mobage.air.extension.ad.MobageAd_showPopupDialog;
+import com.mobage.air.extension.analytics.EventReporter_report;
 import com.mobage.air.extension.bank.Account_getBalance;
 import com.mobage.air.extension.bank.Debit_cancelTransaction;
 import com.mobage.air.extension.bank.Debit_closeTransaction;
@@ -115,6 +118,7 @@ public class MobageFREContext extends FREContext {
 		register(Mobage_checkLoginStatus.class);
 		register(Mobage_openUpgradeDialog.class);
 		register(Mobage_registerTick.class);
+		register(Mobage_showNicknameRegistrationDialog.class);
 
 		// class Appdata
 		register(Appdata_deleteEntries.class);
@@ -197,6 +201,11 @@ public class MobageFREContext extends FREContext {
 		register(MobageAd_loadPopupDialog.class);
 		register(MobageAd_showPopupDialog.class);
 		register(MobageAdEventReporter_sendCustomEvent.class);
+		register(MobageAd_loadOfferwall.class);
+		register(MobageAd_showOfferwall.class);
+		
+		// class analytics
+		register(EventReporter_report.class);
 
 	}
 

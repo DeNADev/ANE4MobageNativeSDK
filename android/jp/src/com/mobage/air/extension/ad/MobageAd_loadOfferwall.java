@@ -24,19 +24,21 @@ package com.mobage.air.extension.ad;
 
 
 import org.json.JSONArray;
+
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.mobage.air.extension.ArgsParser;
-import com.mobage.air.extension.Convert;
 import com.mobage.air.extension.Dispatcher;
 import com.mobage.air.extension.SharedInstance;
 import com.mobage.android.ad.MobageAd;
-import com.mobage.android.ad.MobageAdIconListView;
 import com.mobage.android.ad.MobageAdListener;
+import com.mobage.android.ad.MobageAdOfferwall;
+import com.mobage.air.extension.Convert;
 
-public class MobageAd_loadIconListView implements FREFunction {
-	final String adType = "IconListView";
+public class MobageAd_loadOfferwall implements FREFunction {
+	final String adType = "OfferWallDialog";
+	
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
@@ -44,12 +46,15 @@ public class MobageAd_loadIconListView implements FREFunction {
 		try{
 			ArgsParser a = new ArgsParser(args);
 			MobageAd.FrameId frameId =a.nextFrameId();
+			String extraParam = null;
+			if(args.length == 2){
+				extraParam = a.nextString();
+				}
 			a.finish();
 			
-			
-			if(SharedInstance.getInstance().iconListView == null){
-				SharedInstance.getInstance().iconListView = new MobageAdIconListView(context.getActivity());
-				SharedInstance.getInstance().iconListView.setAdListener(new MobageAdListener() {
+			if(SharedInstance.getInstance().offerwall == null){
+				SharedInstance.getInstance().offerwall = new MobageAdOfferwall(context.getActivity());
+				SharedInstance.getInstance().offerwall.setAdListener(new MobageAdListener() {
 					@Override
 					public void onReceiveAd(MobageAd ad) {
 						Dispatcher.dispatch(context,"AdListener.onReceiveAd", adType);
@@ -64,7 +69,6 @@ public class MobageAd_loadIconListView implements FREFunction {
 						}catch (Exception e) {
 							Dispatcher.exception(context, e);
 						}
-					
 					}
 
 					@Override
@@ -84,8 +88,11 @@ public class MobageAd_loadIconListView implements FREFunction {
 				});
 			}
 			
-			SharedInstance.getInstance().iconListView.setFrameId(frameId);
-			SharedInstance.getInstance().iconListView.loadAd();
+			SharedInstance.getInstance().offerwall.setFrameId(frameId);
+			if(extraParam != null) {
+			SharedInstance.getInstance().offerwall.setExtraParam(extraParam);
+			}
+			SharedInstance.getInstance().offerwall.loadAd();
 			
 		}catch (Exception e) {
 			Dispatcher.exception(context, e);

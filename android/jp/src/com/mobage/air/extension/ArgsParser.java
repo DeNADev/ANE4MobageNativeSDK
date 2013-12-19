@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import com.adobe.fre.FREASErrorException;
 import com.adobe.fre.FREInvalidObjectException;
@@ -150,6 +151,28 @@ public class ArgsParser {
 		} catch (FREASErrorException e) {
 			throw new UnexpectedException(e);
 		} catch (FRENoSuchNameException e) {
+			throw new UnexpectedException(e);
+		}
+	}
+	
+	public JSONObject nextJsonKeyValueMap(){
+		try {
+			return Convert.keyValueMapAsJsonObject(next());
+		} catch (IllegalStateException e) {
+			throw new UnexpectedException(e);
+		} catch (IllegalArgumentException e) {
+			throw new UnexpectedException(e);
+		} catch (FREInvalidObjectException e) {
+			throw new UnexpectedException(e);
+		} catch (FREWrongThreadException e) {
+			throw new UnexpectedException(e);
+		} catch (FRETypeMismatchException e) {
+			throw new UnexpectedException(e);
+		} catch (FREASErrorException e) {
+			throw new UnexpectedException(e);
+		} catch (FRENoSuchNameException e) {
+			throw new UnexpectedException(e);
+		} catch (JSONException e) {
 			throw new UnexpectedException(e);
 		}
 	}

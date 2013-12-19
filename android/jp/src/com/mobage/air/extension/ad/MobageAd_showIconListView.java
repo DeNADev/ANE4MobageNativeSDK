@@ -43,7 +43,7 @@ public class MobageAd_showIconListView implements FREFunction {
 				SharedInstance.getInstance().isIconListViewCalled == false){
 		try{
 			ArgsParser a = new ArgsParser(args);
-			final String position = a.nextString();
+			String position = a.nextString();
 			a.finish();
 			
 			RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, MobageAdIconListView.getHeightPixels(context.getActivity()));

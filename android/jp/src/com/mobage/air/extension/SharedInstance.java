@@ -25,6 +25,7 @@ package com.mobage.air.extension;
 import android.widget.RelativeLayout;
 
 import com.mobage.android.ad.MobageAdIconListView;
+import com.mobage.android.ad.MobageAdOfferwall;
 import com.mobage.android.ad.MobageAdPopupDialog;
 import com.mobage.android.notification.MobageDashboardObserver;
 import com.mobage.android.social.BalanceButton;
@@ -44,6 +45,7 @@ public class SharedInstance {
 	public MobageAdIconListView iconListView;
 	public boolean isIconListViewCalled;
 	public MobageAdPopupDialog popupDialog;
+	public MobageAdOfferwall offerwall;
 	public RelativeLayout rlayout;
 	
 	

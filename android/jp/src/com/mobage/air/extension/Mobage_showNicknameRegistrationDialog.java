@@ -20,51 +20,47 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  ******************************************************************************/
-package com.mobage.air.extension.ad;
+package com.mobage.air.extension;
 
+import org.json.JSONArray;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
-import com.mobage.air.extension.ArgsParser;
-import com.mobage.air.extension.Dispatcher;
-import com.mobage.android.Error;
-import com.mobage.android.ad.MobageAdEventReporter;
+import com.mobage.android.Mobage;
 
-public class MobageAdEventReporter_sendCustomEvent implements FREFunction {
+public class Mobage_showNicknameRegistrationDialog implements FREFunction {
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
-		
-		try{
+		try {
 			ArgsParser a = new ArgsParser(args);
-			String eventId = a.nextString();
-			final String OnsendCustomEventSuccessId = a.nextString();
-			final String onErrorId = a.nextString();
+			final String defaultNickname = a.nextString();
+			final String onNicknameRegistrationSuccessId = a.nextString();
 			a.finish();
-			
-			MobageAdEventReporter.OnSendCustomEventComplete cb = new MobageAdEventReporter.OnSendCustomEventComplete() {
-				
+
+			Mobage.OnNicknameRegistrationComplete cb = new Mobage.OnNicknameRegistrationComplete() {
+
 				@Override
-				public void onSuccess() {
-					Dispatcher.dispatch(context, OnsendCustomEventSuccessId);
-					
-				}
-				
-				@Override
-				public void onError(Error error) {
-					Dispatcher.dispatch(context, onErrorId, error);
-					
+				public void onSuccess(boolean isNicknameAlreadyRegistered) {
+					try {
+						JSONArray args = new JSONArray();
+						args.put(isNicknameAlreadyRegistered);
+						Dispatcher.dispatch(context,
+								onNicknameRegistrationSuccessId, args);
+					} catch (Exception e) {
+						Dispatcher.exception(context, e);
+					}
+
 				}
 			};
-			
-			MobageAdEventReporter.sendCustomEvent(eventId, cb);
-			
-		}catch (Exception e) {
+
+			Mobage.showNicknameRegistrationDialog(defaultNickname, cb);
+
+		} catch (Exception e) {
 			Dispatcher.exception(context, e);
 		}
-		
+
 		return null;
 	}
-
 }

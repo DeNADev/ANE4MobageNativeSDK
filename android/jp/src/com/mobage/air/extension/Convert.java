@@ -144,6 +144,21 @@ public final class Convert {
 		}
 		return target;
 	}
+	
+	public static JSONObject keyValueMapAsJsonObject(FREObject object) throws FREInvalidObjectException, FREWrongThreadException, IllegalStateException, IllegalArgumentException,
+			FRETypeMismatchException, FREASErrorException, FRENoSuchNameException, JSONException {
+		FREArray array = (FREArray) object;
+		long length = array.getLength();
+		JSONObject target = new JSONObject();
+		
+		for (int i = 0; i < length; ++i) {
+			FREArray pair = (FREArray) array.getObjectAt(i);
+			FREObject keyObject = pair.getObjectAt(0).callMethod("toString", null);
+			FREObject valueObject = pair.getObjectAt(1).callMethod("toString", null);
+			target.put(keyObject.getAsString(), valueObject.getAsString());
+		}
+		return target;
+	}
 
 	public static ArrayList<Debit.BillingItem> billingItems(FREObject object) throws FREInvalidObjectException, FREWrongThreadException, IllegalStateException, FRETypeMismatchException,
 			FREASErrorException, FRENoSuchNameException, JSONException {

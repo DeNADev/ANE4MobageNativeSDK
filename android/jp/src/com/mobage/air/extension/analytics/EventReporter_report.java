@@ -20,50 +20,42 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  ******************************************************************************/
-package com.mobage.air.extension.ad;
+package com.mobage.air.extension.analytics;
 
+import org.json.JSONObject;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.mobage.air.extension.ArgsParser;
 import com.mobage.air.extension.Dispatcher;
-import com.mobage.android.Error;
-import com.mobage.android.ad.MobageAdEventReporter;
+import com.mobage.android.analytics.EventReporter;
+import com.mobage.android.analytics.GameEvent;
 
-public class MobageAdEventReporter_sendCustomEvent implements FREFunction {
+public class EventReporter_report implements FREFunction {
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
-		
-		try{
+		try {
 			ArgsParser a = new ArgsParser(args);
-			String eventId = a.nextString();
-			final String OnsendCustomEventSuccessId = a.nextString();
-			final String onErrorId = a.nextString();
+			String eventName = a.nextString();
+			JSONObject payload = a.nextJsonKeyValueMap();
+			JSONObject playerState = a.nextJsonKeyValueMap();
 			a.finish();
-			
-			MobageAdEventReporter.OnSendCustomEventComplete cb = new MobageAdEventReporter.OnSendCustomEventComplete() {
-				
-				@Override
-				public void onSuccess() {
-					Dispatcher.dispatch(context, OnsendCustomEventSuccessId);
-					
-				}
-				
-				@Override
-				public void onError(Error error) {
-					Dispatcher.dispatch(context, onErrorId, error);
-					
-				}
-			};
-			
-			MobageAdEventReporter.sendCustomEvent(eventId, cb);
-			
-		}catch (Exception e) {
+
+			if (payload.length() == 0) {
+				payload = null;
+			}
+			if (playerState.length() == 0) {
+				playerState = null;
+			}
+
+			GameEvent event = new GameEvent(eventName, payload, playerState);
+			EventReporter.report(event);
+		} catch (Exception e) {
 			Dispatcher.exception(context, e);
 		}
-		
+
 		return null;
 	}
 
