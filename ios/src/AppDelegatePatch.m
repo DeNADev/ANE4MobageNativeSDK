@@ -59,6 +59,7 @@ static char* _applicationTargets[APP_PATCH_COUNT] = {
 static IMP _appSupracedent[APP_PATCH_COUNT];
 
 enum {
+    DELEGATE_applicationDidBecomeActive,
     DELEGATE_didFinishLaunchingWithOptions,
 //	DELEGATE_openURLSourceApplicationAnnotation,
 	DELEGATE_didReceiveRemoteNotification,
@@ -67,6 +68,7 @@ enum {
 };
 
 static char* _applicationDelegateTargets[DELEGATE_PATCH_COUNT] = {
+    "applicationDidBecomeActive:",
 	"application:didFinishLaunchingWithOptions:",
 //	"application:openURL:sourceApplication:annotation:",
 	"application:didReceiveRemoteNotification:",
@@ -168,6 +170,16 @@ IMP getMethodImplementation(id obj, SEL sel) {
 }
 
 #pragma mark - UIAppDelegate Hook
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    LOG_METHOD;
+    
+    LOG(@"UIApplicationState : %d", [application applicationState]);
+    if ([application applicationState] != UIApplicationStateActive) {
+        VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
+        if (func) func(self,_cmd,application);
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     LOG_METHOD;
     if ([launchOptions count] > 0) {
