@@ -174,7 +174,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
     LOG_METHOD;
     
     LOG(@"UIApplicationState : %d", [application applicationState]);
-    if ([application applicationState] != UIApplicationStateActive) {
+    if ([application applicationState] == UIApplicationStateActive) {
         VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
         if (func) func(self,_cmd,application);
     }
