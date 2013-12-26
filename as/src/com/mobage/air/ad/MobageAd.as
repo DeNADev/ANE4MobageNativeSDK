@@ -85,7 +85,7 @@ package com.mobage.air.ad
          * 
          * 
          */		
-        public static function showOfferWallDialog() :void{
+        public static function showOfferwall() :void{
             const funcId :String = 'com.mobage.air.extension.ad.MobageAd.showOfferwall';
             Extension.call(funcId);
         }
@@ -96,7 +96,7 @@ package com.mobage.air.ad
          * @param extraParam
          * 
          */
-        public static function loadOfferWallDialog(frameID :FrameID, extraParam :String) :void{
+        public static function loadOfferwall(frameID :FrameID, extraParam :String) :void{
             const funcId :String = 'com.mobage.air.extension.ad.MobageAd.loadOfferwall';
             if(extraParam == null){
                 Extension.call(funcId, frameID);

@@ -44,8 +44,8 @@ package UITest.ad
 				com.mobage.air.ad.MobageAd.loadPopupDialog(FrameID.A, "Hello This a Test For me");
 			});
             
-            adButtons.add("Load OfferwallDialog",function() :void {
-                com.mobage.air.ad.MobageAd.loadOfferWallDialog(FrameID.A, "Hello This a Test For me");
+            adButtons.add("Load Offerwall",function() :void {
+                com.mobage.air.ad.MobageAd.loadOfferwall(FrameID.A, "Hello This a Test For me");
             })
 			
 			adButtons.add("Send Custom Event",function() :void {
@@ -99,8 +99,8 @@ package UITest.ad
 			com.mobage.air.ad.MobageAd.showIconListView("BOTTOM");}
 			else if (adType == "PopupDialog") {
 			com.mobage.air.ad.MobageAd.showPopupDialog();}
-            else if (adType == "OfferWallDialog") {
-            com.mobage.air.ad.MobageAd.showOfferWallDialog();}
+            else if (adType == "Offerwall") {
+            com.mobage.air.ad.MobageAd.showOfferwall();}
 		}
 		
 		
