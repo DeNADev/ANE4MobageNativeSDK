@@ -29,7 +29,7 @@ static MBGADPopupDialog *_popupDialog = nil;
 static MBGADOfferwall *_offerwallDialog = nil;
 static NSString *_adTypeIconListView = @"IconListView";
 static NSString *_adTypePopupDialog = @"PopupDialog";
-static NSString *_adTypeOfferWallDialog = @"OfferWallDialog";
+static NSString *_adTypeOfferWallDialog = @"Offerwall";
 
 
 @implementation MobageAd_base

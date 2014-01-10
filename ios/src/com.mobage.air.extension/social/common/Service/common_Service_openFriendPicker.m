@@ -57,13 +57,13 @@ FREObject ANE4MBG_social_common_Service_openFriendPicker(FREContext cxt,
      onPicked:^(NSArray *userIds) {
          FREResult result = TCDispatch(context,
                                      onPicked,
-                                     userIds);
+                                     [NSArray arrayWithObject:userIds]);
          if(result != FRE_OK) [ArgsParser reportResult:result];
      }
      onInviteSent:^(NSArray *userIds) {
          FREResult result = TCDispatch(context,
                                      onInviteSent,
-                                     userIds);
+                                     [NSArray arrayWithObject:userIds]);
          if(result != FRE_OK) [ArgsParser reportResult:result];
      }
      onDismiss:^{
