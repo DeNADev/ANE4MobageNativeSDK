@@ -37,7 +37,7 @@ import com.mobage.android.ad.MobageAdOfferwall;
 import com.mobage.air.extension.Convert;
 
 public class MobageAd_loadOfferwall implements FREFunction {
-	final String adType = "OfferWallDialog";
+	final String adType = "Offerwall";
 	
 
 	@Override
