@@ -68,6 +68,6 @@ Smartphone simulator (Flash Builder built-in):
 	Not supported
 
 Mobage Native SDK:
-	*Only 1.4.5 or later
+	*Only 1.4.6 or later
 
 See README-dev for development.
