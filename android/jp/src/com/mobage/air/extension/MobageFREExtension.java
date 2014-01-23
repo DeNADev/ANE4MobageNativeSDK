@@ -32,7 +32,7 @@ public final class MobageFREExtension implements FREExtension {
 
 	public static String TAG = "MobageFREExtension";
 
-	private FREContext context;
+	private static FREContext context;
 
 	/**
 	 * Naming rules: <br>
@@ -77,5 +77,9 @@ public final class MobageFREExtension implements FREExtension {
 		} catch (Exception e) {
 			return resourceClassName; // fallback
 		}
+	}
+    
+    public static Activity getActivity() {
+		return context.getActivity();
 	}
 }
