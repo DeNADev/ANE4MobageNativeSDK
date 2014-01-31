@@ -75,6 +75,9 @@ Type the following command in the root directory:
 
     make toggle-?? DEBUG=0
 
+Example:
+    make toggle-jp DEBUG=0
+
 
 RUN TESTS
 ======================================================================

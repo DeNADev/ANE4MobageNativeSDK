@@ -5,12 +5,6 @@ include ../common.mk
 # debug or release
 DEBUG?=0
 
-ifeq ($(DEBUG), 1)
-ANDROID_BUILD_TARGET?=debug
-else
-ANDROID_BUILD_TARGET?=release
-endif
-
 # REGION
 # jp or kr
 # jp : Build for JP
@@ -68,7 +62,7 @@ $(INPUT_ANDROID_SWF): $(INPUT_NATIVE_JAR) $(OUTPUT_SWF)
 
 $(INPUT_NATIVE_JAR):
 	mkdir -p platform/android
-	cd ../android/; BUILD_TARGET=$(ANDROID_BUILD_TARGET) REGION=$(REGION) make
+	cd ../android/; make DEBUG=$(DEBUG) REGION=$(REGION) 
 	cp ../android/$(REGION)/ANE4MobageSDK.jar $@
 
 $(INPUT_IOS_LIB):
