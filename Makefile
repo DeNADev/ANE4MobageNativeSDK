@@ -4,8 +4,8 @@ include common.mk
 
 # DEBUG
 # debug or release
-# 0 : Debug build
-# 1 : Release build
+# 1 : Debug build
+# 0 : Release build
 DEBUG?=0
 
 toggle-jp:

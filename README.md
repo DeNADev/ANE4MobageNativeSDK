@@ -31,13 +31,9 @@ REST APIs specification:
 Known Issues
 ==========================================================================
 - Exporting apk file from FlashBuilder will automatically add "air." to the package name
-  which will cause issues with remote notification and submission build. See Programing
+  which will cause issues with remote notification. It will not affect apk’s through our Production submission since developer site will fix this automatically. See Programing
   Guide section "How to setup correct Android package name when exporting for release
   build?" for more details.
-
-- FlashBuilder exports apk with incorrect resources causing upload error on JP Mobage
-  Developers. Please insert dummy icon.png in "res/drawables/" as workaround until the
-  issue is solved.
 
 - Under a specific condition on Android 3.x, an issue is found where
   the screen orientation of the Mobage login view is not handled correctly.
@@ -50,6 +46,8 @@ Known Issues
 
 ChangeLog
 ==========================================================================
+2014-01-16 (version v1.4.6-jp-0)
+ Initial release for Mobage SDK 1.4.6
 
 
 ENVIRONMENT
