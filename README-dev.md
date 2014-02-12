@@ -38,7 +38,7 @@ ENVIROMENT
 ======================================================================
 Following are the requirements for development.
 
-Flash Builder 4.7 (AIR SDK 3.8 or later)   
+Flash Builder 4.7 (AIR SDK 3.9 or later)   
 Eclipse Juno or later
 Xcode 5 or later
 Android Developers Tools 21 or later
@@ -62,7 +62,7 @@ Note that the Android emulator is not used as a development environment.
 DEVELOPMENT FOR IOS
 ======================================================================
  
-Open ios/ANE4MobageSDK.xcodeproj with Xcode 4.3 or later and edit
+Open ios/ANE4MobageSDK.xcodeproj with Xcode 5 or later and edit
 source code, and then 'make'.
 Please make sure that "Apple iOS SDK" is higher then 6.1 when packaging with FlashBuilder.
 
