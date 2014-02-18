@@ -84,6 +84,11 @@ static ArgsParser *_argParser = nil;
                               key:(NSString *)key
                             value:(FREObject *)value;
 
+/**
+ * nil check
+ **/
++ (id)nilCheck:(id)obj;
+
 @end
 
 @implementation ArgsParser {
@@ -484,14 +489,14 @@ static ArgsParser *_argParser = nil;
     for (int index = 0; index < transaction.items.count; index++) {
         [items addObject:[ArgsParser billingItemToJSON:[transaction.items objectAtIndex:index]]];
     }
-    
+
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
                          transaction.id, @"id",
                          items, @"items",
-                         transaction.comment, @"comment",
-                         transaction.published, @"published",
-                         transaction.state, @"state",
-                         transaction.updated, @"updated",
+                         [ArgsParser nilCheck:transaction.comment], @"comment",
+                         [ArgsParser nilCheck:transaction.published], @"published",
+                         [ArgsParser nilCheck:transaction.state], @"state",
+                         [ArgsParser nilCheck:transaction.updated], @"updated",
                          @"com.mobage.air.bank.Transaction", @".class", nil];
   
     return dic;
@@ -501,11 +506,11 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         itemData.id, @"id",
-                         itemData.name, @"name",
+                         [ArgsParser nilCheck:itemData.id], @"id",
+                         [ArgsParser nilCheck:itemData.name], @"name",
                          [NSNumber numberWithInt:itemData.price], @"price",
-                         itemData.description, @"description",
-                         itemData.imageUrl, @"imageUrl",
+                         [ArgsParser nilCheck:itemData.description], @"description",
+                         [ArgsParser nilCheck:itemData.imageUrl], @"imageUrl",
                          @"com.mobage.air.bank.ItemData", @".class", nil];
 
     return dic;
@@ -527,18 +532,18 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         leaderboad.respId, @"id",
-                         leaderboad.appId, @"appId",
-                         leaderboad.title, @"title",
-                         leaderboad.scoreFormat, @"scoreFormat",
+                         [ArgsParser nilCheck:leaderboad.respId], @"id",
+                         [ArgsParser nilCheck:leaderboad.appId], @"appId",
+                         [ArgsParser nilCheck:leaderboad.title], @"title",
+                         [ArgsParser nilCheck:leaderboad.scoreFormat], @"scoreFormat",
                          [NSNumber numberWithInt:leaderboad.scorePrecision], @"scorePrecision",
-                         leaderboad.iconUrl, @"iconUrl",
+                         [ArgsParser nilCheck:leaderboad.iconUrl], @"iconUrl",
                          [NSNumber numberWithBool:leaderboad.allowLowerScore], @"allowLowerScore",
                          [NSNumber numberWithBool:leaderboad.reverse], @"reverse",
                          [NSNumber numberWithBool:leaderboad.archived], @"archived",
                          [NSNumber numberWithDouble:leaderboad.defaultScore], @"defaultScore",
-                         leaderboad.published, @"published",
-                         leaderboad.updated, @"updated",
+                         [ArgsParser nilCheck:leaderboad.published], @"published",
+                         [ArgsParser nilCheck:leaderboad.updated], @"updated",
                          @"com.mobage.air.social.common.LeaderboardData", @".class", nil];
 
     return dic;
@@ -558,8 +563,8 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         topSocre.displayValue, @"displayValue",
-                         topSocre.userId, @"userId",
+                         [ArgsParser nilCheck:topSocre.displayValue], @"displayValue",
+                         [ArgsParser nilCheck:topSocre.userId], @"userId",
                          [NSNumber numberWithInteger:topSocre.rank], @"rank",
                          [NSNumber numberWithDouble:topSocre.value], @"value",
                          @"com.mobage.air.social.common.LeaderboardTopScore", @".class", nil];
@@ -581,20 +586,20 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         user.id, @"id",
-                         user.displayName, @"displayName",
-                         user.nickname, @"nickname",
-                         user.aboutMe, @"aboutMe",
-                         @(user.hasApp), @"hasApp",
-                         @(user.age), @"age",
-                         user.birthday, @"birthday",
-                         user.gender, @"gender",
-                         @(user.grade), @"grade",
-                         user.thumbnailUrl, @"thumbnailUrl",
-                         user.jobType, @"jobType",
-                         user.bloodType, @"bloodType",
-                         @(user.isVerified), @"isVerified",
-                         @(user.isFamous), @"isFamous",
+                         [ArgsParser nilCheck:user.id], @"id",
+                         [ArgsParser nilCheck:user.displayName], @"displayName",
+                         [ArgsParser nilCheck:user.nickname], @"nickname",
+                         [ArgsParser nilCheck:user.aboutMe], @"aboutMe",
+                         [NSNumber numberWithBool:user.hasApp], @"hasApp",
+                         [NSNumber numberWithInteger:user.age], @"age",
+                         [ArgsParser nilCheck:user.birthday], @"birthday",
+                         [ArgsParser nilCheck:user.gender], @"gender",
+                         [NSNumber numberWithInteger:user.grade], @"grade",
+                         [ArgsParser nilCheck:user.thumbnailUrl], @"thumbnailUrl",
+                         [ArgsParser nilCheck:user.jobType], @"jobType",
+                         [ArgsParser nilCheck:user.bloodType], @"bloodType",
+                         [NSNumber numberWithBool:user.isVerified], @"isVerified",
+                         [NSNumber numberWithBool:user.isFamous], @"isFamous",
                          @"com.mobage.air.social.User", @".class", nil];
 
     return dic;
@@ -614,9 +619,9 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         response.respId, @"respId",
+                         [ArgsParser nilCheck:response.respId], @"respId",
                          [ArgsParser payloadToJSON:response.payload], @"payload",
-                         response.publishedTimestamp, @"publishedTimestamp",
+                         [ArgsParser nilCheck:response.publishedTimestamp], @"publishedTimestamp",
                          @"com.mobage.air.social.common.RemoteNotificationResponse_iOS", @".class", nil];
 
     return dic;
@@ -636,9 +641,9 @@ static ArgsParser *_argParser = nil;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
                          [NSNumber numberWithInteger:payload.badge], @"badge",
-                         payload.message, @"message",
-                         payload.sound, @"sound",
-                         extras, @"extras", nil];
+                         [ArgsParser nilCheck:payload.message], @"message",
+                         [ArgsParser nilCheck:payload.sound], @"sound",
+                         [ArgsParser nilCheck:extras], @"extras", nil];
 
     return dic;
 }
@@ -647,15 +652,15 @@ static ArgsParser *_argParser = nil;
     LOG_METHOD;
     
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
-                         textEntry.entryId, @"id",
-                         textEntry.groupName, @"groupName",
-                         textEntry.parentId, @"parentId",
-                         textEntry.writerId, @"writerId",
-                         textEntry.ownerId, @"ownerId",
-                         textEntry.data, @"data",
+                         [ArgsParser nilCheck:textEntry.entryId], @"id",
+                         [ArgsParser nilCheck:textEntry.groupName], @"groupName",
+                         [ArgsParser nilCheck:textEntry.parentId], @"parentId",
+                         [ArgsParser nilCheck:textEntry.writerId], @"writerId",
+                         [ArgsParser nilCheck:textEntry.ownerId], @"ownerId",
+                         [ArgsParser nilCheck:textEntry.data], @"data",
                          [NSNumber numberWithInteger:textEntry.status], @"status",
-                         textEntry.publish, @"publish",
-                         textEntry.updated, @"updated",
+                         [ArgsParser nilCheck:textEntry.publish], @"publish",
+                         [ArgsParser nilCheck:textEntry.updated], @"updated",
                          @"com.mobage.air.social.jp.TextdataEntry", @".class", nil];
 
     return dic;
@@ -1036,12 +1041,12 @@ static ArgsParser *_argParser = nil;
     return result;
 }
 
++ (id)nilCheck:(id)obj {
+    if (!obj) {
+        return [NSNull null];
+    }
+    return obj;
+}
 
 
 @end
-
-
-
-
-
-
