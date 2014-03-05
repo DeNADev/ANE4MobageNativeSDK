@@ -38,7 +38,7 @@ ENVIROMENT
 ======================================================================
 Following are the requirements for development.
 
-Flash Builder 4.7 (AIR SDK 3.9 or later)   
+Flash Builder 4.7 (AIR SDK 4.0 or later)   
 Eclipse Juno or later
 Xcode 5 or later
 Android Developers Tools 21 or later
