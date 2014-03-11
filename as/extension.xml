@@ -23,5 +23,8 @@
                                 <finalizer>ANE4MobageSDKFinalizer</finalizer>
                         </applicationDeployment>
                 </platform>
+                <platform name="default">
+                        <applicationDeployment />
+                </platform>
         </platforms>
 </extension>

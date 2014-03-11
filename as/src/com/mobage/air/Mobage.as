@@ -76,7 +76,7 @@ package com.mobage.air
         private var _consumerSecret :String;
         private var _appId          :String;
         private var _appInstance    :EventDispatcher;
-        
+		
         // load configuration
         // config.debug - enable DEBUG mode
         private static function loadConfig() :Object {
@@ -153,6 +153,29 @@ package com.mobage.air
             _appInstance    = appInstance;
         }
         
+        /**
+         * Return Mobage supports current platform or not.
+         * With iOS or Android, it returns true.
+         * With ADL, it returns false.
+         */
+        public static function isSupported():Boolean {
+            DEFINE::IOS
+            {
+                return true;
+            }
+            
+            DEFINE::ANDROID
+            {
+                return true;
+            }
+            
+            DEFINE::DEFAULT
+            {
+                return false;
+            }
+            
+            return false;
+        }
         
 		/**
 		 * Registers tick method with timer (Only for KR and iOS)
