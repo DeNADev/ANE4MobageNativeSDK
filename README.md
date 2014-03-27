@@ -49,6 +49,9 @@ ChangeLog
 2014-01-16 (version v1.4.6-jp-0)
  Initial release for Mobage SDK 1.4.6
 
+2014-03-38 (version v1.4.6-jp-1)
+ Changed android jar dependencies to AIR platform dependencies 
+
 
 ENVIRONMENT
 ==========================================================================
