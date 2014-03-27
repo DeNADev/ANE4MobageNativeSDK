@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<flex-config>
+	<compiler>
+	    <define append="true"> 
+	        <name>DEFINE::IOS</name> 
+	        <value>false</value> 
+	    </define> 
+	    <define append="true"> 
+	        <name>DEFINE::ANDROID</name> 
+	        <value>false</value> 
+	    </define>
+	    <define append="true"> 
+	        <name>DEFINE::DEFAULT</name> 
+	        <value>false</value> 
+	    </define>
+    </compiler>
+</flex-config>

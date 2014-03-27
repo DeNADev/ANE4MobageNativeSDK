@@ -1,4 +1,4 @@
-<extension xmlns="http://ns.adobe.com/air/extension/3.9">
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
     <id>com.mobage.air.ANE4MobageSDK</id>
     <versionNumber>0.9.5</versionNumber>
         <platforms>
@@ -22,6 +22,9 @@
                                 <initializer>ANE4MobageSDKInitializer</initializer>
                                 <finalizer>ANE4MobageSDKFinalizer</finalizer>
                         </applicationDeployment>
+                </platform>
+                <platform name="default">
+                        <applicationDeployment />
                 </platform>
         </platforms>
 </extension>
