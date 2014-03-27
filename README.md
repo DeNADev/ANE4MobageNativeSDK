@@ -49,8 +49,11 @@ ChangeLog
 2014-01-16 (version v1.4.6-jp-0)
  Initial release for Mobage SDK 1.4.6
 
-2014-03-38 (version v1.4.6-jp-1)
- Changed android jar dependencies to AIR platform dependencies 
+2014-03-11 (version v1.4.6-jp-1)
+ Added default platform target for AIR simulator. And fixed other minor issues. 
+
+2014-03-38 (version v1.4.6-jp-2)
+ Changed android jar dependencies to AIR platform dependencies.
 
 
 ENVIRONMENT
