@@ -1,0 +1,7 @@
+<platform xmlns="http://ns.adobe.com/air/extension/4.0">
+    <packagedDependencies>
+        <packagedDependency>android-support-v4.jar</packagedDependency>
+        <packagedDependency>AppAdForce.jar</packagedDependency>
+        <packagedDependency>MobageNativeSdk.jar</packagedDependency>
+    </packagedDependencies>
+</platform>

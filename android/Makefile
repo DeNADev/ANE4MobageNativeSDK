@@ -30,7 +30,7 @@ MOBAGE_SDK_CLASS_FILE=$(REGION)/bin/classes/com/mobage/android/Mobage.class
 
 ifeq ($(REGION), jp)
 
-DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/android-support-v4.jar $(MOBAGE_SDK_CLASS_FILE) \
+DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/android-support-v4.jar \
 	$(REGION)/build.xml $(REGION)/local.properties $(REGION)/proguard-project.txt
 
 $(OUTPUT_JAR): $(DEPENDENCIES)
@@ -38,12 +38,12 @@ $(OUTPUT_JAR): $(DEPENDENCIES)
 	cd ./$(REGION); ant $(BUILD_TARGET)
 	cp $(REGION)/bin/classes.jar $@
 
-$(MOBAGE_SDK_CLASS_FILE):
-	mkdir -p $(REGION)/bin/classes
-	unzip -o $(MOBAGE_SDK_JAR_FILE) -d $(REGION)/bin/classes -x META-INF/*
-	unzip -o $(MOBAGE_SDK_JAR_FILE2) -d $(REGION)/bin/classes -x META-INF/*
-	unzip -o $(MOBAGE_SDK_JAR_FILE3) -d $(REGION)/bin/classes -x META-INF/*
-	touch $(MOBAGE_SDK_CLASS_FILE)
+# $(MOBAGE_SDK_CLASS_FILE):
+#	mkdir -p $(REGION)/bin/classes
+#	unzip -o $(MOBAGE_SDK_JAR_FILE) -d $(REGION)/bin/classes -x META-INF/*
+#	unzip -o $(MOBAGE_SDK_JAR_FILE2) -d $(REGION)/bin/classes -x META-INF/*
+#	unzip -o $(MOBAGE_SDK_JAR_FILE3) -d $(REGION)/bin/classes -x META-INF/*
+#	touch $(MOBAGE_SDK_CLASS_FILE)
 
 $(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/android-support-v4.jar :
 	cp -pR $(MOBAGE_SDK_JAR_PATH)/ $(REGION)/libs/
@@ -54,7 +54,7 @@ $(REGION)/libs/FlashRuntimeExtensions.jar:
 # for KR
 else
 
-DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/armeabi/libmobage.so $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/android-support-v4.jar $(REGION)/libs/armeabi-v7a/libmobage.so $(MOBAGE_SDK_CLASS_FILE) \
+DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/armeabi/libmobage.so $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/android-support-v4.jar $(REGION)/libs/armeabi-v7a/libmobage.so \
 	$(REGION)/build.xml $(REGION)/local.properties $(REGION)/proguard-project.txt
 
 $(OUTPUT_JAR): $(DEPENDENCIES)
@@ -62,11 +62,11 @@ $(OUTPUT_JAR): $(DEPENDENCIES)
 	cd ./$(REGION); ant $(BUILD_TARGET)
 	cp $(REGION)/bin/classes.jar $@
 
-$(MOBAGE_SDK_CLASS_FILE):
-	mkdir -p $(REGION)/bin/classes
-	unzip -o $(MOBAGE_SDK_JAR_FILE) -d $(REGION)/bin/classes -x META-INF/*
-	unzip -o $(MOBAGE_SDK_JAR_FILE2) -d $(REGION)/bin/classes -x META-INF/*
-	touch $(MOBAGE_SDK_CLASS_FILE)
+# $(MOBAGE_SDK_CLASS_FILE):
+#	mkdir -p $(REGION)/bin/classes
+#	unzip -o $(MOBAGE_SDK_JAR_FILE) -d $(REGION)/bin/classes -x META-INF/*
+#	unzip -o $(MOBAGE_SDK_JAR_FILE2) -d $(REGION)/bin/classes -x META-INF/*
+#	touch $(MOBAGE_SDK_CLASS_FILE)
 
 $(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/armeabi/libmobage.so $(REGION)/libs/android-support-v4.jar $(REGION)/libs/armeabi-v7a/libmobage.so:
 	cp -pR $(MOBAGE_SDK_JAR_PATH)/ $(REGION)/libs/

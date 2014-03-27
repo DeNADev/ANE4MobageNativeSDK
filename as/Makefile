@@ -54,12 +54,12 @@ INPUT_ADL_SWF=$(ADL_DIR)/library.swf
 INPUT_MOBAGE_SDK=$(ANDROID_DIR)/libs $(ANDROID_DIR)/res $(ANDROID_DIR)/res_rn_v9 $(IOS_DIR)/MobageSDK $(IOS_SIMULATOR_DIR)/MobageSDK
 
 # path to Mobage Native SDK
-MOBAGE_ANDROID_SDK_FILES=$(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res_rn_v9
+MOBAGE_ANDROID_SDK_FILES=$(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/android-support-v4.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/MobageNativeSdk.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/AppAdForce.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res_rn_v9
 MOBAGE_IOS_SDK_PATH=$(MOBAGE_SDK_PATH)/ios/MobageSDK
 
 $(OUTPUT_ANE): $(OUTPUT_SWC) $(INPUT_ANDROID_SWF) $(INPUT_IOS_SWF) $(INPUT_IOS_SIMULATOR_SWF) $(INPUT_ADL_SWF) $(INPUT_MOBAGE_SDK)
 	$(FLASH_SDK_PATH)/bin/adt -package -target ane $@ extension.xml -swc bin/ANE4MobageSDK.swc \
-		-platform Android-ARM -C $(ANDROID_DIR) . \
+		-platform Android-ARM -C $(ANDROID_DIR) -platformoptions Android-options.xml . \
 		-platform iPhone-ARM -C $(IOS_DIR) -platformoptions iOS-options.xml . \
 		-platform iPhone-x86 -C $(IOS_SIMULATOR_DIR) -platformoptions iOS-options.xml . \
 		-platform default -C $(ADL_DIR) .
