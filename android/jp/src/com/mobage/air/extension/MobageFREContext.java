@@ -67,6 +67,7 @@ import com.mobage.air.extension.social.common.People_getUser;
 import com.mobage.air.extension.social.common.People_getUsers;
 import com.mobage.air.extension.social.common.Profanity_checkProfanity;
 import com.mobage.air.extension.social.common.RemoteNotification_getRemoteNotificationsEnabled;
+import com.mobage.air.extension.social.common.RemoteNotification_onNewIntent;
 import com.mobage.air.extension.social.common.RemoteNotification_send;
 import com.mobage.air.extension.social.common.RemoteNotification_setListener;
 import com.mobage.air.extension.social.common.RemoteNotification_setRemoteNotificationsEnabled;
@@ -169,6 +170,7 @@ public class MobageFREContext extends FREContext {
 		register(RemoteNotification_send.class);
 		register(RemoteNotification_setRemoteNotificationsEnabled.class);
 		register(RemoteNotification_setListener.class);
+		register(RemoteNotification_onNewIntent.class);
 		
 		// class LeaderBoard
 		register(Leaderboard_deleteCurrentUserScore.class);

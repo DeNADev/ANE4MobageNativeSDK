@@ -34,6 +34,7 @@ package com.mobage.air.social.common
         public var message :String;
         public var sound :String;
         public var extras :Object; // [["key", "value"], ["key", "value"], ...]
+		public var state :String;
         
         /**
          * 
