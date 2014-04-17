@@ -108,5 +108,11 @@ package com.mobage.air.social.common
             const funcId :String = 'com.mobage.air.extension.social.common.RemoteNotification.setListener';
             Extension.call(funcId);
         }
+		
+		
+		public static function onNewIntent() :void {
+			const funcId :String = 'com.mobage.air.extension.social.common.RemoteNotification.onNewIntent';
+			Extension.call(funcId);
+		}
     }
 }

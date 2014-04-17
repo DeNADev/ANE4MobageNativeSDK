@@ -24,71 +24,33 @@ package com.mobage.air.extension.social.common;
 
 import org.json.JSONArray;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.mobage.air.extension.Convert;
 import com.mobage.air.extension.Dispatcher;
-import com.mobage.air.extension.SharedInstance;
 import com.mobage.android.social.common.RemoteNotification;
-import com.mobage.android.social.common.RemoteNotification.RemoteNotificationListener;
 import com.mobage.android.social.common.RemoteNotificationPayload;
 
-public class RemoteNotification_setListener implements FREFunction {
+public class RemoteNotification_onNewIntent implements FREFunction {
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
-		SharedInstance.initInstance();
-
-		// Check for Remote Notification on Start
-		handleIntent(context.getActivity().getIntent(), context);
 
 		try {
-			RemoteNotification.setListener(new RemoteNotificationListener() {
-				public void handleReceive(Context rmContext, Intent intent) {
-					if (SharedInstance.getInstance().isPaused) {
-						RemoteNotification.displayStatusBarNotification(rmContext, intent);
-					} else {
-						RemoteNotificationPayload payload = RemoteNotification
-								.extractPayloadFromIntent(intent);
+			RemoteNotificationPayload payload = RemoteNotification.extractPayloadFromIntent(context
+					.getActivity().getIntent());
 
-						try {
-							JSONArray args = new JSONArray();
-							args.put(Convert.customRemotePayloadToJSON(payload, "Active"));
+			JSONArray jsonArgs = new JSONArray();
+			jsonArgs.put(Convert.customRemotePayloadToJSON(payload, "Inactive"));
 
-							Dispatcher.dispatch(context, "PlatformListener.handleReceive", args);
-						} catch (Exception e) {
-							Dispatcher.exception(context, e);
-						}
+			Dispatcher.dispatch(context, "PlatformListener.handleReceive", jsonArgs);
 
-					}
-
-				}
-			});
 		} catch (Exception e) {
 			Dispatcher.exception(context, e);
 		}
 		return null;
-	}
-
-	private void handleIntent(Intent intent, FREContext context) {
-		if (intent != null) {
-			Bundle extras = intent.getExtras();
-			if (extras != null) {
-				try {
-					RemoteNotificationPayload payload = RemoteNotification.extractPayloadFromIntent(intent);
-					JSONArray args = new JSONArray();
-					args.put(Convert.customRemotePayloadToJSON(payload, "Launch"));
-					Dispatcher.dispatch(context, "PlatformListener.handleReceive", args);
-				} catch (Exception e) {
-					Dispatcher.exception(context, e);
-				}
-			}
-		}
 	}
 
 }
