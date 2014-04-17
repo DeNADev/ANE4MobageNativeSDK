@@ -88,7 +88,8 @@ static BOOL method_swizzling(Class destClass, Class sourceClass, SEL selector, I
     *replacedIMP = defaultMethod ? method_getImplementation(defaultMethod) : NULL;
     if (defaultMethod) {
         IMP imp = method_getImplementation(patchMethod);
-        result = method_setImplementation(defaultMethod, imp);
+        method_setImplementation(defaultMethod, imp);
+        result = YES;
     } else {
         IMP imp = method_getImplementation(patchMethod);
         const char *types = method_getTypeEncoding(patchMethod);
@@ -146,6 +147,10 @@ IMP getMethodImplementation(id obj, SEL sel) {
     }
 }
 
++ (AppDelegatePatch *)sharedAppDelegatePatch {
+    return _appDelegatePatch;
+}
+
 #pragma mark - UIApplication Hook
 - (void)setDelegate:(id)delegate {
     LOG_METHOD;
@@ -183,20 +188,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     LOG_METHOD;
     if ([launchOptions count] > 0) {
-        
-        NSDictionary *userInfo = [launchOptions valueForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
-        
-        MBGRemoteNotificationPayload *payload = [MBGRemoteNotificationPayload payload];
-        payload.badge = [[userInfo valueForKeyPath:@"aps.badge"] integerValue];
-        payload.message = [userInfo valueForKeyPath:@"aps.alert"] ? [userInfo valueForKeyPath:@"aps.alert"] : @"";
-        payload.sound = [userInfo valueForKeyPath:@"aps.sound"] ? [userInfo valueForKeyPath:@"aps.sound"] : @"";
-        if (((NSArray *)[userInfo valueForKey:@"x"]).count >= 3) {
-            payload.extras = [[userInfo valueForKey:@"x"] objectAtIndex:3];
-        } else {
-            payload.extras = [NSDictionary dictionary];
-        }
-        
-        [Mobage_addPlatformListener handleReceive:[ArgsParser payloadToJSON:payload]];
+        _appDelegatePatch.launchOptions = launchOptions;
     }
     
     BOOL_IMP func = (BOOL_IMP)getMethodImplementation(self,_cmd);
@@ -206,6 +198,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     LOG_METHOD;
+    LOG(@"userInfo = %@", userInfo);
     
     MBGRemoteNotificationPayload *payload = [MBGRemoteNotificationPayload payload];
     payload.badge = [[userInfo valueForKeyPath:@"aps.badge"] integerValue];
@@ -217,7 +210,23 @@ IMP getMethodImplementation(id obj, SEL sel) {
         payload.extras = [NSDictionary dictionary];
     }
     
-    [Mobage_addPlatformListener handleReceive:[ArgsParser payloadToJSON:payload]];
+    NSString *state = @"";
+    switch ([[UIApplication sharedApplication] applicationState]) {
+        case UIApplicationStateActive:
+            state = @"Active";
+            break;
+        case UIApplicationStateInactive:
+            state = @"Inactive";
+            break;
+        case UIApplicationStateBackground:
+        default:
+            break;
+    }
+    
+    NSMutableDictionary *payloadDic = [NSMutableDictionary dictionaryWithDictionary:[ArgsParser payloadToJSON:payload]];
+    [payloadDic setObject:state forKey:@"state"];
+    
+    [Mobage_addPlatformListener handleReceive:payloadDic];
     
     
 	VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
