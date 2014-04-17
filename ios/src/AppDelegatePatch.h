@@ -25,4 +25,8 @@
 
 @interface AppDelegatePatch : NSObject
 
+@property (strong, nonatomic) NSDictionary *launchOptions;
+
++ (AppDelegatePatch *)sharedAppDelegatePatch;
+
 @end

@@ -23,6 +23,8 @@
 
 #import "common_RemoteNotification_setListener.h"
 #import <UIKit/UIKit.h>
+#import "AppDelegatePatch.h"
+#import "Mobage_addPlatformListener.h"
 
 @interface common_RemoteNotification_SetListener()
 FREObject ANE4MBG_social_common_RemoteNotification_setListener(FREContext cxt,
@@ -44,12 +46,28 @@ FREObject ANE4MBG_social_common_RemoteNotification_setListener(FREContext cxt,
                                                                uint32_t argc,
                                                                FREObject argv[]) {
     LOG_METHOD;
+    NSDictionary *launchOptions = [AppDelegatePatch sharedAppDelegatePatch].launchOptions;
+    NSDictionary *userInfo = [launchOptions valueForKey:@"UIApplicationLaunchOptionsRemoteNotificationKey"];
     
-    UIRemoteNotificationType type = (UIRemoteNotificationTypeBadge
-                                     | UIRemoteNotificationTypeSound
-                                     | UIRemoteNotificationTypeAlert);
+    LOG(@"userInfo = %@", userInfo);
+    if ([userInfo count] > 0) {
+        MBGRemoteNotificationPayload *payload = [MBGRemoteNotificationPayload payload];
+        payload.badge = [[userInfo valueForKeyPath:@"aps.badge"] integerValue];
+        payload.message = [userInfo valueForKeyPath:@"aps.alert"] ? [userInfo valueForKeyPath:@"aps.alert"] : @"";
+        payload.sound = [userInfo valueForKeyPath:@"aps.sound"] ? [userInfo valueForKeyPath:@"aps.sound"] : @"";
+        if (((NSArray *)[userInfo valueForKey:@"x"]).count >= 3) {
+            payload.extras = [[userInfo valueForKey:@"x"] objectAtIndex:3];
+        } else {
+            payload.extras = [NSDictionary dictionary];
+        }
+        
+        NSMutableDictionary *payloadDic = [NSMutableDictionary dictionaryWithDictionary:[ArgsParser payloadToJSON:payload]];
+        [payloadDic setObject:@"Launch" forKey:@"state"];
+        
+        [Mobage_addPlatformListener handleReceive:payloadDic];
+    }
     
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:type];
+    [AppDelegatePatch sharedAppDelegatePatch].launchOptions = nil;
     
     return NULL;
 }
