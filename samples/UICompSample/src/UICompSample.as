@@ -128,7 +128,6 @@ package
         
         public function handleReceive_iOS(payload :RemoteNotificationPayload_iOS)  :void {
             trace("Recieved Notification :" + payload.message);
-			Log.i("Recieved Notification :" + payload.message +" state :" );
 			
             AlertDialog.show({
                 title: "Recieved message",
