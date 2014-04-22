@@ -24,6 +24,8 @@ package com.mobage.air.extension.social.common;
 
 import org.json.JSONArray;
 
+import android.content.Intent;
+import android.os.Bundle;
 
 import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
@@ -39,14 +41,19 @@ public class RemoteNotification_onNewIntent implements FREFunction {
 	public FREObject call(final FREContext context, FREObject[] args) {
 
 		try {
-			RemoteNotificationPayload payload = RemoteNotification.extractPayloadFromIntent(context
-					.getActivity().getIntent());
+			Intent intent = context.getActivity().getIntent();
+			if (intent !=null){
+				Bundle extras = intent.getExtras();
+				if (extras != null) {
+					RemoteNotificationPayload payload = RemoteNotification.extractPayloadFromIntent(context
+							.getActivity().getIntent());
 
-			JSONArray jsonArgs = new JSONArray();
-			jsonArgs.put(Convert.customRemotePayloadToJSON(payload, "Inactive"));
+					JSONArray jsonArgs = new JSONArray();
+					jsonArgs.put(Convert.customRemotePayloadToJSON(payload, "Inactive"));
 
-			Dispatcher.dispatch(context, "PlatformListener.handleReceive", jsonArgs);
-
+					Dispatcher.dispatch(context, "PlatformListener.handleReceive", jsonArgs);
+				}
+			}
 		} catch (Exception e) {
 			Dispatcher.exception(context, e);
 		}
