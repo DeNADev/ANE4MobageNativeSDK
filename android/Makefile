@@ -11,6 +11,9 @@ DEBUG?=0
 # kr : Build for KR
 REGION?=jp
 
+# with google play games services
+GOOGLEPLAY?=1
+
 ifeq ($(DEBUG), 1)
 BUILD_TARGET=debug
 else
@@ -30,6 +33,32 @@ MOBAGE_SDK_CLASS_FILE=$(REGION)/bin/classes/com/mobage/android/Mobage.class
 
 ifeq ($(REGION), jp)
 
+ifeq ($(GOOGLEPLAY),1)
+DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/google-play-services.jar $(REGION)/libs/android-support-v4.jar \
+	$(REGION)/build.xml $(REGION)/local.properties $(REGION)/proguard-project.txt
+
+$(OUTPUT_JAR): $(DEPENDENCIES)
+	# http://developer.android.com/tools/building/building-cmdline.html
+	cd ./$(REGION); ant $(BUILD_TARGET)
+	cp $(REGION)/bin/classes.jar $@
+
+# $(MOBAGE_SDK_CLASS_FILE):
+#	mkdir -p $(REGION)/bin/classes
+#	unzip -o $(MOBAGE_SDK_JAR_FILE) -d $(REGION)/bin/classes -x META-INF/*
+#	unzip -o $(MOBAGE_SDK_JAR_FILE2) -d $(REGION)/bin/classes -x META-INF/*
+#	unzip -o $(MOBAGE_SDK_JAR_FILE3) -d $(REGION)/bin/classes -x META-INF/*
+#	touch $(MOBAGE_SDK_CLASS_FILE)
+
+$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/android-support-v4.jar :
+	cp -pR $(MOBAGE_SDK_JAR_PATH)/ $(REGION)/libs/
+
+$(REGION)/libs/FlashRuntimeExtensions.jar:
+	cp -p $(FLASH_RUNTIME_EXT_JAR_PATH) $(REGION)/libs/
+	
+$(REGION)/libs/google-play-services.jar:
+	cp -p $(GOOGLE_SDK_PATH) $(REGION)/libs/
+
+else 
 DEPENDENCIES=$(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/FlashRuntimeExtensions.jar $(REGION)/libs/android-support-v4.jar \
 	$(REGION)/build.xml $(REGION)/local.properties $(REGION)/proguard-project.txt
 
@@ -50,6 +79,8 @@ $(REGION)/libs/MobageNativeSdk.jar $(REGION)/libs/AppAdForce.jar $(REGION)/libs/
 
 $(REGION)/libs/FlashRuntimeExtensions.jar:
 	cp -p $(FLASH_RUNTIME_EXT_JAR_PATH) $(REGION)/libs/
+	
+endif
 
 # for KR
 else
