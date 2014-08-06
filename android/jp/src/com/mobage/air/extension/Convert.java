@@ -222,6 +222,14 @@ public final class Convert {
 	public static JSONObject remotePayloadToJSON(RemoteNotificationPayload remotePayload) throws JSONException {
 		return remotePayload.toJsonObject().put(".class", "com.mobage.air.social.common.RemoteNotificationPayload");
 	}
+	
+	public static JSONObject customRemotePayloadToJSON(RemoteNotificationPayload remotePayload, String state) throws JSONException {
+		JSONObject json = remotePayload.toJsonObject();
+		json.put("state", state);
+		json.put(".class", "com.mobage.air.social.common.RemoteNotificationPayload");
+		
+		return json;
+	}
 
 	public static JSONObject transactionToJSON(Debit.Transaction txn) throws JSONException {
 		JSONObject json = new JSONObject();

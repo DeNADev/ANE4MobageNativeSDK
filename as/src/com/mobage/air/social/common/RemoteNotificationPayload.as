@@ -32,9 +32,10 @@ package com.mobage.air.social.common
         public var style :String;
         public var collapseKey :String;
         public var message :String;
-        public var extras :Array;
+        public var extras :Object;
         public var iconUrl :String;
         public var sound :String;
+		public var state :String;
         
         public function RemoteNotificationPayload(map :Object) {
             super(map);

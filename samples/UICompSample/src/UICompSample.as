@@ -11,8 +11,11 @@ package
     import flash.display.Sprite;
     import flash.display.StageAlign;
     import flash.display.StageScaleMode;
+    import flash.events.InvokeEvent;
     import flash.system.Capabilities;
     import flash.text.TextField;
+	import flash.desktop.NativeApplication;
+	import flash.desktop.InvokeEventReason; 
     
     import UITest.MainMenu;
     
@@ -25,16 +28,21 @@ package
         private var _splashCompleted :Boolean = false;
         private var _userId :String = null;
         
+		// iOS or Android ?
+		private var os :String = Capabilities.os;
+		private var exp :RegExp = /iPhone OS/;
+		private var result :Boolean = exp.test(os);
+
+		
+		
         public function UICompSample() {
             super();
             
+			NativeApplication.nativeApplication.addEventListener(InvokeEvent.INVOKE, invokeHandler); 
+			
             stage.align = StageAlign.TOP_LEFT;
             stage.scaleMode = StageScaleMode.NO_SCALE;
             
-            // iOS or Android ?
-            var os :String = Capabilities.os;
-            var exp :RegExp = /iPhone OS/;
-            var result :Boolean = exp.test(os);
             trace("Your device : " + os);
             if (result) {
                 Mobage.initialize(
@@ -111,19 +119,20 @@ package
         }
         
         public function handleReceive(payload :RemoteNotificationPayload)  :void {
-            trace("Recieved Notification :" + payload.message);
+			trace("Received Notification :" + payload.message);
             AlertDialog.show({
-                title: "Recieved message",
-                message: payload.message
+                title: "Received message",
+				message: payload.state + " :" + payload.message
             });
         }
         
         public function handleReceive_iOS(payload :RemoteNotificationPayload_iOS)  :void {
             trace("Recieved Notification :" + payload.message);
+			
             AlertDialog.show({
                 title: "Recieved message",
-                message: payload.message
-            });
+                message: payload.state + " :" + payload.message
+			});
         }
 		
 		public function DashboardLanched() :void
@@ -133,6 +142,19 @@ package
 		public function DashboardDismiss() :void
 		{
 			trace("Dashboard is dissmiss");
+		}
+		
+		public function invokeHandler(event :InvokeEvent) :void
+		{
+			
+			if(_loginCompleted && _splashCompleted){
+			
+				if(!result){
+					// call NewIntent check for Android
+					RemoteNotification.onNewIntent(); 
+				}
+			
+			}
 		}
     }
 }
