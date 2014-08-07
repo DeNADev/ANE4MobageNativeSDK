@@ -11,6 +11,9 @@ DEBUG?=0
 # kr : Build for KR
 REGION?=jp
 
+# with google play games services
+GOOGLEPLAY?=1
+
 # AS output files
 OUTPUT_DIR=bin
 OUTPUT_SWC=$(OUTPUT_DIR)/ANE4MobageSDK.swc
@@ -54,7 +57,11 @@ INPUT_ADL_SWF=$(ADL_DIR)/library.swf
 INPUT_MOBAGE_SDK=$(ANDROID_DIR)/libs $(ANDROID_DIR)/res $(ANDROID_DIR)/res_rn_v9 $(IOS_DIR)/MobageSDK $(IOS_SIMULATOR_DIR)/MobageSDK
 
 # path to Mobage Native SDK
+ifeq ($(GOOGLEPLAY), 1)
+MOBAGE_ANDROID_SDK_FILES=$(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/android-support-v4.jar $(GOOGLE_SDK_PATH) $(GOOGLE_SDK_RESOURCE_PATH) $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/MobageNativeSdk.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/AppAdForce.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res_rn_v9
+else
 MOBAGE_ANDROID_SDK_FILES=$(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/android-support-v4.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/MobageNativeSdk.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/libs/AppAdForce.jar $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res $(MOBAGE_SDK_PATH)/android/MobageNativeAndroid/res_rn_v9
+endif
 MOBAGE_IOS_SDK_PATH=$(MOBAGE_SDK_PATH)/ios/MobageSDK
 
 $(OUTPUT_ANE): $(OUTPUT_SWC) $(INPUT_ANDROID_SWF) $(INPUT_IOS_SWF) $(INPUT_IOS_SIMULATOR_SWF) $(INPUT_ADL_SWF) $(INPUT_MOBAGE_SDK)
@@ -81,7 +88,7 @@ $(INPUT_ANDROID_SWF): $(INPUT_NATIVE_JAR) $(OUTPUT_ANDROID_SWF)
 
 $(INPUT_NATIVE_JAR):
 	mkdir -p $(ANDROID_DIR)
-	cd ../android/; make DEBUG=$(DEBUG) REGION=$(REGION) 
+	cd ../android/; make DEBUG=$(DEBUG) REGION=$(REGION) GOOGLEPLAY=$(GOOGLEPLAY)
 	cp ../android/$(REGION)/ANE4MobageSDK.jar $@
 
 $(INPUT_IOS_LIB):

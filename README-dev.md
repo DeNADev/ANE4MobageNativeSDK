@@ -40,7 +40,7 @@ Following are the requirements for development.
 
 Flash Builder 4.7 (AIR SDK 4.0 or later)   
 Eclipse Juno or later
-Xcode 5 or later
+Xcode 5.1 or later
 Android Developers Tools 21 or later
 
 CREATING ASDOCS
@@ -58,11 +58,40 @@ Import android/ into Eclipse, edit source code, and then run 'make'.
 * Make sure you have setup enviromental path for "android"(located in $YOUR_ADT_PATH/sdk/tools) and "ant"(installed by default on Mac usr/bin/).
  
 Note that the Android emulator is not used as a development environment.
+
+About Google Play Games Library
+======================================================================
+We recommend that you use Google Play Games Services library version 4.X (tested version).  
+
+Adding Google Play library  
+  1. Make sure you set the path to google-play-services.jar and res folder on the "./common.mk". 
+     The res folder needs to be named as "google-play-services-res".  
+  2. Add the following line in <application> to your app.xml for AndroidManifest  
+  
+     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />   
+            
+  3. Call 'make' to build (For release make sure you add DEBUG option 0)
+  
+Removing Google Play library from build
+  1. Open /ANE4MobageSDK/as/Android-options.xml  
+  2. Remove the following lines  
+
+        <packagedDependency>google-play-services.jar</packagedDependency>  
+
+    
+    <packagedResources>  
+        <packagedResource>  
+            <packageName>com.google.android.gms</packageName>  
+            <folderName>google-play-services-res</folderName>  
+        </packagedResource>  
+    </packagedResources>  
+
+  3. Call 'make GOOGLEPLAY=0' to build without Google Play Games Services library  
  
 DEVELOPMENT FOR IOS
 ======================================================================
  
-Open ios/ANE4MobageSDK.xcodeproj with Xcode 5 or later and edit
+Open ios/ANE4MobageSDK.xcodeproj with Xcode 5.1 or later and edit
 source code, and then 'make'.
 Please make sure that "Apple iOS SDK" is higher then 6.1 when packaging with FlashBuilder.
 
