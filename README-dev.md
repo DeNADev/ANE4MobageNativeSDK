@@ -67,15 +67,15 @@ Adding Google Play library
   1. Make sure you set the path to google-play-services.jar and res folder on the "./common.mk". 
      The res folder needs to be named as "google-play-services-res".  
   2. Add the following line in <application> to your app.xml for AndroidManifest  
-  
+  ```
      <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />   
-            
+  ```          
   3. Call 'make' to build (For release make sure you add DEBUG option 0)
   
 Removing Google Play library from build
   1. Open /ANE4MobageSDK/as/Android-options.xml  
   2. Remove the following lines  
-
+```
         <packagedDependency>google-play-services.jar</packagedDependency>  
 
     
@@ -85,7 +85,7 @@ Removing Google Play library from build
             <folderName>google-play-services-res</folderName>  
         </packagedResource>  
     </packagedResources>  
-
+```
   3. Call 'make GOOGLEPLAY=0' to build without Google Play Games Services library  
  
 DEVELOPMENT FOR IOS
@@ -105,6 +105,7 @@ Type the following command in the root directory:
     make toggle-?? DEBUG=0
 
 Example:
+
     make toggle-jp DEBUG=0
 
 
