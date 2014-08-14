@@ -47,16 +47,20 @@ Known Issues
 ChangeLog
 ==========================================================================
 2014-01-16 (version v1.4.6-jp-0)  
- Initial release for Mobage SDK 1.4.6
+- Initial release for Mobage SDK 1.4.6
 
 2014-03-11 (version v1.4.6-jp-1)  
- Added default platform target for AIR simulator. And fixed other minor issues. 
+- Added default platform target for AIR simulator. And fixed other minor issues. 
 
 2014-03-38 (version v1.4.6-jp-2)  
- Changed android jar dependencies to AIR platform dependencies.
+- Changed android jar dependencies to AIR platform dependencies.
 
-2014-04-17 (version v1.4.6-jp-3)
- Fixed Android PushNotification not passed to AIR layer when receiving extras. Added state on RemoteNotificationPayload for AIR to confirm from where the notification was received. 
+2014-04-17 (version v1.4.6-jp-3)  
+- Fixed Android PushNotification not passed to AIR layer when receiving extras.  
+- Added state on RemoteNotificationPayload for AIR to confirm from where the notification was received.  
+
+2014-08-06 (version v1.4.6-jp-4)  
+- Added as default to add Google Play Games Services Library. See README-dev for more details.  
 
 
 ENVIRONMENT

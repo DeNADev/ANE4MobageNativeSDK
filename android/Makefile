@@ -11,6 +11,9 @@ DEBUG?=0
 # kr : Build for KR
 REGION?=jp
 
+# with google play games services
+GOOGLEPLAY?=1
+
 ifeq ($(DEBUG), 1)
 BUILD_TARGET=debug
 else
