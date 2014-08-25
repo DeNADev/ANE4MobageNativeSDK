@@ -73,7 +73,6 @@ import com.mobage.air.extension.social.common.RemoteNotification_setListener;
 import com.mobage.air.extension.social.common.RemoteNotification_setRemoteNotificationsEnabled;
 import com.mobage.air.extension.social.common.Service_getBalanceButton;
 import com.mobage.air.extension.social.common.Service_launchPortalApp;
-import com.mobage.air.extension.social.common.Service_openFriendPicker;
 import com.mobage.air.extension.social.common.Service_openUserProfile;
 import com.mobage.air.extension.social.common.Service_removeBalanceButton;
 import com.mobage.air.extension.social.common.Service_showBankUi;
@@ -137,7 +136,12 @@ public class MobageFREContext extends FREContext {
 
 		// class Service
 		register(Service_launchPortalApp.class);
+		
+		/* Open Friend Picker Deprecated from 1.4.7
+		 *
 		register(Service_openFriendPicker.class);
+		 */
+		
 		register(Service_openUserProfile.class);
 		register(Service_showBankUi.class);
 		register(Service_getBalanceButton.class);
