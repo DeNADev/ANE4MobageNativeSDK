@@ -31,6 +31,7 @@ import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.mobage.air.extension.ad.MobageAdEventReporter_sendCustomEvent;
 import com.mobage.air.extension.ad.MobageAd_hideIconListView;
+import com.mobage.air.extension.ad.MobageAd_injectAdvertisingId;
 import com.mobage.air.extension.ad.MobageAd_loadIconListView;
 import com.mobage.air.extension.ad.MobageAd_loadOfferwall;
 import com.mobage.air.extension.ad.MobageAd_loadPopupDialog;
@@ -209,6 +210,7 @@ public class MobageFREContext extends FREContext {
 		register(MobageAdEventReporter_sendCustomEvent.class);
 		register(MobageAd_loadOfferwall.class);
 		register(MobageAd_showOfferwall.class);
+		register(MobageAd_injectAdvertisingId.class);
 		
 		// class analytics
 		register(EventReporter_report.class);
