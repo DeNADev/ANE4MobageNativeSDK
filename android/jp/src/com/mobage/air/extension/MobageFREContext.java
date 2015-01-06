@@ -74,6 +74,7 @@ import com.mobage.air.extension.social.common.RemoteNotification_setListener;
 import com.mobage.air.extension.social.common.RemoteNotification_setRemoteNotificationsEnabled;
 import com.mobage.air.extension.social.common.Service_getBalanceButton;
 import com.mobage.air.extension.social.common.Service_launchPortalApp;
+import com.mobage.air.extension.social.common.Service_openPlayerInviter;
 import com.mobage.air.extension.social.common.Service_openUserProfile;
 import com.mobage.air.extension.social.common.Service_removeBalanceButton;
 import com.mobage.air.extension.social.common.Service_showBankUi;
@@ -142,6 +143,7 @@ public class MobageFREContext extends FREContext {
 		 *
 		register(Service_openFriendPicker.class);
 		 */
+		register(Service_openPlayerInviter.class);
 		
 		register(Service_openUserProfile.class);
 		register(Service_showBankUi.class);

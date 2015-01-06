@@ -99,6 +99,22 @@ package com.mobage.air.social.common
 //			Remove the comment below for KR
 //			Extension.call(funcId, maxFriendsToSelect, dId, iId, pId);
 		}
+        /**
+         * Opens the player inviter.
+         *  
+         * @param maxFriendsToSelect
+         * @param onInviteSent	function(userIds :Array) :void
+         * @param onDismiss		function() :void
+         * 
+         */		
+        public static function openPlayerInviter(defaultMessage :String, invitationPictureUrl :String,
+                                                 onPlayerInviterComplete :Function,
+                                                 onDismiss :Function) :void {
+            const funcId :String = 'com.mobage.air.extension.social.common.Service.openPlayerInviter';
+            const pId :String = Mobage.once(funcId, onPlayerInviterComplete);
+            const dId :String = Mobage.once(funcId, onDismiss);
+			Extension.call(funcId, defaultMessage, invitationPictureUrl, pId, dId);
+        }
 		/**
 		 * Takes a user ID or gamer name and opens the user's profile page. 
 		 * 

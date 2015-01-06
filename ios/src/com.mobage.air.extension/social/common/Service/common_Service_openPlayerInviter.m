@@ -21,57 +21,51 @@
  * THE SOFTWARE.
  **/
 
-#import "common_Service_openFriendPicker.h"
+#import "common_Service_openPlayerInviter.h"
 
-@interface common_Service_openFriendPicker()
-FREObject ANE4MBG_social_common_Service_openFriendPicker(FREContext cxt,
+@interface common_Service_openPlayerInviter()
+FREObject ANE4MBG_social_common_Service_openPlayerInviter(FREContext cxt,
                                                          void* functionData,
                                                          uint32_t argc,
                                                          FREObject argv[]);
 @end
 
-@implementation common_Service_openFriendPicker
+@implementation common_Service_openPlayerInviter
 + (void)ContextInitializer:(FunctionSets *)funcSets {
     LOG_METHOD;
-    [funcSets addFuncSet:@"ANE4MBG_social_common_Service_openFriendPicker"
-                 pointer:&ANE4MBG_social_common_Service_openFriendPicker];
+    [funcSets addFuncSet:@"ANE4MBG_social_common_Service_openPlayerInviter"
+                 pointer:&ANE4MBG_social_common_Service_openPlayerInviter];
     
 }
 
-FREObject ANE4MBG_social_common_Service_openFriendPicker(FREContext cxt,
+FREObject ANE4MBG_social_common_Service_openPlayerInviter(FREContext cxt,
                                                          void* functionData,
                                                          uint32_t argc,
                                                          FREObject argv[]) {
     LOG_METHOD;
     ArgsParser *parser = [ArgsParser sharedParser];
     [parser setArgc:argc argv:argv];
-//    NSInteger maxFriendsToSelect = [parser nextInt];
-//    NSString *onDismiss = [parser nextString];
-//    NSString *onInviteSent  = [parser nextString];
-//    NSString *onPicked = [parser nextString];
-//    
-//    FREContext context = [ContextOwner sharedContext];
-//    
-//    [MBGSocialService
-//     openFriendPicker:maxFriendsToSelect
-//     onPicked:^(NSArray *userIds) {
-//         FREResult result = TCDispatch(context,
-//                                     onPicked,
-//                                     [NSArray arrayWithObject:userIds]);
-//         if(result != FRE_OK) [ArgsParser reportResult:result];
-//     }
-//     onInviteSent:^(NSArray *userIds) {
-//         FREResult result = TCDispatch(context,
-//                                     onInviteSent,
-//                                     [NSArray arrayWithObject:userIds]);
-//         if(result != FRE_OK) [ArgsParser reportResult:result];
-//     }
-//     onDismiss:^{
-//         FREResult result = TCDispatch(context,
-//                                     onDismiss,
-//                                     nil);
-//         if(result != FRE_OK) [ArgsParser reportResult:result];
-//     }];
+    NSString *defaultMessage = [parser nextString];
+	NSString *imageURL = [parser nextString];
+    NSString *onInviteSent = [parser nextString];
+    NSString *onDismiss = [parser nextString];
+    
+    FREContext context = [ContextOwner sharedContext];
+    
+    [MBGSocialService
+	 openPlayerInviterWithMessage:defaultMessage imageURL:imageURL
+     onInviteSent:^(NSArray *userIds) {
+         FREResult result = TCDispatch(context,
+									   onInviteSent,
+									   [NSArray arrayWithObject:userIds]);
+         if(result != FRE_OK) [ArgsParser reportResult:result];
+     }
+     onDismiss:^{
+         FREResult result = TCDispatch(context,
+									   onDismiss,
+									   nil);
+         if(result != FRE_OK) [ArgsParser reportResult:result];
+     }];
     
     return NULL;
 }
