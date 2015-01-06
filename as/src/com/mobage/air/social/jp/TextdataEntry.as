@@ -32,7 +32,7 @@ package com.mobage.air.social.jp
         public var ownerId   :String;
         public var data      :String;
         public var status    :int;
-        public var publish   :String;
+        public var published   :String;
         public var updated   :String;
         
         public function TextdataEntry(map:Object) {

@@ -24,6 +24,7 @@ package com.mobage.air.extension;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -305,6 +306,14 @@ public final class Convert {
 	
 
 	public static JSONArray stringListToJSON(ArrayList<String> list) {
+		JSONArray jsonArray = new JSONArray();
+		for (String item : list) {
+			jsonArray.put(item);
+		}
+		return jsonArray;
+	}
+	
+	public static JSONArray stringListToJSON(List<String> list) {
 		JSONArray jsonArray = new JSONArray();
 		for (String item : list) {
 			jsonArray.put(item);

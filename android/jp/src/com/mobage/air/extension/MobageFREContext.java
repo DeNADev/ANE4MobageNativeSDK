@@ -31,6 +31,7 @@ import com.adobe.fre.FREContext;
 import com.adobe.fre.FREFunction;
 import com.mobage.air.extension.ad.MobageAdEventReporter_sendCustomEvent;
 import com.mobage.air.extension.ad.MobageAd_hideIconListView;
+import com.mobage.air.extension.ad.MobageAd_injectAdvertisingId;
 import com.mobage.air.extension.ad.MobageAd_loadIconListView;
 import com.mobage.air.extension.ad.MobageAd_loadOfferwall;
 import com.mobage.air.extension.ad.MobageAd_loadPopupDialog;
@@ -73,7 +74,7 @@ import com.mobage.air.extension.social.common.RemoteNotification_setListener;
 import com.mobage.air.extension.social.common.RemoteNotification_setRemoteNotificationsEnabled;
 import com.mobage.air.extension.social.common.Service_getBalanceButton;
 import com.mobage.air.extension.social.common.Service_launchPortalApp;
-import com.mobage.air.extension.social.common.Service_openFriendPicker;
+import com.mobage.air.extension.social.common.Service_openPlayerInviter;
 import com.mobage.air.extension.social.common.Service_openUserProfile;
 import com.mobage.air.extension.social.common.Service_removeBalanceButton;
 import com.mobage.air.extension.social.common.Service_showBankUi;
@@ -137,7 +138,13 @@ public class MobageFREContext extends FREContext {
 
 		// class Service
 		register(Service_launchPortalApp.class);
+		
+		/* Open Friend Picker Deprecated from 1.4.7
+		 *
 		register(Service_openFriendPicker.class);
+		 */
+		register(Service_openPlayerInviter.class);
+		
 		register(Service_openUserProfile.class);
 		register(Service_showBankUi.class);
 		register(Service_getBalanceButton.class);
@@ -205,6 +212,7 @@ public class MobageFREContext extends FREContext {
 		register(MobageAdEventReporter_sendCustomEvent.class);
 		register(MobageAd_loadOfferwall.class);
 		register(MobageAd_showOfferwall.class);
+		register(MobageAd_injectAdvertisingId.class);
 		
 		// class analytics
 		register(EventReporter_report.class);

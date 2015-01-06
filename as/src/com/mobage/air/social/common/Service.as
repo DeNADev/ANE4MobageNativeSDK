@@ -77,7 +77,9 @@ package com.mobage.air.social.common
         }
         
 		/**
-		 * Opens the friend picker.
+		 * @deprecated
+		 * 
+		 * Opens the friend picker. Removes from 1.4.7-jp.
 		 *  
 		 * @param maxFriendsToSelect
 		 * @param onDismiss		function() :void
@@ -85,6 +87,7 @@ package com.mobage.air.social.common
 		 * @param onPicked		function(userIds :Array) :void
 		 * 
 		 */		
+		[Deprecated]
 		public static function openFriendPicker(maxFriendsToSelect :int,
 												onDismiss :Function,
 												onInviteSent :Function,
@@ -93,8 +96,25 @@ package com.mobage.air.social.common
 			const dId :String = Mobage.once(funcId, onDismiss);
 			const iId :String = Mobage.once(funcId, onInviteSent);
 			const pId :String = Mobage.once(funcId, onPicked);
-			Extension.call(funcId, maxFriendsToSelect, dId, iId, pId);
+//			Remove the comment below for KR
+//			Extension.call(funcId, maxFriendsToSelect, dId, iId, pId);
 		}
+        /**
+         * Opens the player inviter.
+         *  
+         * @param maxFriendsToSelect
+         * @param onInviteSent	function(userIds :Array) :void
+         * @param onDismiss		function() :void
+         * 
+         */		
+        public static function openPlayerInviter(defaultMessage :String, invitationPictureUrl :String,
+                                                 onPlayerInviterComplete :Function,
+                                                 onDismiss :Function) :void {
+            const funcId :String = 'com.mobage.air.extension.social.common.Service.openPlayerInviter';
+            const pId :String = Mobage.once(funcId, onPlayerInviterComplete);
+            const dId :String = Mobage.once(funcId, onDismiss);
+			Extension.call(funcId, defaultMessage, invitationPictureUrl, pId, dId);
+        }
 		/**
 		 * Takes a user ID or gamer name and opens the user's profile page. 
 		 * 

@@ -63,6 +63,8 @@ ChangeLog
 2014-08-06 (version v1.4.6-jp-4)  
 - Added as default to add Google Play Games Services Library. See README-dev for more details.  
 
+2014-08-13 (version v1.4.6-jp-5)
+- Added call on lifecycle event after Mobage.initialize() on Native Layer (Android). 
 
 ENVIRONMENT
 ==========================================================================

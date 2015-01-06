@@ -66,6 +66,10 @@ public class Mobage_initialize implements FREFunction {
 		assert drawableClass != null;
 
 		Mobage.initialize(region, serverMode, consumerKey, consumerSecret, appId, rootActivity);
+		// Life cycle event
+		Mobage.onCreate(context.getActivity());
+		Mobage.onStart(context.getActivity());
+		Mobage.onResume(context.getActivity());
 		return null;
 	}
 }

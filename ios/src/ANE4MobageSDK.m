@@ -118,6 +118,7 @@
 #import "common_Service_removeBalanceButton.h"
 #import "common_Service_launchPortalApp.h"
 #import "common_Service_openFriendPicker.h"
+#import "common_Service_openPlayerInviter.h"
 #import "common_Service_openUserProfile.h"
 #import "common_Service_showBankUi.h"
 #import "common_Service_showCommunityUI.h"
@@ -307,6 +308,7 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [common_Service_removeBalanceButton ContextInitializer:funcSets];
     [common_Service_launchPortalApp ContextInitializer:funcSets];
     [common_Service_openFriendPicker ContextInitializer:funcSets];
+	[common_Service_openPlayerInviter ContextInitializer:funcSets];
     [common_Service_openUserProfile ContextInitializer:funcSets];
     [common_Service_showBankUi ContextInitializer:funcSets];
     [common_Service_showCommunityUI ContextInitializer:funcSets];

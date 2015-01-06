@@ -411,6 +411,7 @@
 		C5FF19F31828EFC2009A00DE /* common_Service_showCommunityUI.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */; };
 		C5FF19F41828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */; };
 		C5FF19F51828EFC2009A00DE /* common_Service_showCommunityUI.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */; };
+		D6C0A2CA19F8BF17002F5CFD /* common_Service_openPlayerInviter.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0A2C919F8BF17002F5CFD /* common_Service_openPlayerInviter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -655,6 +656,8 @@
 		C5FF19ED1828B9C3009A00DE /* Account_getBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account_getBalance.m; sourceTree = "<group>"; };
 		C5FF19F01828EFC2009A00DE /* common_Service_showCommunityUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_Service_showCommunityUI.h; sourceTree = "<group>"; };
 		C5FF19F11828EFC2009A00DE /* common_Service_showCommunityUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_showCommunityUI.m; sourceTree = "<group>"; };
+		D6C0A2C819F8BEE4002F5CFD /* common_Service_openPlayerInviter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common_Service_openPlayerInviter.h; sourceTree = "<group>"; };
+		D6C0A2C919F8BF17002F5CFD /* common_Service_openPlayerInviter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = common_Service_openPlayerInviter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -999,6 +1002,8 @@
 				C54EA6D3175499EF00DDC98F /* common_Service_removeBalanceButton.m */,
 				C54EA6D617549A4400DDC98F /* common_Service_launchPortalApp.h */,
 				C54EA6D717549A4400DDC98F /* common_Service_launchPortalApp.m */,
+				D6C0A2C819F8BEE4002F5CFD /* common_Service_openPlayerInviter.h */,
+				D6C0A2C919F8BF17002F5CFD /* common_Service_openPlayerInviter.m */,
 				C54EA6DA17549B1000DDC98F /* common_Service_openFriendPicker.h */,
 				C54EA6DB17549B1100DDC98F /* common_Service_openFriendPicker.m */,
 				C54EA6DE17549C3500DDC98F /* common_Service_openUserProfile.h */,
@@ -1556,6 +1561,7 @@
 				C54EA74C175C309200DDC98F /* Mobage_removePlatformListener.m in Sources */,
 				C57865AE1769A60D00C56F06 /* common_Service_updateBalanceButton.m in Sources */,
 				C5516D2917DD88F50070FBBA /* Mobage_addDashboardObserver.m in Sources */,
+				D6C0A2CA19F8BF17002F5CFD /* common_Service_openPlayerInviter.m in Sources */,
 				C5516D2D17DD8A9E0070FBBA /* Mobage_dashboardObserver.m in Sources */,
 				C5C81577183DC45A00DD2D41 /* MobageAd_showIconListView.m in Sources */,
 				C5516D3117DD8AC50070FBBA /* Mobage_removeDashboardObserver.m in Sources */,
