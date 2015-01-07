@@ -104,6 +104,11 @@ package com.mobage.air.ad
                 Extension.call(funcId, frameID, extraParam);
             }
         }
+		
+		public static function injectAdvertisingId(advertisingID :String) :void{
+			const funcId :String = 'com.mobage.air.extension.ad.MobageAd.injectAdvertisingId';
+			Extension.call(funcId, advertisingID);
+		}
         
 	}
 }

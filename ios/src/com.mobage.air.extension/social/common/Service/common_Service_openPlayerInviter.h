@@ -21,59 +21,8 @@
  * THE SOFTWARE.
  **/
 
-#import "FunctionSets.h"
+#import "common_Service_base.h"
 
-#pragma mark - Function Sets
-@interface FunctionSets()
-// FuncSet count
-@property (assign, nonatomic) NSInteger count;
-// FuncSets
-@property (strong, nonatomic) NSMutableArray *functionSets;
-
-@end
-
-@implementation FunctionSets
-
-- (id)init {
-    self = [super init];
-    if (!self) return nil;
-    
-    self.count = 0;
-    self.functionSets = [NSMutableArray array];
-    return self;
-}
-
-- (void)dealloc {
-    self.functionSets = nil;
-    [super dealloc];
-}
-
-- (void)addFuncSet:(NSString *)name pointer:(FREFunction)pointer {
-    FunctionSet *funcSet = [[[FunctionSet alloc] init] autorelease];
-    funcSet.name = name;
-    funcSet.func = pointer;
-    [_functionSets addObject:funcSet];
-    
-    _count = @([_functionSets count]).unsignedIntValue;
-}
-
-@end
-
-#pragma mark - Function Set
-@implementation FunctionSet
-- (id)init {
-    self = [super init];
-    if (!self) return nil;
-    
-    self.name = nil;
-    self.func = NULL;
-    return self;
-}
-
-- (void)dealloc {
-    self.name = nil;
-    self.func = NULL;
-    [super dealloc];
-}
+@interface common_Service_openPlayerInviter : common_Service_base
 
 @end

@@ -22,7 +22,7 @@
  ******************************************************************************/
 package com.mobage.air.extension.social.common;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 
@@ -34,47 +34,40 @@ import com.mobage.air.extension.Convert;
 import com.mobage.air.extension.Dispatcher;
 import com.mobage.android.social.common.Service;
 
-public class Service_openFriendPicker implements FREFunction {
+public class Service_openPlayerInviter implements FREFunction {
 
 	@Override
 	public FREObject call(final FREContext context, FREObject[] args) {
 		try {
 			ArgsParser a = new ArgsParser(args);
-			int maxFiendsToSelect = a.nextInt();
-			final String onDissmissId = a.nextString();
-			final String onInviteSentId = a.nextString();
-			final String onPickedId = a.nextString();
-			a.finish();
 
-			Service.OnFriendPickerComplete cb = new Service.OnFriendPickerComplete() {
+			String defaultMessage = a.nextString();
+			String invitationPictureUrl = a.nextString();
+			final String OnPlayerInviterCompleteId = a.nextString();
+			final String onDissmissId = a.nextString();
+			a.finish();
+			
+			Service.OnPlayerInviterComplete cb = new Service.OnPlayerInviterComplete() {
+				
+				@Override
+				public void onInviteSent(List<String> userIds) {
+					try {
+						JSONArray args = new JSONArray();
+						args.put(Convert.stringListToJSON(userIds));
+						Dispatcher.dispatch(context, OnPlayerInviterCompleteId, args);
+					} catch ( Exception e) {
+						Dispatcher.exception(context, e);
+					}
+				}
+				
 				@Override
 				public void onDismiss() {
 					Dispatcher.dispatch(context, onDissmissId);
 				}
-
-				@Override
-				public void onInviteSent(ArrayList<String> userIds) {
-					try {
-						JSONArray args = new JSONArray();
-						args.put(Convert.stringListToJSON(userIds));
-						Dispatcher.dispatch(context, onInviteSentId, args);
-					} catch (Exception e) {
-						Dispatcher.exception(context, e);
-					}
-				}
-
-				@Override
-				public void onPicked(ArrayList<String> pickedUserIds) {
-					try {
-						JSONArray args = new JSONArray();
-						args.put(Convert.stringListToJSON(pickedUserIds));
-						Dispatcher.dispatch(context, onPickedId, args);
-					} catch (Exception e) {
-						Dispatcher.exception(context, e);
-					}
-				}
 			};
-			Service.openFriendPicker(maxFiendsToSelect, cb);
+			
+			Service.openPlayerInviter(defaultMessage, invitationPictureUrl, cb);
+			
 		} catch (Exception e) {
 			Dispatcher.exception(context, e);
 		}

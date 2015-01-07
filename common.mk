@@ -1,7 +1,7 @@
 # Common variables for making ANE for Mobage Native SDK
 
 # Path to Mobage Native SDK
-MOBAGE_SDK_PATH="Your_PATH_To_NATIVE_SDK/mobage-nativesdk-1.4.5-20131105-g6193da8"
+MOBAGE_SDK_PATH="Your_PATH_To_NATIVE_SDK/mobage-nativesdk-1.4.7.2-20141126-gcf61b4c"
 
 # Path for Google Play Games Services SDK and resources
 GOOGLE_SDK_PATH="Your_PATH_To_GooglePlay/google-play-services.jar"
@@ -14,4 +14,4 @@ FLASH_RUNTIME_EXT_JAR_PATH="/Applications/Adobe Flash Builder 4.7/sdks/4.6.0/lib
 FLASH_SDK_PATH="/Applications/Adobe Flash Builder 4.7/sdks/4.6.0"
 
 # simulator sdk version
-IOS_SIMULATOR_SDK_VERSION=iphonesimulator6.1
+IOS_SIMULATOR_SDK_VERSION=iphonesimulator8.1

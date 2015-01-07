@@ -44,8 +44,14 @@
 @end
 
 #pragma mark - define
-typedef BOOL(*BOOL_IMP)(id,SEL,...);
-typedef void(*VOID_IMP)(id,SEL,...);
+typedef BOOL(*BOOL_IMP_1ID)(id, SEL, id);
+typedef BOOL(*BOOL_IMP_2ID)(id, SEL, id, id);
+typedef BOOL(*BOOL_IMP_3ID)(id, SEL, id, id, id);
+typedef BOOL(*BOOL_IMP_4ID)(id, SEL, id, id, id, id);
+typedef void(*VOID_IMP_1ID)(id, SEL, id);
+typedef void(*VOID_IMP_2ID)(id, SEL, id, id);
+typedef void(*VOID_IMP_3ID)(id, SEL, id, id, id);
+typedef void(*VOID_IMP_4ID)(id, SEL, id, id, id, id);
 
 enum {
 	APP_setDelegate,
@@ -169,7 +175,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
 		[_PatchedDelegateIMPs setObject:classMethods forKey:NSStringFromClass([delegate class])];
     }
     
-    VOID_IMP func = (VOID_IMP)_appSupracedent[APP_setDelegate];
+    VOID_IMP_1ID func = (VOID_IMP_1ID)_appSupracedent[APP_setDelegate];
 	if (func) func(self, _cmd, delegate);
     
 }
@@ -178,9 +184,9 @@ IMP getMethodImplementation(id obj, SEL sel) {
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     LOG_METHOD;
     
-    LOG(@"UIApplicationState : %d", [application applicationState]);
+    LOG(@"UIApplicationState : %ld", (long)[application applicationState]);
     if ([application applicationState] == UIApplicationStateActive) {
-        VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
+        VOID_IMP_1ID func = (VOID_IMP_1ID)getMethodImplementation(self, _cmd);
         if (func) func(self,_cmd,application);
     }
 }
@@ -191,7 +197,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
         _appDelegatePatch.launchOptions = launchOptions;
     }
     
-    BOOL_IMP func = (BOOL_IMP)getMethodImplementation(self,_cmd);
+    BOOL_IMP_2ID func = (BOOL_IMP_2ID)getMethodImplementation(self,_cmd);
 	if (func) return func(self, _cmd, application, launchOptions);
     return YES;
 }
@@ -229,7 +235,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
     [Mobage_addPlatformListener handleReceive:payloadDic];
     
     
-	VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
+	VOID_IMP_2ID func = (VOID_IMP_2ID)getMethodImplementation(self, _cmd);
     if (func) func(self,_cmd,application,userInfo);
 }
 
@@ -238,7 +244,7 @@ IMP getMethodImplementation(id obj, SEL sel) {
     LOG(@"deviceToken = %@", deviceToken);
     
     [MBGPlatform registerForRemoteNotification:deviceToken];
-    VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
+    VOID_IMP_2ID func = (VOID_IMP_2ID)getMethodImplementation(self, _cmd);
 	if (func) func(self, _cmd, application, deviceToken);
 }
 
@@ -250,8 +256,8 @@ IMP getMethodImplementation(id obj, SEL sel) {
         return [MBGPlatform handleOpenURL:url];
     }
     
-    VOID_IMP func = (VOID_IMP)getMethodImplementation(self, _cmd);
-    if (func) func(self, _cmd, application, url, annotation);
+    VOID_IMP_4ID func = (VOID_IMP_4ID)getMethodImplementation(self, _cmd);
+    if (func) func(self, _cmd, application, url, sourceApplication, annotation);
     return YES;
 }
 

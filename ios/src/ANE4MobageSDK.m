@@ -118,6 +118,7 @@
 #import "common_Service_removeBalanceButton.h"
 #import "common_Service_launchPortalApp.h"
 #import "common_Service_openFriendPicker.h"
+#import "common_Service_openPlayerInviter.h"
 #import "common_Service_openUserProfile.h"
 #import "common_Service_showBankUi.h"
 #import "common_Service_showCommunityUI.h"
@@ -307,6 +308,7 @@ void ANE4MobageSDKContextInitializer(void* extData,
     [common_Service_removeBalanceButton ContextInitializer:funcSets];
     [common_Service_launchPortalApp ContextInitializer:funcSets];
     [common_Service_openFriendPicker ContextInitializer:funcSets];
+	[common_Service_openPlayerInviter ContextInitializer:funcSets];
     [common_Service_openUserProfile ContextInitializer:funcSets];
     [common_Service_showBankUi ContextInitializer:funcSets];
     [common_Service_showCommunityUI ContextInitializer:funcSets];
@@ -351,11 +353,11 @@ void ANE4MobageSDKContextInitializer(void* extData,
         func[index].functionData = NULL;
         func[index].function = funcSet.func;
         
-        LOG(@"[%d/(%d + 1)]name [%s] func [%p]", index, funcSets.count, func[index].name, func[index].function);
+        LOG(@"[%d/(%ld + 1)]name [%s] func [%p]", index, (long)funcSets.count, func[index].name, func[index].function);
     }
     
     *functionsToSet = func;
-    *numFunctionsToTest = funcSets.count;
+    *numFunctionsToTest = @(funcSets.count).unsignedIntValue;
 }
 
 void ANE4MobageSDKContextFinalizer(FREContext ctx) {
