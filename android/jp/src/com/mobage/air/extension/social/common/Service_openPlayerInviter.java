@@ -50,10 +50,10 @@ public class Service_openPlayerInviter implements FREFunction {
 			Service.OnPlayerInviterComplete cb = new Service.OnPlayerInviterComplete() {
 				
 				@Override
-				public void onInviteSent(List<String> arg0) {
+				public void onInviteSent(List<String> userIds) {
 					try {
 						JSONArray args = new JSONArray();
-						args.put(Convert.stringListToJSON(arg0));
+						args.put(Convert.stringListToJSON(userIds));
 						Dispatcher.dispatch(context, OnPlayerInviterCompleteId, args);
 					} catch ( Exception e) {
 						Dispatcher.exception(context, e);
