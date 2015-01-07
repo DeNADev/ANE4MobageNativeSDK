@@ -52,7 +52,7 @@ FREObject ANE4MBG_social_jp_Service_openDocument(FREContext cxt,
     FREContext context = [ContextOwner sharedContext];
     
     [MBGSocialJPService
-     openDocument:documentType
+     openDocument:@(documentType).intValue
      onDismiss:^{
          FREResult result = TCDispatch(context,
                                      onDismiss,

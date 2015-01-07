@@ -7,7 +7,7 @@ android/ Eclipse project for Android (you will find project for jp and kr)
 ios/     Xcode project for iOS
 samples/ Example projecs
  
-This SDK works on Android 2.2 or later, and iOS 5.0 or later.
+This SDK works on Android 2.2 or later, and iOS 5.1.1 or later.
  
 DEVELOPMENT
 ======================================================================
@@ -38,9 +38,9 @@ ENVIROMENT
 ======================================================================
 Following are the requirements for development.
 
-Flash Builder 4.7 (AIR SDK 4.0 or later)   
+Flash Builder 4.7 (AIR SDK 16.0 or later)   
 Eclipse Juno or later
-Xcode 5.1 or later
+Xcode 6.1 or later
 Android Developers Tools 21 or later
 
 CREATING ASDOCS

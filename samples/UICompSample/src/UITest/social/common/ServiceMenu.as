@@ -58,6 +58,22 @@ package UITest.social.common
                     });
                 });
             });
+            
+            sButtons.add("openPlayerInviter", function() :void {
+                com.mobage.air.social.common.Service.openPlayerInviter(
+                    "defaultMessage",
+                    "http://google.com",
+                    function(userIds :Array) :void {
+                        AlertDialog.show({
+                            title: "openPlayerInviter.onPlayerInviterComplete",
+                            message: JSON.stringify(userIds)
+                        });
+                    },
+                    function() :void{
+                        trace('openPlayerInviter dismissed');
+                    }
+                );
+            });
 			
 			sButtons.add("show Community UI", function() :void {
 				com.mobage.air.social.common.Service.showCommunityUI(function() :void{

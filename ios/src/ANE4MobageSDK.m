@@ -353,11 +353,11 @@ void ANE4MobageSDKContextInitializer(void* extData,
         func[index].functionData = NULL;
         func[index].function = funcSet.func;
         
-        LOG(@"[%d/(%d + 1)]name [%s] func [%p]", index, funcSets.count, func[index].name, func[index].function);
+        LOG(@"[%d/(%ld + 1)]name [%s] func [%p]", index, (long)funcSets.count, func[index].name, func[index].function);
     }
     
     *functionsToSet = func;
-    *numFunctionsToTest = funcSets.count;
+    *numFunctionsToTest = @(funcSets.count).unsignedIntValue;
 }
 
 void ANE4MobageSDKContextFinalizer(FREContext ctx) {

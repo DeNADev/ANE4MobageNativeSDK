@@ -160,7 +160,7 @@ static ArgsParser *_argParser = nil;
 + (FREObject)stringToObject:(NSString *)string {
     LOG_METHOD;
     FREObject freObject = NULL;
-    FREResult result = FRENewObjectFromUTF8(strlen((const char*)[string UTF8String]) + 1,
+    FREResult result = FRENewObjectFromUTF8((uint32_t)strlen((const char*)[string UTF8String]) + 1,
                                             (const uint8_t*)[string UTF8String],
                                             &freObject);
     if (result != FRE_OK) {
@@ -197,7 +197,7 @@ static ArgsParser *_argParser = nil;
 - (NSInteger)nextInt {
     LOG_METHOD;
     NSInteger value = [ArgsParser objectToInteger:[_argParser next]];
-    LOG(@"return %d", value);
+    LOG(@"return %ld", (long)value);
     return value;
 }
 
@@ -252,7 +252,7 @@ static ArgsParser *_argParser = nil;
                                [NSNumber numberWithInteger:MBG_REGION_KR], @"KR", nil];
 
     NSInteger value = [[regionMap valueForKey:[ArgsParser objectToString:[_argParser next]]] integerValue];
-    LOG(@"return %d", value);
+    LOG(@"return %ld", (long)value);
     return value;
 }
 
@@ -263,7 +263,7 @@ static ArgsParser *_argParser = nil;
                                    [NSNumber numberWithInteger:MBG_PRODUCTION], @"PRODUCTION", nil];
 
     NSInteger value = [[serverTypeMap valueForKey:[ArgsParser objectToString:[_argParser next]]] integerValue];
-    LOG(@"return %d", value);
+    LOG(@"return %ld", (long)value);
     return value;
 }
 
@@ -292,7 +292,7 @@ static ArgsParser *_argParser = nil;
                                [NSNumber numberWithInteger:MBG_SMS_VERIFICATION], @"SMS_VERIFICATION", nil];
 
     NSInteger value = [[regionMap valueForKey:[ArgsParser objectToString:[_argParser next]]] integerValue];
-    LOG(@"return %d", value);
+    LOG(@"return %ld", (long)value);
     return value;
 }
 
@@ -305,7 +305,7 @@ static ArgsParser *_argParser = nil;
                                [NSNumber numberWithInteger:MBG_GRAVITY_BOTTOM_RIGHT], @"BOTTOM_RIGHT", nil];
   
     NSInteger value = [[regionMap valueForKey:[ArgsParser objectToString:[_argParser next]]] integerValue];
-    LOG(@"return %d", value);
+    LOG(@"return %ld", (long)value);
     return (MBG_Gravity)value;
 }
 
@@ -369,7 +369,7 @@ static ArgsParser *_argParser = nil;
                          [NSNumber numberWithInteger:MBG_TARGET_USER_GRADE_GRADE3], @"GRADE3", nil];
 
     NSString *key = [_argParser nextString];
-    MBGTargetUserGrade grade = [[dic valueForKey:key] integerValue];
+    MBGTargetUserGrade grade = [[dic valueForKey:key] intValue];
     LOG(@"return %d", grade);
     return grade;
 }
@@ -465,7 +465,7 @@ static ArgsParser *_argParser = nil;
                          [NSNumber numberWithInteger:MBGADFrameID_Z], @"Z", nil];
     
     NSString *key = [_argParser nextString];
-    MBGADFrameID frameID = [[dic valueForKey:key] integerValue];
+    MBGADFrameID frameID = [[dic valueForKey:key] intValue];
     LOG(@"return %d", frameID);
     return frameID;
 }
@@ -476,7 +476,7 @@ static ArgsParser *_argParser = nil;
                          [NSNumber numberWithInteger:MBGBannerPositionBottom], @"BOTTOM", nil];
     
     NSString *key = [_argParser nextString];
-    MBGADFrameID bannerPosition = [[dic valueForKey:key] integerValue];
+    MBGADFrameID bannerPosition = [[dic valueForKey:key] intValue];
     LOG(@"return %d", bannerPosition);
     return bannerPosition;
 }
@@ -699,12 +699,12 @@ static ArgsParser *_argParser = nil;
 
 + (NSInteger)objectToInteger:(FREObject)intObject {
     LOG_METHOD;
-    NSInteger value;
+    int32_t value;
     FREResult result = FREGetObjectAsInt32(intObject, &value);
     if(result != FRE_OK) {
         [ArgsParser reportResult:result];
     }
-    return value;
+    return @(value).integerValue;
 }
 
 + (double)objectToDouble:(FREObject)doubleObject {
@@ -868,7 +868,7 @@ static ArgsParser *_argParser = nil;
     [ArgsParser getFREObjectProperty:freObject
                                  key:key
                                value:&valueObject];
-    billingItem.quantity = [ArgsParser objectToInteger:valueObject];
+    billingItem.quantity = @([ArgsParser objectToInteger:valueObject]).intValue;
     
     return billingItem;
 }
@@ -896,7 +896,7 @@ static ArgsParser *_argParser = nil;
     [ArgsParser getFREObjectProperty:freObject
                                  key:key
                                value:&valueObject];
-    itemData.price = [ArgsParser objectToInteger:valueObject];
+    itemData.price = @([ArgsParser objectToInteger:valueObject]).intValue;
     
     
     key = @"description";

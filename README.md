@@ -66,6 +66,10 @@ ChangeLog
 2014-08-13 (version v1.4.6-jp-5)
 - Added call on lifecycle event after Mobage.initialize() on Native Layer (Android). 
 
+2014-08-13 (version v1.4.7-jp)
+- Changed support Mobage Native SDK version 1.4.7.
+- Supported 64bit iOS architecture.
+
 ENVIRONMENT
 ==========================================================================
 Android:
@@ -75,13 +79,13 @@ Android:
     	(Android emulator is not supported)
 
 iOS:
-	iOS 5.0 or later
+	iOS 5.1.1 or later
 	(iOS Simulator with iOS 6.0 or later is partially supported)
 
 Smartphone simulator (Flash Builder built-in):
 	Not supported
 
 Mobage Native SDK:
-	*Only 1.4.6 or later
+	*Only 1.4.7 or later
 
 See README-dev for development.

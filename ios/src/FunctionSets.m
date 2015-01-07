@@ -54,7 +54,7 @@
     funcSet.func = pointer;
     [_functionSets addObject:funcSet];
     
-    _count = [_functionSets count];
+    _count = @([_functionSets count]).unsignedIntValue;
 }
 
 @end
