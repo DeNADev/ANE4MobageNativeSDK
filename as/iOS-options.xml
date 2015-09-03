@@ -4,6 +4,7 @@
          <option>-ios_version_min 5.1.1</option>
          <option>-framework StoreKit</option>
          <option>-weak_framework AdSupport</option>
+         <option>-framework iAd</option>
     </linkerOptions>
 </platform>
 
